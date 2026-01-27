@@ -1,0 +1,35 @@
+TYPE: Mental Model
+SOURCE: Various
+TITLE: The 100-Hour Rule
+AUTHOR: Me
+DATE: 2021-09-10
+
+The rule:
+
+For most skills, 100 hours of deliberate practice gets you to "pretty good."
+
+Not world-class. But competent. Better than average.
+
+100 hours = 18 minutes/day for a year.
+
+Examples:
+
+- 100 hours of cooking: You can make good meals
+- 100 hours of coding: You can build basic apps
+- 100 hours of language: You can have simple conversations
+- 100 hours of drawing: You can sketch recognizably
+
+The insight:
+
+We overestimate what it takes to be competent. We give up too early.
+
+100 hours is reachable. The first 100 hours yield the most improvement.
+
+Application:
+
+When starting something new: "Can I commit 100 hours?"
+
+If yes: Don't judge until you've invested 100 hours.
+If no: Maybe don't start.
+
+The trap: Starting many things, finishing none. 10 hours × 10 skills < 100 hours × 1 skill.

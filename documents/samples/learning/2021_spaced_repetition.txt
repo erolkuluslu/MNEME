@@ -1,0 +1,36 @@
+TYPE: Learning Note
+SOURCE: Various + Anki experience
+TITLE: Spaced Repetition - Remember Everything
+AUTHOR: Me
+DATE: 2021-04-15
+
+The forgetting curve:
+
+We forget 50% within an hour, 70% within 24 hours. Without review, knowledge evaporates.
+
+The solution: Review at increasing intervals
+
+Day 1 → Day 3 → Day 7 → Day 14 → Day 30 → Day 90
+
+Each successful review extends the interval. Each failure shortens it.
+
+Why it works:
+
+Memory strengthens at the moment of almost-forgetting. Too early = wasted review. Too late = forgotten.
+
+Spaced repetition hits the sweet spot.
+
+Tools I use:
+
+Anki for flashcards. But the principle applies to any review:
+- Revisit notes periodically
+- Teach concepts to others
+- Apply learning to projects
+
+What I'm spacing:
+
+- Japanese vocabulary (Anki)
+- Key concepts from books (periodic note review)
+- Important dates/facts (calendar reminders)
+
+The insight: Learning without retention is wasted time. Build review into the system.

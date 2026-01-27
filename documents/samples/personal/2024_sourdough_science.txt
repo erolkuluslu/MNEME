@@ -1,0 +1,17 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: The Science Behind My Sourdough Journey
+AUTHOR: Me
+DATE: 2024-10-05
+
+October 5, 2024.
+
+I've been reading about the microbiology of sourdough. It's fascinating. The symbiotic relationship between the wild yeast (Candida milleri) and the bacteria (Lactobacillus sanfranciscensis). The yeast produces the gas (carbon dioxide) that makes the bread rise, while the bacteria produce the acid (lactic and acetic) that gives it flavor.
+
+It reminds me of my early failures in 2020. I didn't understand this balance. I just thought "mix flour and water". But temperature plays a huge role. Warmer temps favor the bacteria (more sour), cooler temps favor the yeast (more rise). Mastering the fermentation is really just mastering this biological variable.
+
+I'm experimenting with different hydration levels again. 80% is a beast to handle, but the crumb is open and airy. It's a living thing. You can't just code it and compile it. You have to nurture it. It teaches you to pay attention to the environment. The humidity, the temperature, the flour type. It's a complex system, just like the neural networks I build, but edible.
+
+Found a fascinating paper on temperature-dependent metabolic shifts in sourdough fermentation. Turns out my intuition about cold fermentation was backed by science—the heterofermentative bacteria produce acetic acid and are cold-tolerant. That's why my overnight fridge proofs have that complex, vinegar tang.
+
+The more I learn about fermentation, the more I see parallels to machine learning. Both are optimization problems. Both require patience. Both punish you for ignoring the fundamentals.

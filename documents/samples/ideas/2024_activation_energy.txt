@@ -1,0 +1,31 @@
+TYPE: Mental Model
+SOURCE: Chemistry metaphor
+TITLE: Activation Energy
+AUTHOR: Me
+DATE: 2024-03-25
+
+The concept:
+
+Chemical reactions need activation energy to start. Without enough initial energy, nothing happens.
+
+Same with human behavior. Starting is often the hardest part.
+
+Application:
+
+HABITS: Lower activation energy for good habits. Raise it for bad ones.
+
+- Gym clothes laid out (lower) vs. buried in drawer (higher)
+- Phone in another room (higher to check) vs. next to bed (lower)
+- Healthy food visible (lower) vs. junk food hidden (higher)
+
+PROJECTS: The blank page has high activation energy. Lower it:
+
+- Start with bullet points, not prose
+- Give yourself permission to write badly
+- Set a tiny first step ("just open the document")
+
+THE INSIGHT:
+
+We often fail not because tasks are hard, but because starting is hard.
+
+Engineer the start to be easy. Momentum follows.

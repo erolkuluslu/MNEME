@@ -1,0 +1,134 @@
+TYPE: Tech Blog
+SOURCE: https://kubernetes.io/blog/2021/beginners-guide
+TITLE: Kubernetes for Beginners: Container Orchestration Explained
+AUTHOR: Kelsey Hightower, CNCF Technical Staff
+DATE: 2021-05-15
+
+## What Problem Does Kubernetes Solve?
+
+Before containers, deploying software meant:
+- "It works on my machine" syndrome
+- Manual server provisioning
+- Snowflake configurations
+- Painful scaling
+
+Containers (Docker) solved packaging. Kubernetes solves orchestration at scale.
+
+## Core Concepts
+
+### Pods
+The smallest deployable unit. A pod = one or more containers sharing network/storage.
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+spec:
+  containers:
+  - name: web
+    image: nginx:1.19
+    ports:
+    - containerPort: 80
+```
+
+### Deployments
+Manage pod replicas and rolling updates:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: web
+        image: nginx:1.19
+```
+
+### Services
+Expose pods to network traffic:
+- **ClusterIP**: Internal cluster access
+- **NodePort**: Expose on node's IP
+- **LoadBalancer**: Cloud provider LB
+- **Ingress**: HTTP routing rules
+
+### ConfigMaps & Secrets
+Externalize configuration:
+- ConfigMaps: Non-sensitive config
+- Secrets: Passwords, API keys (base64 encoded)
+
+## The Control Plane
+
+### API Server
+- Front door to the cluster
+- RESTful interface
+- kubectl communicates here
+
+### etcd
+- Distributed key-value store
+- Stores all cluster state
+- Source of truth
+
+### Scheduler
+- Assigns pods to nodes
+- Considers resource requests, affinity rules
+
+### Controller Manager
+- Runs control loops
+- Ensures desired state = actual state
+
+## Practical Commands
+
+```bash
+# Create resources
+kubectl apply -f deployment.yaml
+
+# List pods
+kubectl get pods
+
+# View logs
+kubectl logs my-pod
+
+# Execute command in pod
+kubectl exec -it my-pod -- /bin/bash
+
+# Scale deployment
+kubectl scale deployment my-app --replicas=5
+
+# Rolling update
+kubectl set image deployment/my-app web=nginx:1.20
+```
+
+## Best Practices
+
+1. **Resource limits**: Always set CPU/memory requests and limits
+2. **Health checks**: Liveness and readiness probes
+3. **Namespaces**: Isolate environments (dev, staging, prod)
+4. **RBAC**: Principle of least privilege
+5. **GitOps**: Infrastructure as code, version controlled
+
+## Common Pitfalls
+
+- Not setting resource limits → noisy neighbor problems
+- Pulling :latest tag → unpredictable deployments
+- Storing secrets in ConfigMaps → security risk
+- Not planning for failure → no high availability
+
+## When NOT to Use Kubernetes
+
+Kubernetes adds complexity. Consider alternatives for:
+- Small teams with simple deployments
+- Monolithic applications that don't need scaling
+- When PaaS (Heroku, Render) meets your needs
+
+**Remember**: Kubernetes is a tool, not a goal. Use it when it solves real problems.

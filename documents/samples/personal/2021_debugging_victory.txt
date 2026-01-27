@@ -1,0 +1,21 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Finally Fixed the Bug
+AUTHOR: Me
+DATE: 2021-10-15
+
+BREAKTHROUGH. The model finally trains properly.
+
+The problem: Loss was stuck. Model wasn't learning. I'd been banging my head against this for weeks.
+
+The solution: Three small things that together made all the difference. Initialization. Normalization. Learning rate.
+
+It took me months to understand why these work. Reading papers. Implementing from scratch. Failing repeatedly. But now I can explain each piece.
+
+The model now trains to 92% accuracy. From 50% (random chance). That's real learning.
+
+I understand the concepts now. Not just the code. The reasoning behind why things work.
+
+The black box is less black. Not fully transparent, but I can see outlines. That's progress.
+
+Jake says understanding takes time. He's right. A year ago, I wanted to quit. Tonight, I feel like I'm finally getting it.

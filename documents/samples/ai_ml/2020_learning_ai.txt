@@ -1,0 +1,18 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Struggling with CNNs and Deep Learning
+AUTHOR: Me
+DATE: 2020-10-12
+
+October 12, 2020.
+
+I am struggling immensely with Convolutional Neural Networks (CNNs) today. Deep learning feels like a complete black box. I understand the math theoretically—backpropagation, gradient descent, the chain rule—but when I look at the weights, it just looks like noise. I spent four hours trying to debug a shape mismatch in TensorFlow. It's frustrating. Is this really the future?
+
+I feel like I'm just turning knobs until something works. The loss function goes down, but do I actually know *why*? I need to go back to basics. Maybe read some papers on the underlying architecture. It's hard to see how this will ever be truly intelligent. It's just pattern matching on steroids. I look at the code, the layers of Conv2D and MaxPool, and I wonder where the "understanding" is. It's just matrix multiplication.
+
+I tried to explain it to my friend today, how the network detects edges, then shapes, then objects. But when the model misclassified a cat as a toaster, I felt foolish. The fragility of these systems is worrying. If a single pixel change can fool it, are we really building intelligence, or just a very fragile house of cards? I need to dive deeper into the optimization algorithms. Adam vs SGD. It all feels like alchemy. I'm mixing potions and hoping for gold.
+
+I'm also worried about the compute costs. Training these models takes so long. My GPU is running hot all night. Is this sustainable? If we need bigger and bigger models to get marginally better results, will we hit a wall? Moore's Law is slowing down. Maybe there's a different paradigm. Symbolic AI? No, that's dead. But this... this brute force approach feels inelegant. I want to build something that learns like a child does. Efficiently. With few examples. Not this data-hungry monster I'm wrestling with.
+
+(Later that night)
+I've been staring at the loss curve for another hour. It's oscillating. Maybe the learning rate is too high. I'll try decaying it. It's funny, I feel a strange emotional attachment to this little script. When it learns, I feel proud. When it fails, I feel responsible. Is this how parents feel? Probably not. But there is something creative about this. It's not just engineering; it's gardening. You prepare the soil (data), you plant the seed (architecture), and you water it (compute). But you can't force it to grow. You just have to create the conditions for intelligence to emerge. If it emerges at all. I'm still skeptical. But I'm also hooked. I need to understand this black box. I won't sleep until I do.

@@ -1,0 +1,32 @@
+TYPE: Mental Model
+SOURCE: Behavioral economics
+TITLE: The Power of Defaults
+AUTHOR: Me
+DATE: 2022-01-20
+
+The insight:
+
+Most people stick with defaults. Changing requires effort.
+
+Examples:
+
+- Organ donation rates differ dramatically based on whether default is opt-in or opt-out
+- 401k participation higher when enrollment is automatic
+- Software settings largely unchanged from default
+
+Implications for self:
+
+DESIGN YOUR DEFAULTS.
+
+Phone defaults: Notifications off. Grayscale on.
+Environment defaults: Healthy food visible, junk hidden.
+Schedule defaults: Deep work blocked, meetings require justification.
+Browser defaults: Learning sites, not news.
+
+Willpower is limited. Defaults require no willpower.
+
+The meta-move:
+
+Spend effort once to set good defaults. Benefit forever.
+
+Don't rely on daily decisions. Design systems where the easy path is the right path.

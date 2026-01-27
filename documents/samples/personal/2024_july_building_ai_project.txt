@@ -1,0 +1,19 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Building My First AI Agent
+AUTHOR: Me
+DATE: 2024-07-08
+
+July 8, 2024.
+
+Building an AI agent for personal knowledge management. Ambitious. Maybe too ambitious. Learning so much.
+
+The idea: Ask questions about my notes. It retrieves context, synthesizes answers. "What did I learn about Stoicism?" It searches my journal, finds relevant entries, responds.
+
+It's different building with AI. Less deterministic, more probabilistic. Shaping behavior, not dictating it.
+
+The 2020 version of me who struggled with neural networks would be amazed. Or terrified. Both.
+
+Challenges I'm facing: How to chunk documents? How to handle context limits? What makes a good embedding?
+
+But I'm making progress. Each iteration is slightly better. Progressive overload for code.

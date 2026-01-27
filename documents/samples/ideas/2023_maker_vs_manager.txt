@@ -1,0 +1,32 @@
+TYPE: Mental Model
+SOURCE: Paul Graham essay
+TITLE: Maker's Schedule vs. Manager's Schedule
+AUTHOR: Me
+DATE: 2023-02-10
+
+The two schedules:
+
+MANAGER'S SCHEDULE: Day divided into hours. Meetings can fit anywhere. Switching tasks is fine.
+
+MAKER'S SCHEDULE: Day divided into half-days. Deep work needs long blocks. One meeting can ruin a whole day.
+
+The conflict:
+
+Managers don't understand why makers hate meetings. Makers don't understand why managers love them.
+
+A 1-hour meeting in the middle of the afternoon destroys a maker's whole afternoon. Context-switching cost is real.
+
+My reality:
+
+I'm a maker forced into manager schedules. The meetings fragment my deep work time.
+
+Solutions I've tried:
+
+1. Meeting-free mornings (protected maker time)
+2. Batch meetings into one or two days
+3. Decline meetings without clear agendas
+4. Async communication when possible
+
+The awareness:
+
+Just knowing these schedules exist helps. I can articulate why the fragmented day feels unproductive. It's not laziness—it's schedule mismatch.

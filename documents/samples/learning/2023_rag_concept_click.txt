@@ -1,0 +1,33 @@
+TYPE: Learning Note
+SOURCE: LangChain docs + experimentation
+TITLE: RAG Finally Makes Sense
+AUTHOR: Me
+DATE: 2023-08-20
+
+RAG = Retrieval Augmented Generation
+
+The problem: LLMs have knowledge cutoffs and can't know your private data.
+
+The solution: Before asking the LLM, search for relevant context, then include it in the prompt.
+
+Pipeline:
+1. User asks question
+2. Embed the question (convert to numbers)
+3. Search vector database for similar content
+4. Retrieve top matches
+5. Add retrieved context to prompt
+6. LLM generates answer using context
+
+Why it works:
+
+LLMs are good at reading and synthesizing. They're bad at memorizing facts perfectly.
+
+RAG plays to strengths: "Here's the relevant information. Now answer the question."
+
+Key insight:
+
+The quality of retrieval is the ceiling for answer quality. If you retrieve junk, you get junk answers.
+
+Chunking matters. Embedding model matters. Retrieval strategy matters.
+
+This is the foundation for AI knowledge assistants. My notes + RAG = personal AI that knows my stuff.

@@ -1,0 +1,17 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: First Steps into Quantum Computing
+AUTHOR: Me
+DATE: 2021-11-11
+
+November 11, 2021.
+
+Started reading about Quantum Computing. It's mind-bending. Superposition. Entanglement. Qubits that can be 0 and 1 at the same time. It completely breaks my classical intuition.
+
+Shor's algorithm can break RSA encryption. That's terrifying. The entire internet security infrastructure could collapse if we build a stable quantum computer with enough qubits. But the engineering challenges are immense. Decoherence is the enemy. You have to keep the system near absolute zero.
+
+I tried to run a simple quantum circuit on IBM's cloud quantum computer. It worked! I got a probabilistic result. It's probabilistic, not deterministic. That's a shift. In classical code, if (x) then (y). In quantum, if (x) then (y) with 80% probability. It feels like we are tapping into the fabric of reality itself.
+
+The math is beautiful but brutal. Tensor products. Unitary matrices. Measurement collapse. It's like learning a new language that operates on different axioms. The Dirac notation (bra-ket) is elegant once you get used to it.
+
+I don't know if I'll ever use this professionally, but it expands my mind. Like learning about neural networks back in 2020, it's changing how I think about computation itself. What is information? What is a calculation? Quantum mechanics suggests our classical assumptions are just approximations.

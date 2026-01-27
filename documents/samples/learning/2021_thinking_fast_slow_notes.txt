@@ -1,0 +1,25 @@
+TYPE: Book Notes
+SOURCE: Thinking, Fast and Slow by Daniel Kahneman
+TITLE: Kahneman on How We Think
+AUTHOR: Me
+DATE: 2021-03-10
+
+The two systems:
+
+System 1: Fast, automatic, intuitive. Handles most daily decisions. Prone to biases.
+
+System 2: Slow, deliberate, effortful. Required for complex problems. Lazy—avoids engagement when possible.
+
+Key biases I notice in myself:
+
+ANCHORING: First number influences everything. When I hear a salary range, I fixate on the anchor. Negotiation lesson: make the first offer.
+
+AVAILABILITY: I judge probability by how easily examples come to mind. Plane crashes feel common because they're memorable. Statistically rare.
+
+LOSS AVERSION: Losing $100 hurts more than gaining $100 feels good. I hold losing investments too long, hoping to break even.
+
+CONFIRMATION BIAS: I seek information that confirms what I already believe. Actively seek disconfirming evidence.
+
+Practical application: Before big decisions, ask "What would System 2 say if I forced it to engage?" Write out pros/cons. Slow down.
+
+This book is dense. Will need to re-read.

@@ -1,0 +1,52 @@
+TYPE: Scientific Article
+SOURCE: IEEE Transactions on Pattern Analysis and Machine Intelligence
+TITLE: Transfer Learning in Computer Vision: A Survey of Pretrained Model Adaptation
+AUTHOR: Dr. Lin Zhang, Dr. Carlos Mendez
+DATE: 2022-04-18
+
+Abstract: Transfer learning has become the dominant paradigm in computer vision. This survey analyzes 150+ papers on adapting pretrained models (ImageNet, CLIP) to downstream tasks. We categorize approaches into fine-tuning, feature extraction, and domain adaptation, providing practitioners with actionable guidelines.
+
+1. Introduction
+
+Training deep neural networks from scratch requires massive datasets (millions of images) and substantial compute (hundreds of GPU-hours). Transfer learning circumvents this by leveraging knowledge from pretrained models.
+
+The key insight: low-level features (edges, textures) learned on ImageNet transfer remarkably well to diverse downstream tasks—from medical imaging to satellite imagery.
+
+2. Transfer Learning Taxonomy
+
+2.1 Feature Extraction
+- Freeze pretrained weights
+- Train only final classifier layer
+- Best when: limited data (<1000 samples), target domain similar to source
+
+2.2 Fine-Tuning
+- Initialize with pretrained weights
+- Update all (or some) layers on target task
+- Learning rate strategies: discriminative fine-tuning, gradual unfreezing
+
+2.3 Domain Adaptation
+- Source and target domains differ significantly
+- Techniques: adversarial training, maximum mean discrepancy, self-training
+
+3. Practical Guidelines
+
+| Scenario | Data Size | Domain Similarity | Recommendation |
+|----------|-----------|-------------------|----------------|
+| A | Small | High | Feature extraction |
+| B | Small | Low | Fine-tune top layers |
+| C | Large | High | Fine-tune all layers |
+| D | Large | Low | Train from scratch or domain adaptation |
+
+4. Foundation Models
+
+Recent foundation models (CLIP, ALIGN, Florence) trained on web-scale image-text pairs show unprecedented zero-shot transfer:
+- CLIP achieves 76.2% ImageNet accuracy without any ImageNet training
+- Linear probe on CLIP features outperforms full fine-tuning of ResNet-50
+
+5. Conclusion
+
+Transfer learning democratizes deep learning by reducing data and compute requirements. The emergence of foundation models suggests a future where task-specific training becomes unnecessary for many applications.
+
+References:
+[1] Yosinski, J., et al. (2014). How transferable are features in deep neural networks?
+[2] Radford, A., et al. (2021). Learning Transferable Visual Models From Natural Language Supervision.

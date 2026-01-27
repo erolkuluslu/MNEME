@@ -1,0 +1,39 @@
+TYPE: Book Highlights
+SOURCE: Antifragile by Nassim Taleb
+TITLE: Beyond Resilience
+AUTHOR: Me (highlighting Taleb)
+DATE: 2022-04-10
+
+---
+
+"Wind extinguishes a candle and energizes fire."
+
+My note: Same stressor, different effects. Some things die from volatility. Others grow.
+
+---
+
+"The antifragile loves randomness and uncertainty, which also means—crucially—a love of errors."
+
+My note: Errors are information. Systems that can't handle errors are fragile.
+
+---
+
+"We have been fragilizing the economy, our health, political life, education, almost everything... by suppressing randomness and volatility."
+
+My note: Overprotection creates fragility. Kids who never fail can't handle failure. Systems without stress testing break under stress.
+
+---
+
+"The simpler the better. Complications lead to multiplicative chains of unanticipated effects."
+
+My note: Complexity is fragile. Simple is robust.
+
+---
+
+"The best way to verify that you are alive is by checking if you like variations."
+
+My note: Antifragility as life philosophy. Embrace variation, change, challenge. It's what keeps you alive.
+
+---
+
+Taleb is cantankerous but insightful. This book changed how I think about systems, risk, and life design.

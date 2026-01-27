@@ -1,0 +1,44 @@
+TYPE: Book Citation
+SOURCE: The Structure of Scientific Revolutions (University of Chicago Press, 4th Ed.)
+TITLE: The Structure of Scientific Revolutions - Paradigm Shifts in Science
+AUTHOR: Thomas S. Kuhn
+DATE: 2023-08-10
+
+Chapter II: The Route to Normal Science
+
+"In this essay, 'normal science' means research firmly based upon one or more past scientific achievements, achievements that some particular scientific community acknowledges for a time as supplying the foundation for its further practice."
+
+"Normal science, the activity in which most scientists inevitably spend almost all their time, is predicated on the assumption that the scientific community knows what the world is like."
+
+Chapter VI: Anomaly and the Emergence of Scientific Discoveries
+
+"Discovery commences with the awareness of anomaly, i.e., with the recognition that nature has somehow violated the paradigm-induced expectations that govern normal science."
+
+"Normal science does not aim at novelties of fact or theory and, when successful, finds none. New and unsuspected phenomena are, however, repeatedly uncovered by scientific research, and radical new theories have again and again been invented by scientists."
+
+Chapter IX: The Nature and Necessity of Scientific Revolutions
+
+"The decision to reject one paradigm is always simultaneously the decision to accept another, and the judgment leading to that decision involves the comparison of both paradigms with nature and with each other."
+
+"Paradigm shifts occur when the accumulated weight of anomalies becomes unbearable, and a new framework better accounts for observed phenomena."
+
+Chapter X: Revolutions as Changes of World View
+
+"What were ducks in the scientist's world before the revolution are rabbits afterwards... Transformations like these, though usually more gradual and almost always irreversible, are common concomitants of scientific training."
+
+Historical Examples of Paradigm Shifts:
+
+1. Copernican Revolution: Geocentric → Heliocentric model
+2. Newtonian Mechanics → Einsteinian Relativity  
+3. Phlogiston theory → Oxygen theory of combustion
+4. Classical genetics → Molecular biology
+5. Behaviorism → Cognitive psychology
+
+Application to AI/ML:
+
+The AI field may be undergoing its own paradigm shift:
+- Old paradigm: Hand-engineered features, symbolic AI
+- New paradigm: End-to-end deep learning, foundation models
+- Emerging anomalies: Hallucination, reasoning limitations, alignment challenges
+
+Are we in a period of "normal science" within the deep learning paradigm, or approaching another revolutionary shift toward neuro-symbolic approaches or fundamentally new architectures?

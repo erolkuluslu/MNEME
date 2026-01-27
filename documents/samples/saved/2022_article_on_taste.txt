@@ -1,0 +1,30 @@
+TYPE: Saved Article
+SOURCE: Paul Graham
+TITLE: How to Develop Good Taste
+AUTHOR: Saved with notes
+DATE: 2022-06-20
+
+Key insight:
+
+"Taste is just the ability to recognize good work. You develop taste by looking at lots of work and asking: is this good? Why?"
+
+The process:
+
+1. Expose yourself to lots of work (good and bad)
+2. Compare. What's better? Why?
+3. Articulate. Put reasons into words.
+4. Iterate. Taste refines over time.
+
+Why taste matters:
+
+"Most great work comes from someone who had the taste to recognize their own bad work and keep iterating."
+
+Without taste, you can't tell good from bad. You ship bad work thinking it's good.
+
+My reflection:
+
+I have developing taste in some areas (code, bread). Underdeveloped in others (design, writing).
+
+The fix: Exposure + comparison + articulation.
+
+Look at great design. Ask why it's great. Try to make something. Compare. Repeat.

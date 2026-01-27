@@ -1,0 +1,31 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Recognizing Burnout
+AUTHOR: Me
+DATE: 2022-05-15
+
+I've been burned out for months without realizing it.
+
+Signs I missed:
+- Dreading work every morning
+- Constant fatigue even after sleep
+- Short-tempered with colleagues
+- No interest in side projects
+- Cynicism about everything
+
+I thought I was just tired. Or that work was "going through a rough patch." I didn't connect the dots.
+
+The turning point: I couldn't bring myself to open VS Code. Stared at the icon for 30 minutes. Eventually gave up and took a walk.
+
+On that walk, I admitted it: I'm burned out.
+
+Recovery plan:
+1. Talk to manager. Set boundaries.
+2. Take PTO. Actually disconnect.
+3. Say no to new projects.
+4. Prioritize sleep and exercise.
+5. Revisit values. Why did I become an engineer?
+
+The gym helps. The bread helps. The Stoics help. But I need to address the root cause: saying yes to everything, never protecting my time.
+
+Burnout is not weakness. It's a signal. I'm finally listening.

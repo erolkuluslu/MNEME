@@ -1,0 +1,32 @@
+TYPE: Learning Note
+SOURCE: Jay Alammar's Blog - The Illustrated Transformer
+TITLE: Finally Grasping How Transformers Work
+AUTHOR: Me
+DATE: 2023-02-10
+
+The breakthrough insight:
+
+Attention = "What parts of the input should I focus on to produce this output?"
+
+Self-attention asks: For each word, how relevant is every other word?
+
+"The cat sat on the mat because it was tired."
+What does "it" refer to? The model learns to attend strongly to "cat."
+
+The Query-Key-Value metaphor:
+
+Imagine a library:
+- Query: What I'm looking for ("books about cooking")
+- Keys: What's in each book ("recipes, history, technique...")
+- Values: The actual content
+
+Attention score = how well query matches keys
+Output = weighted sum of values based on attention
+
+Why transformers beat RNNs:
+
+RNNs process sequentially. Word 100 can only see word 99 through a compressed state.
+
+Transformers process in parallel. Word 100 can directly attend to word 1. Long-range dependencies handled better.
+
+This is why ChatGPT works. Attention lets it connect ideas across the entire context.

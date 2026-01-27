@@ -1,0 +1,17 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Starting My Machine Learning Journey
+AUTHOR: Me
+DATE: 2020-06-15
+
+June 15, 2020.
+
+Started Andrew Ng's Machine Learning course on Coursera. The math is dense but his explanations are clear. Gradient descent is just walking downhill. The derivative points to the steepest descent. You take small steps. You iterate. Eventually, you reach a minimum.
+
+It's a metaphor for life, really. Small steps. Iteration. Progress.
+
+I spent 4 hours implementing backpropagation by hand. Four hours to understand what a single line of PyTorch does automatically. But now I understand what that line does. That's worth something.
+
+The bread is improving too. Today's loaf had actual oven spring. The crumb is still too tight but there's progress. Like gradient descent—small steps toward the minimum loss (the loss being my disappointment in the bread).
+
+Two things I'm nurturing: a neural network and a sourdough starter. Both require patience, feeding, and the right conditions to thrive.

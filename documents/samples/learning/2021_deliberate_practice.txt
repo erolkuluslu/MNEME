@@ -1,0 +1,35 @@
+TYPE: Learning Note
+SOURCE: Peak by Anders Ericsson
+TITLE: Deliberate Practice - How Experts Get Good
+AUTHOR: Me
+DATE: 2021-01-20
+
+Key insight from Ericsson:
+
+10,000 hours is misunderstood. It's not just time—it's deliberate practice.
+
+What makes practice deliberate:
+
+1. SPECIFIC GOALS: Not "practice guitar" but "nail this transition at 120 bpm"
+
+2. FOCUSED ATTENTION: Full concentration, no multitasking
+
+3. IMMEDIATE FEEDBACK: Know if you did it right
+
+4. OUTSIDE COMFORT ZONE: Easy practice = no improvement
+
+5. MENTAL REPRESENTATIONS: Experts "see" their domain differently
+
+Where I fail at this:
+
+GYM: Sometimes I go through motions, not deliberately pushing.
+
+CODING: I solve problems I already know. Should tackle harder ones.
+
+BREAD: Comfort recipes vs. challenging new techniques.
+
+The fix:
+
+Identify the specific skill to improve. Design focused practice. Get feedback. Repeat.
+
+Not more practice. Better practice.

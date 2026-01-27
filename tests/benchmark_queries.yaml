@@ -1,0 +1,404 @@
+# MNEME Comprehensive Benchmark Suite
+# 50 queries across difficulty levels, query types, and domains
+
+queries:
+  # ============ EASY QUERIES (10) ============
+  - id: Q01
+    query: "What did I learn about neural networks in 2021?"
+    difficulty: EASY
+    type: SPECIFIC
+    expected_categories: [ai_ml]
+    expected_year: 2021
+    ground_truth_keywords: [neural, network, deep learning, CNN]
+
+  - id: Q02
+    query: "Show me my notes from 2023 about transformers"
+    difficulty: EASY
+    type: SPECIFIC
+    expected_categories: [ai_ml]
+    expected_year: 2023
+    ground_truth_keywords: [transformer, attention, BERT, GPT]
+
+  - id: Q03
+    query: "What are my personal reflections from 2022?"
+    difficulty: EASY
+    type: SPECIFIC
+    expected_categories: [personal]
+    expected_year: 2022
+    ground_truth_keywords: [reflection, growth, personal]
+
+  - id: Q04
+    query: "What did I save about Python in 2020?"
+    difficulty: EASY
+    type: SPECIFIC
+    expected_categories: [technical, learning]
+    expected_year: 2020
+    ground_truth_keywords: [python, programming, code]
+
+  - id: Q05
+    query: "Show notes about machine learning from 2024"
+    difficulty: EASY
+    type: SPECIFIC
+    expected_categories: [ai_ml]
+    expected_year: 2024
+    ground_truth_keywords: [machine learning, ML, model]
+
+  - id: Q06
+    query: "What ideas did I have in 2021?"
+    difficulty: EASY
+    type: SPECIFIC
+    expected_categories: [ideas]
+    expected_year: 2021
+    ground_truth_keywords: [idea, project, concept]
+
+  - id: Q07
+    query: "Find my philosophy notes from 2023"
+    difficulty: EASY
+    type: SPECIFIC
+    expected_categories: [philosophy]
+    expected_year: 2023
+    ground_truth_keywords: [philosophy, stoic, wisdom]
+
+  - id: Q08
+    query: "What technical content is from 2022?"
+    difficulty: EASY
+    type: SPECIFIC
+    expected_categories: [technical]
+    expected_year: 2022
+    ground_truth_keywords: [technical, system, architecture]
+
+  - id: Q09
+    query: "Show learning materials from 2020"
+    difficulty: EASY
+    type: SPECIFIC
+    expected_categories: [learning]
+    expected_year: 2020
+    ground_truth_keywords: [learn, study, course]
+
+  - id: Q10
+    query: "What AI content do I have from 2025?"
+    difficulty: EASY
+    type: SPECIFIC
+    expected_categories: [ai_ml]
+    expected_year: 2025
+    ground_truth_keywords: [AI, artificial intelligence]
+
+  # ============ MEDIUM QUERIES (20) ============
+  - id: Q11
+    query: "How has my understanding of AI evolved over time?"
+    difficulty: MEDIUM
+    type: TEMPORAL
+    expected_categories: [ai_ml, learning]
+    expected_years: [2020, 2021, 2022, 2023, 2024]
+    ground_truth_keywords: [AI, evolution, understanding, progress]
+
+  - id: Q12
+    query: "What patterns connect my learning and personal growth?"
+    difficulty: MEDIUM
+    type: SYNTHESIS
+    expected_categories: [learning, personal]
+    ground_truth_keywords: [learning, growth, pattern, connection]
+
+  - id: Q13
+    query: "Compare my interests in 2020 vs 2024"
+    difficulty: MEDIUM
+    type: COMPARISON
+    expected_categories: [personal, ai_ml, ideas]
+    expected_years: [2020, 2024]
+    ground_truth_keywords: [interest, change, evolution]
+
+  - id: Q14
+    query: "How do my technical notes relate to my project ideas?"
+    difficulty: MEDIUM
+    type: SYNTHESIS
+    expected_categories: [technical, ideas]
+    ground_truth_keywords: [technical, project, implementation]
+
+  - id: Q15
+    query: "What have I learned about deep learning between 2021 and 2023?"
+    difficulty: MEDIUM
+    type: TEMPORAL
+    expected_categories: [ai_ml, learning]
+    expected_years: [2021, 2022, 2023]
+    ground_truth_keywords: [deep learning, neural, training]
+
+  - id: Q16
+    query: "Show the progression of my saved articles over the years"
+    difficulty: MEDIUM
+    type: TEMPORAL
+    expected_categories: [saved]
+    ground_truth_keywords: [article, save, reference]
+
+  - id: Q17
+    query: "What themes appear across my personal and philosophy notes?"
+    difficulty: MEDIUM
+    type: SYNTHESIS
+    expected_categories: [personal, philosophy]
+    ground_truth_keywords: [theme, wisdom, reflection]
+
+  - id: Q18
+    query: "How has my approach to learning changed from 2020 to now?"
+    difficulty: MEDIUM
+    type: TEMPORAL
+    expected_categories: [learning, personal]
+    expected_years: [2020, 2021, 2022, 2023, 2024]
+    ground_truth_keywords: [learning, method, approach, change]
+
+  - id: Q19
+    query: "What connections exist between AI and philosophy in my notes?"
+    difficulty: MEDIUM
+    type: SYNTHESIS
+    expected_categories: [ai_ml, philosophy]
+    ground_truth_keywords: [AI, philosophy, ethics, thinking]
+
+  - id: Q20
+    query: "Compare technical approaches in 2021 vs 2023"
+    difficulty: MEDIUM
+    type: COMPARISON
+    expected_categories: [technical]
+    expected_years: [2021, 2023]
+    ground_truth_keywords: [technical, approach, architecture]
+
+  - id: Q21
+    query: "What ideas did I have that relate to machine learning?"
+    difficulty: MEDIUM
+    type: SYNTHESIS
+    expected_categories: [ideas, ai_ml]
+    ground_truth_keywords: [idea, ML, project, implementation]
+
+  - id: Q22
+    query: "How do my saved resources connect to my learning goals?"
+    difficulty: MEDIUM
+    type: SYNTHESIS
+    expected_categories: [saved, learning]
+    ground_truth_keywords: [resource, learning, goal]
+
+  - id: Q23
+    query: "What philosophical concepts influenced my technical work?"
+    difficulty: MEDIUM
+    type: SYNTHESIS
+    expected_categories: [philosophy, technical]
+    ground_truth_keywords: [philosophy, technical, influence]
+
+  - id: Q24
+    query: "Track my understanding of transformers from 2020 to 2024"
+    difficulty: MEDIUM
+    type: TEMPORAL
+    expected_categories: [ai_ml, learning]
+    expected_years: [2020, 2021, 2022, 2023, 2024]
+    ground_truth_keywords: [transformer, attention, BERT, evolution]
+
+  - id: Q25
+    query: "What personal insights emerged from my technical challenges?"
+    difficulty: MEDIUM
+    type: SYNTHESIS
+    expected_categories: [personal, technical]
+    ground_truth_keywords: [insight, challenge, learning, growth]
+
+  - id: Q26
+    query: "How do my ideas evolve year by year?"
+    difficulty: MEDIUM
+    type: TEMPORAL
+    expected_categories: [ideas]
+    ground_truth_keywords: [idea, evolution, progress, development]
+
+  - id: Q27
+    query: "What saved articles influenced my project ideas?"
+    difficulty: MEDIUM
+    type: SYNTHESIS
+    expected_categories: [saved, ideas]
+    ground_truth_keywords: [article, idea, inspiration, project]
+
+  - id: Q28
+    query: "Compare my AI notes from early vs recent years"
+    difficulty: MEDIUM
+    type: COMPARISON
+    expected_categories: [ai_ml]
+    expected_years: [2020, 2021, 2024, 2025]
+    ground_truth_keywords: [AI, comparison, evolution]
+
+  - id: Q29
+    query: "What learning patterns emerge across all categories?"
+    difficulty: MEDIUM
+    type: SYNTHESIS
+    expected_categories: [learning, personal, ai_ml, technical]
+    ground_truth_keywords: [learning, pattern, progress, method]
+
+  - id: Q30
+    query: "How has my focus shifted between technical and philosophical topics?"
+    difficulty: MEDIUM
+    type: TEMPORAL
+    expected_categories: [technical, philosophy]
+    ground_truth_keywords: [focus, shift, balance, priority]
+
+  # ============ HARD QUERIES (20) ============
+  - id: Q31
+    query: "What patterns connect my learning, ideas, and personal growth across all years?"
+    difficulty: HARD
+    type: SYNTHESIS
+    expected_categories: [learning, ideas, personal]
+    ground_truth_keywords: [pattern, connection, synthesis, growth, learning]
+    multi_hop: true
+
+  - id: Q32
+    query: "How do philosophical concepts influence my technical decision-making over time?"
+    difficulty: HARD
+    type: SYNTHESIS
+    expected_categories: [philosophy, technical, personal]
+    ground_truth_keywords: [philosophy, technical, decision, influence, wisdom]
+    multi_hop: true
+
+  - id: Q33
+    query: "Trace the evolution of my interests from 2020 to 2025"
+    difficulty: HARD
+    type: TEMPORAL
+    expected_categories: [all]
+    expected_years: [2020, 2021, 2022, 2023, 2024, 2025]
+    ground_truth_keywords: [interest, evolution, change, development, trajectory]
+    multi_hop: true
+
+  - id: Q34
+    query: "What bird's eye view emerges from my entire knowledge base?"
+    difficulty: HARD
+    type: EXPLORATORY
+    expected_categories: [all]
+    ground_truth_keywords: [overview, synthesis, comprehensive, patterns, themes]
+
+  - id: Q35
+    query: "How do saved articles, personal reflections, and technical notes triangulate on key themes?"
+    difficulty: HARD
+    type: SYNTHESIS
+    expected_categories: [saved, personal, technical]
+    ground_truth_keywords: [triangulate, theme, connection, synthesis]
+    multi_hop: true
+
+  - id: Q36
+    query: "What meta-patterns exist in how I approach learning across different domains?"
+    difficulty: HARD
+    type: EXPLORATORY
+    expected_categories: [learning, ai_ml, technical, philosophy]
+    ground_truth_keywords: [meta, pattern, learning, approach, methodology]
+
+  - id: Q37
+    query: "Synthesize my understanding of AI ethics from technical, philosophical, and personal perspectives"
+    difficulty: HARD
+    type: SYNTHESIS
+    expected_categories: [ai_ml, philosophy, personal]
+    ground_truth_keywords: [AI, ethics, philosophy, technical, personal, synthesis]
+    multi_hop: true
+
+  - id: Q38
+    query: "What hidden connections exist between seemingly unrelated categories?"
+    difficulty: HARD
+    type: EXPLORATORY
+    expected_categories: [all]
+    ground_truth_keywords: [connection, bridge, cross-domain, synthesis]
+
+  - id: Q39
+    query: "How has my worldview evolved through the synthesis of all my notes?"
+    difficulty: HARD
+    type: EXPLORATORY
+    expected_categories: [all]
+    ground_truth_keywords: [worldview, evolution, synthesis, understanding, growth]
+    multi_hop: true
+
+  - id: Q40
+    query: "What comprehensive narrative emerges from my knowledge across time and domains?"
+    difficulty: HARD
+    type: EXPLORATORY
+    expected_categories: [all]
+    ground_truth_keywords: [narrative, comprehensive, story, journey, evolution]
+
+  - id: Q41
+    query: "Compare and contrast my approach to technical problems vs philosophical questions over time"
+    difficulty: HARD
+    type: COMPARISON
+    expected_categories: [technical, philosophy, personal]
+    ground_truth_keywords: [comparison, approach, technical, philosophy, methodology]
+    multi_hop: true
+
+  - id: Q42
+    query: "What does my knowledge base reveal about my cognitive development from 2020-2025?"
+    difficulty: HARD
+    type: EXPLORATORY
+    expected_categories: [all]
+    expected_years: [2020, 2021, 2022, 2023, 2024, 2025]
+    ground_truth_keywords: [cognitive, development, growth, evolution, understanding]
+
+  - id: Q43
+    query: "How do ideas flow between saved content, learning, and practical implementation?"
+    difficulty: HARD
+    type: SYNTHESIS
+    expected_categories: [saved, learning, ideas, technical]
+    ground_truth_keywords: [flow, pipeline, implementation, learning, synthesis]
+    multi_hop: true
+
+  - id: Q44
+    query: "What unifying themes connect disparate topics across my entire knowledge graph?"
+    difficulty: HARD
+    type: EXPLORATORY
+    expected_categories: [all]
+    ground_truth_keywords: [unifying, theme, connection, synthesis, pattern]
+
+  - id: Q45
+    query: "Analyze the feedback loops between my learning, reflection, and project ideas"
+    difficulty: HARD
+    type: SYNTHESIS
+    expected_categories: [learning, personal, ideas, technical]
+    ground_truth_keywords: [feedback, loop, learning, reflection, iteration]
+    multi_hop: true
+
+  - id: Q46
+    query: "What does the topology of my knowledge graph reveal about my thinking patterns?"
+    difficulty: HARD
+    type: EXPLORATORY
+    expected_categories: [all]
+    ground_truth_keywords: [topology, graph, pattern, structure, thinking]
+
+  - id: Q47
+    query: "How do different temporal layers of my understanding interact and influence each other?"
+    difficulty: HARD
+    type: TEMPORAL
+    expected_categories: [all]
+    expected_years: [2020, 2021, 2022, 2023, 2024, 2025]
+    ground_truth_keywords: [temporal, layer, interaction, influence, evolution]
+    multi_hop: true
+
+  - id: Q48
+    query: "Synthesize insights from hubs and bridges in my knowledge graph"
+    difficulty: HARD
+    type: EXPLORATORY
+    expected_categories: [all]
+    ground_truth_keywords: [hub, bridge, connection, synthesis, insight]
+
+  - id: Q49
+    query: "What emergent properties arise from the cross-domain synthesis of my notes?"
+    difficulty: HARD
+    type: SYNTHESIS
+    expected_categories: [all]
+    ground_truth_keywords: [emergent, property, synthesis, cross-domain, pattern]
+    multi_hop: true
+
+  - id: Q50
+    query: "Map the conceptual landscape of my entire knowledge ecosystem"
+    difficulty: HARD
+    type: EXPLORATORY
+    expected_categories: [all]
+    ground_truth_keywords: [map, landscape, ecosystem, comprehensive, structure]
+    multi_hop: true
+
+# Summary Statistics
+summary:
+  total_queries: 50
+  by_difficulty:
+    EASY: 10
+    MEDIUM: 20
+    HARD: 20
+  by_type:
+    SPECIFIC: 10
+    TEMPORAL: 10
+    SYNTHESIS: 15
+    COMPARISON: 5
+    EXPLORATORY: 10
+  multi_hop_queries: 15
+  cross_domain_queries: 35

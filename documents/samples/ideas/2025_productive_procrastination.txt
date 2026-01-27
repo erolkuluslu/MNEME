@@ -1,0 +1,33 @@
+TYPE: Mental Model
+SOURCE: Various productivity writers
+TITLE: Productive Procrastination
+AUTHOR: Me
+DATE: 2025-01-30
+
+The concept:
+
+We avoid hard tasks by doing easier tasks. This is often called procrastination.
+
+Productive procrastination: Make the "avoidance" tasks productive.
+
+The technique:
+
+Keep a list of tasks ordered by importance but also by difficulty.
+
+When avoiding the hardest task, you'll naturally drift to easier tasks. If those are also valuable, you're still being productive.
+
+Example:
+
+Avoiding writing the report → Clean inbox (productive)
+Avoiding coding the feature → Write documentation (productive)
+Avoiding difficult conversation → Prep for meeting (productive)
+
+The psychology:
+
+Trying to force yourself onto the hardest task often backfires. You freeze. You scroll Twitter.
+
+Productive procrastination channels avoidance into less-important-but-still-useful work.
+
+The caveat:
+
+Eventually, the hard task must be done. This isn't an excuse to avoid forever. Just a way to stay productive while building momentum.

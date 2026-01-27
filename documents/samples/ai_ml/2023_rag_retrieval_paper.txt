@@ -1,0 +1,57 @@
+TYPE: Scientific Article
+SOURCE: ACL Anthology - Association for Computational Linguistics
+TITLE: Retrieval-Augmented Generation: Enhancing Language Models with External Knowledge
+AUTHOR: Dr. Emma Thompson, Dr. Kai Nakamura, Dr. Fatima Al-Hassan
+DATE: 2023-11-15
+
+Abstract: Retrieval-Augmented Generation (RAG) combines the strengths of parametric language models with non-parametric knowledge retrieval. This paper provides a systematic analysis of RAG architectures, demonstrating 23% improvement in factual accuracy on knowledge-intensive tasks compared to pure generative approaches.
+
+1. Introduction
+
+Large language models (LLMs) store vast knowledge in their parameters but suffer from hallucination, knowledge cutoff, and inability to cite sources. RAG addresses these limitations by retrieving relevant documents at inference time.
+
+2. RAG Architecture
+
+2.1 Retriever Component
+- Dense Passage Retrieval (DPR): BERT-based bi-encoder
+- Sparse retrieval (BM25): lexical matching baseline
+- Hybrid approaches: combine dense and sparse signals
+
+2.2 Generator Component  
+- Fusion-in-Decoder: concatenate retrieved passages
+- Cross-attention: attend to retrieved documents
+- Iterative refinement: multiple retrieval rounds
+
+3. Chunking Strategies
+
+Document chunking significantly impacts retrieval quality:
+- Fixed-size chunks (512 tokens): simple but breaks semantic units
+- Sentence-level: preserves meaning but may lack context
+- Semantic chunking: embed and cluster related content
+- Hierarchical: summaries + full text
+
+4. Experimental Results
+
+On Natural Questions:
+| Method | Exact Match | F1 Score |
+|--------|-------------|----------|
+| GPT-3.5 (closed-book) | 29.9 | 38.2 |
+| RAG-Token | 44.5 | 52.1 |
+| RAG-Sequence | 47.3 | 56.8 |
+
+5. Failure Modes
+
+5.1 Retrieval Failures: relevant documents not retrieved
+5.2 Integration Failures: model ignores retrieved context
+5.3 Conflicting Information: contradictory sources confuse model
+
+6. Best Practices
+
+- Use embedding models trained on similar domains
+- Implement re-ranking to improve precision
+- Add metadata (date, source) to chunks
+- Evaluate both retrieval and generation separately
+
+References:
+[1] Lewis, P., et al. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.
+[2] Guu, K., et al. (2020). REALM: Retrieval-Augmented Language Model Pre-Training.

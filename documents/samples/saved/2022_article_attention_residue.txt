@@ -1,0 +1,29 @@
+TYPE: Saved Article
+SOURCE: Research summary
+TITLE: Attention Residue - Why Multitasking Fails
+AUTHOR: Saved with notes
+DATE: 2022-04-10
+
+The concept:
+
+When you switch tasks, attention doesn't instantly switch. A "residue" remains on the previous task.
+
+The study:
+
+People who switched tasks performed worse on subsequent tasks. The residue degraded performance.
+
+Implications:
+
+- Multitasking is attention-splitting, not attention-multiplying
+- Each switch has a cost
+- Deep work requires sustained focus
+
+The solution:
+
+Batch similar tasks. Minimize switches. Protect focus blocks.
+
+My note:
+
+I feel this. When I check email mid-project, part of my brain stays on email. The project suffers.
+
+Single-tasking isn't less productive. It's more productive because there's no residue.

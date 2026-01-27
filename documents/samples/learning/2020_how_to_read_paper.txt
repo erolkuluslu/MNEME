@@ -1,0 +1,38 @@
+TYPE: Learning Note
+SOURCE: Research advice articles
+TITLE: How to Actually Read Research Papers
+AUTHOR: Me
+DATE: 2020-08-20
+
+The three-pass approach someone taught me:
+
+PASS 1 (5-10 min):
+- Title, abstract, introduction
+- Section headings
+- Conclusions
+- Skim figures
+
+Goal: Should I read deeper? What's the big picture?
+
+PASS 2 (30-60 min):
+- Read thoroughly but skip proofs/details
+- Understand figures and diagrams
+- Note unfamiliar terms/references
+- Summarize key points
+
+Goal: Understand the contribution
+
+PASS 3 (hours):
+- Re-implement or deeply trace logic
+- Question every assumption
+- Identify strengths and weaknesses
+
+Goal: True understanding, ready to critique
+
+My mistake before:
+
+I tried to understand everything in one pass. Got stuck on page 3. Gave up.
+
+Three passes lets me triage. Most papers only need pass 1. Some need pass 2. Few need pass 3.
+
+The meta-skill: Knowing when to go deeper and when to move on.

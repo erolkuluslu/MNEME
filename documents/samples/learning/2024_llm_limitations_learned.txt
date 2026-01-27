@@ -1,0 +1,38 @@
+TYPE: Learning Note
+SOURCE: Personal experience + AI safety articles
+TITLE: What AI Can't Do (Yet)
+AUTHOR: Me
+DATE: 2024-08-15
+
+Things I've learned AI is bad at:
+
+1. RECENT INFORMATION
+Knowledge cutoffs are real. It confidently gives outdated info. Always verify anything time-sensitive.
+
+2. COUNTING AND MATH
+Ask it to count words or do complex arithmetic. Often wrong. It's pattern matching, not calculating.
+
+3. SELF-KNOWLEDGE
+"I don't have emotions" while clearly having preferences. It doesn't really know what it is.
+
+4. NOVEL REASONING
+It can remix training data brilliantly. Truly novel ideas are rare. It's a very good interpolator.
+
+5. PERSISTENT MEMORY
+Each conversation starts fresh. It doesn't remember previous chats (without RAG).
+
+6. SPATIAL REASONING
+Describe a room and ask what's left of the table. Often wrong.
+
+7. KNOWING WHAT IT DOESN'T KNOW
+Confidently wrong > admitting uncertainty. I always verify claims I care about.
+
+How I use AI effectively:
+
+- Brainstorming partner, not oracle
+- First draft generator, not final product
+- Explain concepts, not cite facts
+- Code assistant, always reviewed
+- Search starting point, then verify
+
+The right mental model: Brilliant intern with unreliable memory. Useful, not trustworthy.

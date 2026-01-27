@@ -1,0 +1,38 @@
+TYPE: Book Citation
+SOURCE: Meditations (Penguin Classics Edition)
+TITLE: Meditations - Selected Passages on Stoic Philosophy
+AUTHOR: Marcus Aurelius (translated by Martin Hammond)
+DATE: 2021-01-01
+
+Book II, Section 1:
+"Begin the morning by saying to yourself, I shall meet with the busybody, the ungrateful, arrogant, deceitful, envious, unsocial. All these things happen to them by reason of their ignorance of what is good and evil. But I who have seen the nature of the good that it is beautiful, and of the bad that it is ugly, and the nature of him who does wrong, that it is akin to me—I can neither be injured by any of them, nor can I be angry with my kinsman."
+
+Book IV, Section 3:
+"Men seek retreats for themselves, houses in the country, sea-shores, and mountains. You too are disposed to desire such things very much. But this is altogether a mark of the most common sort of men, for it is in your power whenever you choose to retire into yourself. For nowhere either with more quiet or more freedom from trouble does a man retire than into his own soul."
+
+Book V, Section 16:
+"Such as are your habitual thoughts, such also will be the character of your mind; for the soul is dyed by the thoughts. Dye it then with a continuous series of such thoughts as these: for instance, that where a man can live, there he can also live well."
+
+Book VI, Section 6:
+"The best revenge is not to be like your enemy."
+
+Book VII, Section 9:
+"All things are implicated with one another, and the bond is holy; and there is hardly anything unconnected with any other thing. For things have been coordinated, and they combine to form the same universe. For there is one universe made up of all things, and one god who pervades all things, and one substance, and one law, and one reason."
+
+Book VIII, Section 47:
+"If you are distressed by anything external, the pain is not due to the thing itself, but to your estimate of it; and this you have the power to revoke at any moment."
+
+Book IX, Section 29:
+"Do not disturb yourself by picturing your life as a whole; do not assemble in your mind the many troubles which have come to you in the past and will come again in the future, but ask yourself with regard to every present difficulty: 'What is there in this that is unbearable and beyond endurance?'"
+
+Commentary:
+Marcus Aurelius wrote these private reflections during military campaigns along the Danube frontier (170-180 CE). Never intended for publication, the Meditations offers an intimate window into the mind of a philosopher-king struggling to apply Stoic principles to the challenges of ruling an empire.
+
+The recurring themes include:
+- The impermanence of all things (memento mori)
+- The dichotomy of control (what is "up to us")
+- The interconnectedness of the cosmos (logos)
+- The importance of present-moment awareness
+- Virtue as the only true good
+
+These principles have found renewed relevance in modern cognitive behavioral therapy, which draws directly from Stoic cognitive techniques for managing negative emotions.

@@ -1,0 +1,39 @@
+TYPE: Learning Note
+SOURCE: Personal reflection
+TITLE: Transfer Learning Applies to Humans Too
+AUTHOR: Me
+DATE: 2025-01-10
+
+The AI concept:
+
+Transfer learning: Train a model on one task, apply to a related task. Prior knowledge accelerates new learning.
+
+Human parallel:
+
+Skills transfer. Math helps with coding. Music helps with language. Writing helps with thinking.
+
+The hidden curriculum:
+
+Every skill teaches meta-skills:
+- Learning itself
+- Problem-solving patterns
+- Frustration tolerance
+- Seeing connections
+
+This is why diverse learning beats narrow specialization early on.
+
+What has transferred for me:
+
+GYM → CODING: Progressive overload, consistency beats intensity, recovery matters
+
+BREAD → WORK: Patience, reading feedback, trusting the process
+
+MEDITATION → EVERYTHING: The pause between stimulus and response
+
+PHILOSOPHY → AI: Ethics, consciousness, meaning questions
+
+The takeaway:
+
+Nothing is wasted. Every skill contributes to the whole.
+
+Learn broadly. The connections will emerge.

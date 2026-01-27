@@ -1,0 +1,52 @@
+TYPE: Scientific Article
+SOURCE: Nature Neuroscience
+TITLE: Hebbian Learning and Synaptic Plasticity: Implications for Artificial Neural Networks
+AUTHOR: Dr. Robert Kessler, Dr. Amara Okonkwo
+DATE: 2021-09-05
+
+Abstract: This review examines the parallels between biological synaptic plasticity and learning algorithms in artificial neural networks. We argue that incorporating biologically-inspired plasticity mechanisms could address current limitations in continual learning and catastrophic forgetting.
+
+1. Introduction
+
+"Neurons that fire together, wire together." This aphorism, summarizing Donald Hebb's 1949 postulate, describes how synaptic connections strengthen when pre- and post-synaptic neurons activate simultaneously. Modern neuroscience has revealed sophisticated molecular mechanisms underlying this plasticity.
+
+2. Biological Mechanisms
+
+2.1 Long-Term Potentiation (LTP)
+- NMDA receptor activation triggers calcium influx
+- CaMKII phosphorylation strengthens AMPA receptor responses
+- Structural changes: spine enlargement, new synapse formation
+
+2.2 Long-Term Depression (LTD)
+- Low-frequency stimulation weakens connections
+- Protein phosphatases dephosphorylate receptors
+- Enables forgetting and memory refinement
+
+3. Artificial Analogues
+
+3.1 Backpropagation: Global error signal propagated through chain rule
+- Non-local: requires symmetric weights (biologically implausible)
+- Non-Hebbian: updates depend on downstream error, not local activity
+
+3.2 Spike-Timing Dependent Plasticity (STDP)
+- Pre-before-post: strengthening (causal)
+- Post-before-pre: weakening (anti-causal)
+- Local computation: only requires information at the synapse
+
+4. Catastrophic Forgetting
+
+Standard ANNs suffer from catastrophic forgetting when learning new tasks. Biological brains avoid this through:
+- Synaptic consolidation (important connections become "protected")
+- Complementary learning systems (hippocampus + neocortex)
+- Sparse, distributed representations
+
+5. Future Directions
+
+Elastic Weight Consolidation (EWC) and progressive networks represent early attempts to incorporate plasticity principles. We propose that true continual learning may require:
+- Local learning rules (Hebbian or STDP-like)
+- Neuromodulation (dopamine-gated plasticity)
+- Sleep-like consolidation phases
+
+References:
+[1] Hebb, D.O. (1949). The Organization of Behavior.
+[2] Bliss, T.V.P., & Lømo, T. (1973). Long-lasting potentiation of synaptic transmission.

@@ -1,0 +1,32 @@
+TYPE: Learning Note
+SOURCE: Various productivity sources
+TITLE: Parkinson's Law - Time Expands to Fill Space
+AUTHOR: Me
+DATE: 2021-11-20
+
+The law:
+
+"Work expands to fill the time available for its completion."
+
+Give yourself a week, it takes a week. Give yourself a day, it takes a day (mostly).
+
+Implications:
+
+DEADLINES HELP: Even artificial ones create focus.
+
+CONSTRAINTS ARE GOOD: Less time forces prioritization.
+
+PERFECTIONISM IS ENABLED BY TIME: Infinite time → infinite tweaking.
+
+How I use it:
+
+Set tight deadlines, even for personal projects. "This draft done by Friday" beats "whenever it's ready."
+
+The challenge:
+
+Too tight → stress and poor quality
+Too loose → Parkinson's law kicks in
+
+The sweet spot: Slightly uncomfortable but achievable.
+
+Related: The "two-minute rule"—if it takes less than two minutes, do it now. Eliminates overhead of scheduling trivial tasks.

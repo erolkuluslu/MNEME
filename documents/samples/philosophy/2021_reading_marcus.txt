@@ -1,0 +1,17 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Discovering Stoicism Through Marcus Aurelius
+AUTHOR: Me
+DATE: 2021-06-10
+
+June 10, 2021.
+
+Stoicism helps with the stress of my startup. Reading Marcus Aurelius's 'Meditations'. "You have power over your mind - not outside events. Realize this, and you will find strength." I need this. The servers crashed today, and I almost lost it. But getting angry doesn't fix the server. It just ruins my peace.
+
+I'm trying to practice negative visualization. What's the worst that could happen? We fail. Okay. Then what? We start over. It's freeing. The Stoics talk about the "dichotomy of control". There are things up to us, and things not up to us. My code is up to me. The market reaction is not.
+
+It's hard to internalize, though. I feel responsible for everything. But reading these words, written by a Roman Emperor nearly 2000 years ago, makes me feel less alone. He dealt with plagues, wars, betrayals. And he wrote to himself to stay calm. If he could do it, I can handle a server outage.
+
+I'm also thinking about "Memento Mori". Remember you will die. It sounds morbid, but it actually clarifies things. Why am I stressing about this feature release? In the grand scheme, it doesn't matter. What matters is acting with virtue. Being a good teammate. Doing good work. The rest is noise. I need to carry this mindset into the office tomorrow. Calm. Rational. Focused on what I can control.
+
+The concept of the "Inner Citadel" is powerful. A place inside you that no one can touch. No insult, no failure, no external chaos can breach it unless you let it. I'm building my citadel brick by brick. Every time I choose not to react to a provocation, I lay a brick. It's slow work. But it's the only work that really matters in the end.

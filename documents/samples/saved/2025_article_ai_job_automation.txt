@@ -1,0 +1,48 @@
+TYPE: Saved Article
+SOURCE: Wired
+TITLE: Which Jobs Will AI Actually Replace?
+AUTHOR: Saved with notes
+DATE: 2025-03-15
+
+The nuanced view:
+
+Not "AI will replace jobs" but "AI will replace tasks."
+
+Most jobs are bundles of tasks. Some tasks automatable, others not.
+
+Tasks AI handles well:
+
+- Pattern recognition in data
+- Routine text generation
+- Code boilerplate
+- Scheduling, admin
+- Initial drafts, first passes
+
+Tasks AI handles poorly:
+
+- Novel problem-solving
+- Emotional intelligence, empathy
+- Physical dexterity in unstructured environments
+- Judgment in ambiguous situations
+- Creative direction (not just generation)
+
+The reshaping:
+
+Jobs won't disappear. They'll transform.
+
+The lawyer still exists, but AI does discovery. The designer still exists, but AI does first drafts.
+
+My reflection:
+
+I use AI daily. It automates my boring tasks. Frees me for interesting ones.
+
+The question isn't "Will I be replaced?" but "How do I complement AI?"
+
+Skills that complement:
+- Judgment and taste
+- Problem framing
+- Interpersonal skills
+- Integration and synthesis
+- Knowing what to ask for
+
+The meta-skill: Learning to work WITH AI. That's the new literacy.

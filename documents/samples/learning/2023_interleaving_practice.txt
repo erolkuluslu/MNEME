@@ -1,0 +1,33 @@
+TYPE: Learning Note
+SOURCE: Make It Stick (book)
+TITLE: Why Mixing Practice Works Better
+AUTHOR: Me
+DATE: 2023-08-15
+
+The counterintuitive finding:
+
+Blocked practice (AAABBBCCC) feels effective but isn't.
+Interleaved practice (ABCABCABC) feels harder but produces better retention.
+
+Why:
+
+Interleaving forces the brain to:
+- Retrieve different strategies
+- Discriminate between problem types
+- Consolidate varied knowledge
+
+Blocked practice gives false confidence. You get good at the current thing, then forget it when context switches.
+
+Applications:
+
+CODING: Don't do 20 similar problems. Mix SQL, Python, algorithms.
+
+GYM: Varied movements in same session (which I already do).
+
+LEARNING: Study multiple subjects in same session, not one at a time.
+
+The feeling trap:
+
+Interleaving feels inefficient. Progress seems slower. But testing shows better long-term retention.
+
+Trust the process, not the feeling.

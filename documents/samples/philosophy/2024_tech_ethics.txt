@@ -1,0 +1,17 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: AI Ethics and the Responsibility of Builders
+AUTHOR: Me
+DATE: 2024-11-02
+
+November 2, 2024.
+
+Are we building gods? Re-reading Aurelius in the context of AGI. If we create a mind that is superior to ours, do we have a duty to it? Or it to us? The Stoics believed in a Logos, a rational order to the universe. Is AI the manifestation of that Logos? Or is it a chaotic mirror of our own flaws?
+
+I see so much hubris in Silicon Valley. We are rushing to build things we don't understand, ignoring the ancient wisdom that warns against playing god. We need more philosophy in computer science curriculums. We are handing over decision-making power to algorithms that optimize for engagement, not virtue.
+
+Marcus wrote about acting for the common good. "What is not good for the beehive, cannot be good for the bee." Are we building tech that is good for the hive? Or just for the shareholders? The alignment problem isn't just technical; it's philosophical. We can't align AI to human values if we don't agree on what those values are.
+
+I feel a responsibility to speak up. To ask the hard questions. It's not enough to just build. We have to ask *why*. And *should we*. The Stoic practice of examining one's impressions is crucial here. We have this impression that "more intelligence is better". Is it? Or is wisdom what we actually need? Intelligence without wisdom is just a very efficient way to destroy ourselves. I hope we find the wisdom before it's too late.
+
+I was debating this with a colleague today. He's an accelerationist. He thinks we should just let it rip. "The universe wants to wake up," he said. Maybe. But I don't want it to wake up and step on us like ants. We have a duty to our species. To our humanity. We can't just abdicate that. We have to be the guardians of the flame, even as we build the fire.

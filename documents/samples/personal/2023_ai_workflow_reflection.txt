@@ -1,0 +1,32 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: How AI Changed My Daily Work
+AUTHOR: Me
+DATE: 2023-09-20
+
+Six months of heavy AI use. Time to reflect on what's changed.
+
+What AI does for me now:
+- First drafts of documentation
+- Explaining unfamiliar code
+- Generating boilerplate
+- Debugging help
+- Brainstorming ideas
+- Refactoring suggestions
+
+What I still do:
+- Architecture decisions
+- Code review (including AI's code)
+- Understanding requirements
+- Communicating with humans
+- Final judgment calls
+
+The unexpected change: I read more code than I write. AI writes, I review. I've become an editor.
+
+The skill shift: Prompt engineering is real. Knowing how to ask is as important as knowing how to do.
+
+The worry: Am I getting worse at coding from scratch? Use it or lose it?
+
+The balance: I force myself to code without AI sometimes. Keep the muscle.
+
+Overall: Massive productivity gain. But I'm vigilant about atrophy.

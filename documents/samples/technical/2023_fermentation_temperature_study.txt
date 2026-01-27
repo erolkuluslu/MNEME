@@ -1,0 +1,72 @@
+TYPE: Scientific Article
+SOURCE: Journal of Food Science
+TITLE: Temperature-Dependent Metabolic Shifts in Sourdough Fermentation: Optimizing Flavor and Structure
+AUTHOR: Dr. Isabella Romano, Dr. François Leblanc
+DATE: 2023-04-18
+
+Abstract: This study characterizes the metabolic output of sourdough fermentation across temperatures from 20°C to 35°C. We demonstrate that temperature is the primary determinant of the lactic:acetic acid ratio, which directly affects bread flavor profile. Optimal flavor complexity was achieved at 24°C with a 12-hour fermentation.
+
+1. Introduction
+
+Artisanal bakers have long understood that temperature affects sourdough character. A cold fermentation yields milder, more yeast-forward bread, while warm fermentation produces sharp, tangy loaves. This study provides the biochemical explanation.
+
+2. Materials and Methods
+
+2.1 Starter Culture
+San Francisco-style starter, 100% hydration, maintained for 5+ years.
+
+2.2 Fermentation Conditions
+- Temperatures: 20°C, 24°C, 28°C, 32°C, 35°C
+- Duration: 4, 8, 12, 16, 24 hours
+- Flour: 50% bread flour, 50% whole wheat
+
+2.3 Analysis
+- HPLC for organic acids (lactic, acetic, propionic)
+- GC-MS for volatile compounds
+- Dough pH and total titratable acidity (TTA)
+
+3. Results
+
+3.1 Organic Acid Production
+
+| Temp | Lactic Acid (mg/g) | Acetic Acid (mg/g) | Ratio |
+|------|--------------------|--------------------|-------|
+| 20°C | 4.2 | 2.8 | 1.5:1 |
+| 24°C | 5.8 | 2.1 | 2.8:1 |
+| 28°C | 7.1 | 1.4 | 5.1:1 |
+| 32°C | 8.9 | 0.9 | 9.9:1 |
+| 35°C | 9.2 | 0.7 | 13.1:1 |
+
+3.2 Flavor Compound Analysis
+Optimal flavor complexity (measured by volatile diversity) at 24°C:
+- Ethyl acetate (fruity): peak at 24°C
+- Diacetyl (buttery): peak at 20°C
+- 3-methylbutanol (malty): peak at 28°C
+
+3.3 Structural Effects
+Higher temperatures produced:
+- Faster rise (2x at 32°C vs 20°C)
+- Weaker gluten network
+- Denser crumb structure
+
+4. Discussion
+
+The temperature-dependent metabolic shift reflects bacterial ecology:
+- Heterofermentative LAB (produce acetic acid) are more cold-tolerant
+- Homofermentative LAB (produce lactic acid) dominate at higher temps
+- Yeast activity peaks around 28°C but competes with bacteria
+
+5. Practical Recommendations
+
+For home bakers:
+- Mild, complex flavor: 20-24°C, 12-16 hours
+- Tangy, aggressive flavor: 28-32°C, 6-8 hours
+- Use refrigeration (4°C) to extend fermentation without excessive acidification
+
+6. Conclusion
+
+Temperature is the master variable in sourdough fermentation. Understanding its effects empowers bakers to achieve consistent, intentional flavor profiles.
+
+References:
+[1] De Vuyst, L., et al. (2017). Metabolic activity of lactic acid bacteria in sourdough.
+[2] Gänzle, M. (2014). Enzymatic and bacterial conversions during sourdough fermentation.

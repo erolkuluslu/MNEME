@@ -1,0 +1,36 @@
+TYPE: Mental Model
+SOURCE: Howard Marks / Various
+TITLE: Second-Order Thinking
+AUTHOR: Me
+DATE: 2023-03-15
+
+The concept:
+
+First-order thinking: "What happens next?"
+Second-order thinking: "And then what?"
+
+Most people stop at first order. Edge comes from thinking further.
+
+Example:
+
+First order: "Raise prices → more revenue"
+Second order: "More revenue → competitors undercut us → we lose market share → less revenue"
+
+Example:
+
+First order: "Work more hours → more output"
+Second order: "More output → burnout → worse quality → mistakes → net negative"
+
+Where I've failed to think second-order:
+
+DIET: "Skip meals → lose weight" → Slow metabolism → binge later → gain weight
+
+PRODUCTIVITY: "Say yes to everything" → Overcommitted → Exhausted → Quality suffers
+
+RELATIONSHIPS: "Avoid difficult conversations" → Issues compound → Bigger explosion later
+
+The practice:
+
+Before decisions, ask: "And then what? And then what? And then what?"
+
+Most problems come from first-order thinking meeting second-order consequences.

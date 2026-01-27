@@ -1,0 +1,37 @@
+TYPE: Mental Model
+SOURCE: Optimization theory / career advice
+TITLE: Local vs. Global Maximum
+AUTHOR: Me
+DATE: 2024-03-10
+
+The concept:
+
+LOCAL MAXIMUM: Best option within current constraints. Optimal locally but maybe not globally.
+
+GLOBAL MAXIMUM: Best option overall, regardless of current position.
+
+Getting to global maximum may require temporarily getting worse.
+
+Career example:
+
+Local max: Senior engineer at current company. Optimized this path.
+
+Global max: Might require leaving, starting over in new domain, short-term income drop.
+
+Stuck at local max because leaving feels like regression.
+
+Life example:
+
+Local max: Comfortable relationship that's "fine."
+
+Global max: Might require ending it, being alone, to find something better.
+
+The trap:
+
+Incremental optimization keeps you at local max. Can't small-step your way to global max.
+
+Sometimes you need to jump.
+
+The question:
+
+Am I at a local maximum? Would jumping to a lower point allow climbing to something higher?

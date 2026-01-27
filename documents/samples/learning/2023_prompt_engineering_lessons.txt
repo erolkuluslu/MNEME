@@ -1,0 +1,34 @@
+TYPE: Learning Note
+SOURCE: Various (OpenAI docs, LangChain, experimentation)
+TITLE: What I've Learned About Prompting AI
+AUTHOR: Me
+DATE: 2023-06-15
+
+Lessons from 6 months of heavy AI use:
+
+1. BE SPECIFIC
+Bad: "Write code for user auth"
+Good: "Write a Python function that validates JWT tokens and extracts user_id from the payload."
+
+2. SHOW DON'T TELL
+Give examples of what you want. AI learns from patterns.
+
+3. STEP BY STEP
+"Let's think step by step" actually improves reasoning. Breaking problems down helps.
+
+4. ROLE ASSIGNMENT
+"You are an expert Python developer with 20 years experience" activates different knowledge.
+
+5. OUTPUT FORMAT
+"Respond in JSON format with fields: summary, sentiment, key_points"
+Explicit structure reduces ambiguity.
+
+6. ITERATE
+First response is rarely perfect. Refine. Ask follow-ups. Treat it as conversation, not oracle.
+
+What still trips me up:
+- AI is confidently wrong sometimes. Verify important stuff.
+- Recent information may be hallucinated.
+- Complex multi-step tasks need breaking down.
+
+The meta-skill: Knowing when AI helps and when it doesn't.

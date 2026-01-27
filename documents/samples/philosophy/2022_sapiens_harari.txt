@@ -1,0 +1,40 @@
+TYPE: Book Citation
+SOURCE: Sapiens: A Brief History of Humankind (Harper)
+TITLE: Sapiens - The Cognitive Revolution and Human Cooperation
+AUTHOR: Yuval Noah Harari
+DATE: 2022-11-30
+
+Chapter 2: The Tree of Knowledge
+
+"The Cognitive Revolution occurred between 70,000 and 30,000 years ago. It enabled Homo sapiens to think in unprecedented ways and communicate using an entirely new type of language.
+
+The most important information that humans needed to convey was not about lions and bison, but about humans themselves. Our language evolved as a way of gossiping. According to this theory Homo sapiens is primarily a social animal."
+
+"Yet the truly unique feature of our language is not its ability to transmit information about men and lions. Rather, it's the ability to transmit information about things that do not exist at all. As far as we know, only Sapiens can talk about entire kinds of entities that they have never seen, touched or smelled."
+
+Chapter 6: Building Pyramids
+
+"Large numbers of strangers can cooperate successfully by believing in common myths. Any large-scale human cooperation—whether a modern state, a medieval church, an ancient city or an archaic tribe—is rooted in common myths that exist only in people's collective imagination."
+
+"There are no gods in the universe, no nations, no money, no human rights, no laws, and no justice outside the common imagination of human beings."
+
+Chapter 20: The End of Homo Sapiens
+
+"What happens when the cognitive revolution reaches its ultimate conclusion in the form of superintelligent AI? Will humans remain the masters of the planet, or will we share it with—or be replaced by—something fundamentally different?"
+
+Key Concepts:
+
+1. Cognitive Revolution: The emergence of complex language and abstract thinking
+2. Agricultural Revolution: "History's Biggest Fraud"—made humanity more numerous but individually worse off
+3. Imagined Orders: Shared fictions that enable mass cooperation
+4. Intersubjective Reality: Things that exist because many people believe in them (money, nations, corporations)
+
+Relevance to AI:
+
+Harari's framework suggests AI systems are another layer of "imagined reality":
+- LLMs manipulate symbols representing human concepts
+- AI companies are themselves imagined entities
+- The value we assign to AI outputs is socially constructed
+- Future AI systems may create their own "myths" we cannot comprehend
+
+The question becomes: can AI participate in or create new forms of imagined reality that reshape human cooperation?

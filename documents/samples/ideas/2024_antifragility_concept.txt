@@ -1,0 +1,45 @@
+TYPE: Mental Model
+SOURCE: Antifragile by Nassim Taleb
+TITLE: Beyond Resilience - Antifragility
+AUTHOR: Me
+DATE: 2024-02-10
+
+The concept:
+
+FRAGILE: Breaks under stress (glass)
+ROBUST: Survives stress unchanged (rock)
+ANTIFRAGILE: Gets stronger from stress (muscle)
+
+Taleb's key insight: Some things benefit from volatility, randomness, stressors.
+
+Examples:
+
+ANTIFRAGILE:
+- Muscles (stress → growth)
+- Immune system (exposure → strength)
+- Evolution (pressure → adaptation)
+- Some careers (volatility → opportunity)
+
+FRAGILE:
+- Precise plans
+- Optimized systems with no slack
+- Reputations built on perfection
+- Single points of failure
+
+How to become antifragile:
+
+1. EMBRACE SMALL STRESSORS: Controlled difficulty strengthens.
+
+2. HAVE OPTIONS: Multiple paths = survival when one breaks.
+
+3. KEEP SLACK: Buffer room for unexpected challenges.
+
+4. LEARN FROM FAILURE: Each failure is information for improvement.
+
+My application:
+
+I want to build an antifragile life. Not just surviving stress but growing from it.
+
+Varied income sources. Diverse skills. Relationships across domains. Health habits that build resilience.
+
+Chaos becomes opportunity.

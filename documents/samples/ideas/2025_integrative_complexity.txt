@@ -1,0 +1,36 @@
+TYPE: Mental Model
+SOURCE: Psychology research + observation
+TITLE: Integrative Complexity - Holding Multiple Truths
+AUTHOR: Me
+DATE: 2025-01-20
+
+The concept:
+
+Integrative complexity: The ability to hold multiple perspectives and see how they might all be partially true.
+
+Low complexity: Black and white thinking. One right answer.
+High complexity: Multiple valid viewpoints that can coexist.
+
+Examples:
+
+LOW: "AI is good" or "AI is bad"
+HIGH: AI is a tool with potential for both benefit and harm, depending on development and deployment.
+
+LOW: "Work hard" or "Work smart"
+HIGH: Both are true at different times and for different tasks.
+
+Why this matters:
+
+Complex problems require complex thinking. Oversimplification misses nuance.
+
+Most interesting questions don't have single answers. Premature certainty is often wrong.
+
+The practice:
+
+When I'm certain, ask: "What's the opposing view? What might they see that I'm missing?"
+
+Steelman, don't strawman. Make the other side's best argument.
+
+Hold beliefs loosely. Update with new information.
+
+"The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function." - Fitzgerald

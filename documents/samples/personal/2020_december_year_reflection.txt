@@ -1,0 +1,23 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: 2020 Year End Reflection
+AUTHOR: Me
+DATE: 2020-12-31
+
+December 31, 2020.
+
+What a year. I don't even know where to begin.
+
+Skills gained: Sourdough baking (intermediate), machine learning basics (linear regression, basic neural nets), meditation practice (30+ day streak, but inconsistent), remote work survival.
+
+Books read: 12, mostly audiobooks during fake commutes. Favorites: "Deep Work" by Cal Newport, "The Pragmatic Programmer."
+
+Weight gained: 10 lbs. Gyms were closed. I walked around the block. Not enough.
+
+Mental health: Rocky. Dark weeks in October. The meditation helps. Talking to friends helps more.
+
+The year taught me I can adapt. That I'm more resilient than I thought. That baking bread is meditation. That screens are exhausting. That I need people.
+
+2021 goals: Lose the COVID weight. Build something meaningful with ML. Actually understand transformers. Hug my mom.
+
+Here's to a better year. It has to be better. Right?

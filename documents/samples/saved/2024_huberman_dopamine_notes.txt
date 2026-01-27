@@ -1,0 +1,34 @@
+TYPE: Saved Notes
+SOURCE: Huberman Lab Podcast
+TITLE: Dopamine Optimization
+AUTHOR: Me (notes from podcast)
+DATE: 2024-06-15
+
+Key concept:
+
+Dopamine isn't about pleasure. It's about motivation and pursuit. The anticipation, not the reward.
+
+The baseline:
+
+We have a dopamine baseline. Activities spike above baseline, then we drop below baseline (the comedown).
+
+Constant high-dopamine activities → baseline drops → normal activities feel unsatisfying.
+
+Practical implications:
+
+1. INTERMITTENT REWARDS: Don't reward every workout with dopamine hit (phone, food). Sometimes just do the thing.
+
+2. COLD EXPOSURE: Cold showers increase baseline dopamine for hours. Long-term benefits.
+
+3. AVOID LAYERING: Don't combine dopamine sources (music + pre-workout + caffeine + energy drink). Each individually keeps baseline stable.
+
+4. PROTECT BASELINE: Constant scrolling, gaming, porn → crashed baseline → anhedonia.
+
+My changes:
+
+- Gym without phone
+- Cold showers (2-3 min at end)
+- No social media first thing in morning
+- Caffeine delayed 90-120 min after waking
+
+The goal: Higher baseline, not higher peaks. Peaks create valleys.

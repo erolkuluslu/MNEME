@@ -1,0 +1,40 @@
+TYPE: Learning Note
+SOURCE: Research summaries
+TITLE: Why Your Brain Gets Overwhelmed
+AUTHOR: Me
+DATE: 2024-07-20
+
+The concept:
+
+Working memory is limited. Roughly 4 chunks at a time. Overload it and learning stops.
+
+Three types of cognitive load:
+
+1. INTRINSIC: Inherent complexity of the material. Can't reduce, only scaffold.
+
+2. EXTRANEOUS: Bad design, distractions, irrelevant information. Reduce this.
+
+3. GERMANE: Effort to build mental models. Increase this.
+
+Practical implications:
+
+LEARNING: Break complex topics into pieces. Don't overwhelm working memory.
+
+TEACHING: Remove extraneous info. Focus on the essential.
+
+DESIGN: Clear interfaces reduce cognitive load.
+
+ENVIRONMENT: Distractions add load. Minimize them.
+
+Why multitasking fails:
+
+Each context switch adds load. Partial attention on multiple things = none done well.
+
+Single-tasking is cognitive hygiene.
+
+My changes:
+
+- One browser tab at a time when learning
+- Clear desk, clear mind
+- New concepts in small doses
+- Build up complexity gradually

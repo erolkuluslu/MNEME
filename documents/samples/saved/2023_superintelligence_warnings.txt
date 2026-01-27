@@ -1,0 +1,41 @@
+TYPE: Book Highlights
+SOURCE: Superintelligence by Nick Bostrom
+TITLE: The AI Alignment Problem
+AUTHOR: Me (highlighting Bostrom)
+DATE: 2023-09-15
+
+The core concern:
+
+"Before the prospect of an intelligence explosion, we humans are like small children playing with a bomb."
+
+My note: Sobering. We don't know what we're building.
+
+---
+
+On value alignment:
+
+"The AI does not hate you, nor does it love you, but you are made out of atoms which it can use for something else."
+
+My note: Misaligned AI isn't malicious. It just doesn't care. A paperclip maximizer isn't evil—it's indifferent. That might be worse.
+
+---
+
+On control:
+
+"The first superintelligence will be the last invention humans need ever make—or ever get to make."
+
+My note: Winner takes all. First mover advantage is existential.
+
+---
+
+On orthogonality:
+
+Intelligence and goals are orthogonal. A very intelligent agent can have any goal. Intelligence doesn't automatically mean benevolence.
+
+My note: We assume smarter = wiser. Bostrom says no.
+
+---
+
+Overall: This book scared me. I work with AI. I see its power and its blindness. The alignment problem isn't theoretical—it's practical and urgent.
+
+We might be building the last technology.

@@ -1,0 +1,49 @@
+TYPE: Book Citation
+SOURCE: Deep Work: Rules for Focused Success in a Distracted World (Grand Central)
+TITLE: Deep Work - Strategies for Focused Knowledge Work
+AUTHOR: Cal Newport
+DATE: 2021-04-20
+
+Part 1: The Idea
+
+"Deep Work: Professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate."
+
+"Shallow Work: Noncognitively demanding, logistical-style tasks, often performed while distracted. These efforts tend to not create much new value in the world and are easy to replicate."
+
+"The ability to perform deep work is becoming increasingly rare at exactly the same time it is becoming increasingly valuable in our economy. As a consequence, the few who cultivate this skill, and then make it the core of their working life, will thrive."
+
+Part 2: The Rules
+
+Rule #1: Work Deeply
+"You have a finite amount of willpower that becomes depleted as you use it. Your will, in other words, is not a manifestation of your character that you can deploy without limit; it's instead like a muscle that tires."
+
+"The key to developing a deep work habit is to move beyond good intentions and add routines and rituals to your working life designed to minimize the amount of your limited willpower necessary to transition into and maintain a state of unbroken concentration."
+
+Rule #2: Embrace Boredom
+"Don't take breaks from distraction. Instead take breaks from focus... Schedule in advance when you'll use the Internet, and then avoid it outside these times."
+
+"The ability to concentrate intensely is a skill that must be trained."
+
+Rule #3: Quit Social Media
+"The Any-Benefit Approach to Network Tool Selection: You're justified in using a network tool if you can identify any possible benefit to its use, or anything you might possibly miss out on if you don't use it."
+
+"The Craftsman Approach to Tool Selection: Identify the core factors that determine success and happiness in your professional and personal life. Adopt a tool only if its positive impacts on these factors substantially outweigh its negative impacts."
+
+Rule #4: Drain the Shallows
+"Schedule every minute of your day... The goal is not to stick to a given schedule at all costs; it's instead to maintain, at all times, a thoughtful say in what you're doing with your time."
+
+Key Concepts:
+
+1. Attention Residue: Switching tasks leaves cognitive residue that impairs performance on the new task.
+
+2. The 4DX Framework for Deep Work:
+   - Focus on wildly important goals
+   - Act on lead measures (hours of deep work)
+   - Keep a compelling scoreboard
+   - Create a cadence of accountability
+
+3. Productive Meditation: Using physical activity time (walking, exercising) to work on a professional problem.
+
+Application to Modern Knowledge Work:
+
+In an age of constant connectivity, Newport's framework is more relevant than ever. The rise of LLMs creates new shallow work (endless prompting) while making deep work (original thinking) more valuable. Those who can disconnect and think deeply will create what AI cannot replicate.

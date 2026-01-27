@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Külüşlü"
+    given-names: "Erol"
+    affiliation: "Abdullah Gul University"
+  - family-names: "Hasdemir"
+    given-names: "Akif"
+    affiliation: "Abdullah Gul University"
+  - family-names: "Yakkan"
+    given-names: "Furkan"
+    affiliation: "Abdullah Gul University"
+  - family-names: "Bakal"
+    given-names: "Gökhan"
+    affiliation: "Abdullah Gul University"
+title: "MNEME: A Temporal Knowledge Graph RAG System"
+version: 1.0.0
+date-released: 2026-01-26
+license: AGPL-3.0

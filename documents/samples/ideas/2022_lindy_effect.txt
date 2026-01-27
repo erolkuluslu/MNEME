@@ -1,0 +1,33 @@
+TYPE: Mental Model
+SOURCE: Nassim Taleb
+TITLE: The Lindy Effect - Old Things Survive
+AUTHOR: Me
+DATE: 2022-11-10
+
+The concept:
+
+For non-perishable things (ideas, books, technologies), every additional period of survival implies longer remaining life expectancy.
+
+A book that's been in print 100 years will likely be in print another 100. A book published last year? Probably not.
+
+Why:
+
+Survival is information. Something that has lasted has proven useful enough to persist. Time filters quality.
+
+Applications:
+
+BOOKS TO READ: Choose classics. "Meditations" has survived 2000 years. The new bestseller probably won't.
+
+TOOLS TO LEARN: SQL is 50 years old. Still essential. This year's hot framework? Maybe gone in 5 years.
+
+ADVICE TO FOLLOW: Wisdom that's persisted across cultures and centuries is probably true. Be skeptical of novel life advice.
+
+HABITS TO BUILD: Exercise, sleep, relationships, reading. Humans have valued these for millennia.
+
+The trap:
+
+We're biased toward the new. Marketing promotes novelty. But new is untested.
+
+The old things that remain are the survivors. They've proven themselves.
+
+"If you have to choose between new and old, trust the old."

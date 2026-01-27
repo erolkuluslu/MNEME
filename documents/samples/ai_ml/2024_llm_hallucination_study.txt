@@ -1,0 +1,63 @@
+TYPE: Scientific Article
+SOURCE: Nature Machine Intelligence
+TITLE: Hallucination in Large Language Models: Causes, Detection, and Mitigation Strategies
+AUTHOR: Dr. Wei Liu, Dr. Sarah Kim, Dr. Marcus Berg
+DATE: 2024-08-22
+
+Abstract: This comprehensive study analyzes hallucination patterns in large language models (LLMs) across 50,000 generated responses. We identify three primary causes: knowledge gaps, over-generalization from training data, and attention distribution failures. Our proposed detection framework achieves 87% accuracy in identifying hallucinated content.
+
+1. Introduction
+
+Hallucination—the generation of fluent but factually incorrect content—represents one of the most significant challenges in deploying LLMs for knowledge-intensive tasks. Unlike earlier neural network errors that were obviously wrong, LLM hallucinations are insidious: they read convincingly and are difficult to detect without external verification.
+
+2. Taxonomy of Hallucinations
+
+2.1 Intrinsic Hallucinations
+- Contradicting the source material
+- Self-contradictions within responses
+- Logical inconsistencies
+
+2.2 Extrinsic Hallucinations  
+- Fabricated facts not in training data
+- Invented citations and references
+- Made-up entities (people, places, events)
+
+3. Experimental Setup
+
+We evaluated GPT-4, Claude, and Llama-2 across:
+- Factual QA (Natural Questions, TriviaQA)
+- Summarization (CNN/DailyMail)
+- Knowledge-grounded dialogue (Wizard of Wikipedia)
+
+4. Key Findings
+
+4.1 Hallucination Rates by Task
+| Task | GPT-4 | Claude | Llama-2 |
+|------|-------|--------|---------|
+| Factual QA | 8.3% | 7.1% | 15.2% |
+| Summarization | 12.1% | 9.8% | 18.7% |
+| Dialogue | 23.4% | 19.2% | 31.5% |
+
+4.2 Contributing Factors
+- Lower confidence scores correlate with hallucination (r=0.67)
+- Questions about post-2021 events show 3x higher hallucination rates
+- Multi-hop reasoning increases hallucination probability exponentially
+
+5. Mitigation Strategies
+
+5.1 Retrieval Augmentation
+RAG reduces hallucination by 43% on knowledge-intensive tasks by grounding generation in retrieved documents.
+
+5.2 Chain-of-Thought Prompting
+Explicit reasoning steps reduce logical inconsistencies by 28%.
+
+5.3 Self-Consistency Checking
+Generating multiple responses and checking agreement catches 34% of hallucinations.
+
+6. Conclusion
+
+Hallucination remains an open problem. While mitigation strategies help, they do not eliminate the issue. Users must remain vigilant and implement verification systems for high-stakes applications.
+
+References:
+[1] Ji, Z., et al. (2023). Survey of Hallucination in Natural Language Generation.
+[2] Lewis, P., et al. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.

@@ -1,0 +1,23 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: ChatGPT Changed Everything
+AUTHOR: Me
+DATE: 2023-01-15
+
+January 15, 2023.
+
+I've been using ChatGPT since December. It's fundamentally different from anything I've seen.
+
+Yesterday, I needed a regex to parse log files. Normally: 30 minutes on Stack Overflow, trying patterns, getting frustrated. I described the problem to ChatGPT. Working solution in 2 minutes.
+
+It writes boilerplate. Explains error messages. Suggests refactors. Like having a junior developer who knows everything but needs guidance.
+
+But here's the thing: it makes mistakes. Confidently wrong answers. It hallucinated a library method that doesn't exist. If I'd trusted blindly, broken code.
+
+The skill now is not "how to code" but "how to prompt" and "how to verify." I'm becoming an editor, not a writer. A conductor, not a musician.
+
+This changes everything. The people who learn to use it will outcompete those who don't. The barrier to entry dropped overnight.
+
+I'm spending my saved time on architecture and design. The stuff AI can't (yet) do well.
+
+Adapt or die. I choose to adapt.

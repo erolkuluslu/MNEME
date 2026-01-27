@@ -1,0 +1,29 @@
+TYPE: Book Notes
+SOURCE: Never Split the Difference by Chris Voss
+TITLE: Negotiation Tactics from FBI Hostage Negotiator
+AUTHOR: Me
+DATE: 2024-08-10
+
+Key techniques:
+
+MIRRORING: Repeat the last 3 words they said. Encourages them to elaborate.
+
+LABELING: "It sounds like..." / "It seems like..." Name their emotion. Defuses it.
+
+CALIBRATED QUESTIONS: "How am I supposed to do that?" / "What's the biggest challenge you face?" Open questions that feel collaborative.
+
+TACTICAL EMPATHY: Understand their perspective, even if you don't agree. Not sympathy—strategic understanding.
+
+"NO" IS VALUABLE: Get them to say no. It makes them feel safe and in control. "Is this a bad time?" is better than "Is this a good time?"
+
+"THAT'S RIGHT": The goal is to get them to say "that's right" about your understanding of their position. Not "you're right" (which can be dismissive).
+
+My application:
+
+These work in everyday conversations, not just negotiations.
+
+With Maya: Labeling emotions helps. "It seems like you're frustrated about..." validates before problem-solving.
+
+At work: Calibrated questions in disagreements. "How would you see this working?" instead of arguing.
+
+The meta-insight: Negotiation is emotional, not just rational. Address emotions first.

@@ -1,0 +1,31 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: 2023 Year in Review - Best Year Yet
+AUTHOR: Me
+DATE: 2023-12-31
+
+December 31, 2023.
+
+The best year of my thirties. Maybe of my life.
+
+RELATIONSHIP: Maya. Enough said. Four months but I can picture a future.
+
+TRAVEL: Japan. The trip that changed my perspective.
+
+WORK: AI is everywhere. Pivoted from "knowing how to code" to "knowing how to orchestrate AI." Prompt engineering, LangChain, agents.
+
+FITNESS: Deadlift: 385. Bench: 245. Pull-ups: 12.
+
+BREAD: Autopilot now. Experimenting with focaccia and pizza.
+
+READING: 26 books. Favorites: "The Way of Zen" by Alan Watts, "Superintelligence" by Bostrom.
+
+MENTAL: Started therapy in March. Best investment of the year.
+
+Goals for 2024:
+- Take Maya to Japan
+- Hit 405 deadlift
+- Build an AI side project
+- Maybe move in together?
+
+What a year.

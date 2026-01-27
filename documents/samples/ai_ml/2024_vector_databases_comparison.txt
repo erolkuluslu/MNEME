@@ -1,0 +1,116 @@
+TYPE: Tech Blog
+SOURCE: https://www.pinecone.io/learn/vector-database-comparison-2024
+TITLE: Vector Database Showdown 2024: Pinecone vs Weaviate vs Chroma vs Qdrant
+AUTHOR: James Briggs, Pinecone Developer Advocate
+DATE: 2024-06-18
+
+## Why Vector Databases Matter
+
+RAG (Retrieval-Augmented Generation) has become the default architecture for production LLM applications. At its heart: vector databases that enable semantic search over embeddings.
+
+## The Contenders
+
+### Pinecone
+- **Type**: Managed cloud service
+- **Strengths**: Zero ops, horizontal scaling, hybrid search
+- **Weaknesses**: Cost at scale, vendor lock-in
+- **Best for**: Production workloads, teams without infra expertise
+
+### Weaviate
+- **Type**: Open-source, self-hosted or cloud
+- **Strengths**: GraphQL API, modularity, multi-tenancy
+- **Weaknesses**: Resource-heavy, complex configuration
+- **Best for**: Complex use cases, hybrid search requirements
+
+### Chroma
+- **Type**: Open-source, embedded
+- **Strengths**: Simple API, local development, Python-native
+- **Weaknesses**: Limited scale, fewer features
+- **Best for**: Prototyping, small projects, local RAG
+
+### Qdrant
+- **Type**: Open-source, Rust-based
+- **Strengths**: Performance, filtering, payload storage
+- **Weaknesses**: Smaller ecosystem
+- **Best for**: Performance-critical applications
+
+### pgvector
+- **Type**: PostgreSQL extension
+- **Strengths**: Use existing Postgres, SQL familiar
+- **Weaknesses**: Performance ceiling, no native filtering
+- **Best for**: Teams already using Postgres, simpler use cases
+
+## Benchmark Results (1M vectors, 768 dimensions)
+
+| Database | QPS (Queries/sec) | P99 Latency | Recall@10 |
+|----------|------------------|-------------|-----------|
+| Pinecone | 850 | 12ms | 0.98 |
+| Qdrant | 1200 | 8ms | 0.97 |
+| Weaviate | 650 | 18ms | 0.96 |
+| Chroma | 200 | 45ms | 0.95 |
+| pgvector | 150 | 65ms | 0.93 |
+
+*Note: Benchmarks vary by workload, hardware, and configuration*
+
+## Feature Matrix
+
+| Feature | Pinecone | Weaviate | Chroma | Qdrant |
+|---------|----------|----------|--------|--------|
+| Hybrid Search | ✅ | ✅ | ❌ | ✅ |
+| Metadata Filtering | ✅ | ✅ | ✅ | ✅ |
+| Multi-tenancy | ✅ | ✅ | ❌ | ✅ |
+| RBAC | ✅ | ✅ | ❌ | ✅ |
+| Managed Cloud | ✅ | ✅ | ✅ | ✅ |
+| Self-hosted | ❌ | ✅ | ✅ | ✅ |
+
+## Choosing the Right Database
+
+### Start with Chroma if:
+- You're prototyping or learning
+- Dataset < 100K vectors
+- Running locally
+
+### Choose Qdrant if:
+- Performance is critical
+- You want open-source flexibility
+- Need advanced filtering
+
+### Choose Pinecone if:
+- You want managed infrastructure
+- Production scale requirements
+- Team is resource-constrained
+
+### Choose Weaviate if:
+- Complex, multi-modal use cases
+- Need GraphQL interface
+- Enterprise features required
+
+## Implementation Tips
+
+### Chunking Strategy
+Vector DB performance depends on how you chunk documents:
+- Smaller chunks = better precision, more queries needed
+- Larger chunks = more context, potential noise
+- Sweet spot: 256-512 tokens with overlap
+
+### Embedding Model Selection
+- OpenAI ada-002: Good general purpose
+- Cohere embed-v3: Excellent for retrieval
+- E5/BGE: Open-source alternatives
+- Always evaluate on YOUR data
+
+### Indexing Configuration
+- HNSW: Best quality/speed tradeoff
+- IVF: Better for very large datasets
+- Flat: Perfect recall, slow at scale
+
+## Cost Analysis (1M vectors, 768 dims)
+
+| Service | Monthly Cost | Notes |
+|---------|-------------|-------|
+| Pinecone (Starter) | $70 | Serverless, pay per query |
+| Qdrant Cloud | $30 | 2 replicas |
+| Weaviate Cloud | $25 | Base tier |
+| Self-hosted | $50-200 | Depends on infrastructure |
+
+**Bottom Line**: There's no universally "best" vector database. The right choice depends on your scale, budget, team expertise, and specific requirements.

@@ -1,0 +1,36 @@
+TYPE: Mental Model
+SOURCE: Vilfredo Pareto / everywhere
+TITLE: The 80/20 Principle
+AUTHOR: Me
+DATE: 2022-08-20
+
+The pattern:
+
+80% of results come from 20% of causes.
+
+Not exact, but the principle: Inputs are unequal. Focus on the vital few.
+
+Examples:
+
+- 20% of customers = 80% of revenue
+- 20% of bugs = 80% of crashes
+- 20% of exercises = 80% of gains
+- 20% of relationships = 80% of joy
+
+The implication:
+
+Identify the high-impact 20%. Protect it. Double down.
+
+Identify the low-impact 80%. Ruthlessly cut or automate.
+
+Where I've applied:
+
+WORK: What 20% of my tasks produce 80% of my value? Focus there.
+
+FITNESS: Compound movements (squat, deadlift, bench) = most of the results.
+
+READING: A few great books, re-read, beats many mediocre books read once.
+
+The trap:
+
+The 80% still matters sometimes. Don't neglect hygiene activities. But don't confuse them with high-value work.

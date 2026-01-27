@@ -1,0 +1,37 @@
+TYPE: Mental Model
+SOURCE: Nassim Taleb / Antifragile
+TITLE: Via Negativa - Subtraction Over Addition
+AUTHOR: Me
+DATE: 2021-09-20
+
+The concept:
+
+Improvement often comes from removal, not addition.
+
+Health improves by removing bad habits, not adding supplements.
+Writing improves by removing fluff, not adding words.
+Life improves by removing toxic relationships, not adding acquaintances.
+
+Taleb's insight:
+
+We know more about what's wrong than what's right. It's easier to identify and remove negatives than to identify and add positives.
+
+Smoking is definitely bad. No supplement is definitely good.
+
+Applications:
+
+DIET: Remove processed food before adding superfoods.
+
+PRODUCTIVITY: Remove distractions before adding tools.
+
+CODE: Remove complexity before adding features.
+
+SCHEDULE: Remove obligations before adding activities.
+
+The counter-instinct:
+
+We're biased toward addition. "What should I add?" feels productive.
+
+But the cluttered life needs pruning, not more stuff.
+
+"Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away." - Saint-Exupéry

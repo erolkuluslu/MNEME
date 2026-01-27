@@ -1,0 +1,17 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Missing Kyoto - Reflections on Craft and Technology
+AUTHOR: Me
+DATE: 2025-03-03
+
+March 3, 2025.
+
+I miss Kyoto. I was looking at photos from my trip in 2023. The bamboo forest. The Golden Pavilion. The peace. I'm planning another trip. I need that "Kodawari" energy again.
+
+In a world of AI-generated content, where everything is fast and cheap, I find myself craving things that are slow and human. Hand-made pottery. Handwritten letters. A perfectly brewed cup of tea. The Japanese tea ceremony is the antithesis of the AI age. It is inefficient. It is slow. It is ritualistic. And that is why it is valuable.
+
+I want to build software that feels like a tea ceremony. Intentional. Graceful. Not just a utility, but an experience. I think we are going to see a bifurcation. Cheap, fast, AI-generated slop for the masses. And bespoke, human-crafted, high-quality experiences for those who care. I know which side I want to be on.
+
+Reading Sun Tzu lately: "Know yourself, know your enemy." In this context, the "enemy" isn't other people—it's mediocrity. It's the temptation to take shortcuts. The Japanese masters spent decades perfecting their craft. A swordsmith, a tea master, a potter. They didn't optimize for speed. They optimized for depth.
+
+That's what I want. Depth. Mastery. The kind of excellence that can't be prompted into existence.

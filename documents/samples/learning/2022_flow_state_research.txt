@@ -1,0 +1,32 @@
+TYPE: Learning Note
+SOURCE: Flow by Mihaly Csikszentmihalyi
+TITLE: Understanding Flow States
+AUTHOR: Me
+DATE: 2022-02-15
+
+What is flow?
+
+That state of complete absorption where time disappears. Athletes call it "the zone." When I'm deep in coding and suddenly it's 3 hours later.
+
+Conditions for flow:
+
+1. CLEAR GOALS: Know what you're trying to do
+2. IMMEDIATE FEEDBACK: Know if you're succeeding
+3. CHALLENGE-SKILL BALANCE: Not too easy (boredom), not too hard (anxiety)
+
+The sweet spot: Challenge slightly exceeds current skill. You're stretched but not overwhelmed.
+
+Where I experience flow:
+- Coding complex features
+- Playing guitar (when I know the song)
+- Baking bread (shaping, especially)
+- Rock climbing
+
+Where I don't:
+- Email
+- Meetings
+- Social media
+
+Insight: Flow feels like happiness, but it's actually absorption. You're too engaged to evaluate how you feel. Happiness is assessed afterward.
+
+Life design question: How can I structure more flow opportunities?

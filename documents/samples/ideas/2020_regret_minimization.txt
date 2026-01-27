@@ -1,0 +1,34 @@
+TYPE: Mental Model
+SOURCE: Jeff Bezos interview
+TITLE: Regret Minimization Framework
+AUTHOR: Me
+DATE: 2020-08-10
+
+Bezos's framework:
+
+"I wanted to project myself forward to age 80 and say, 'Okay, now I'm looking back on my life. I want to have minimized the number of regrets I have.'"
+
+The question:
+
+When 80, will I regret NOT doing this?
+
+Usually, we regret what we didn't do more than what we did.
+
+How I use it:
+
+BIG DECISIONS: Move cities? Start project? End relationship? Project forward.
+
+The asymmetry:
+
+Regret of commission (did something, failed): Fades with time
+Regret of omission (didn't try): Grows with time
+
+"What if?" haunts longer than "That didn't work."
+
+My application:
+
+Japan trip felt scary. Regret minimization: 80-year-old me would definitely regret never going.
+
+Maya felt fast. Regret minimization: 80-year-old me would regret not pursuing love when I found it.
+
+The bias toward action: When uncertain, do. You can recover from failure. You can't recover time.

@@ -1,0 +1,37 @@
+TYPE: Mental Model
+SOURCE: Warren Buffett / Charlie Munger
+TITLE: Know Your Circle of Competence
+AUTHOR: Me
+DATE: 2021-03-05
+
+The concept:
+
+Everyone has a circle of competence—areas where they have real expertise.
+
+The key: Know where your circle ends.
+
+Buffett: "What counts for most people in investing is not how much they know, but rather how realistically they define what they don't know."
+
+Why this matters:
+
+Outside your circle, you're a novice pretending to be an expert. Dangerous.
+
+Inside your circle, you have edge. Advantage.
+
+My circles:
+
+INSIDE: Software engineering, sourdough baking, strength training, Stoicism basics
+
+EDGE: Machine learning (learning, not expert), personal finance basics
+
+OUTSIDE: Investing specific stocks, medicine, law, most other domains
+
+The application:
+
+Stay inside the circle for high-stakes decisions.
+
+Expand the circle deliberately over time.
+
+Acknowledge "I don't know" when outside.
+
+The trap: Competence in one area creates overconfidence in others. Smart people fail here constantly.

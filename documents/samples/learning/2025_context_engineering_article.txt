@@ -1,0 +1,35 @@
+TYPE: Learning Note
+SOURCE: Various AI blogs + personal experimentation
+TITLE: Context Engineering - The New Skill
+AUTHOR: Me
+DATE: 2025-04-01
+
+What I've learned about working with AI:
+
+It's not just prompting—it's context engineering.
+
+What information to include, how to structure it, what to omit. The context shapes the output.
+
+Components of good context:
+
+1. SYSTEM INSTRUCTIONS: Who is the AI in this interaction? What constraints?
+
+2. RELEVANT INFORMATION: Background the AI needs. Not everything—relevant things.
+
+3. EXAMPLES: Show, don't tell. Demonstrate the format you want.
+
+4. CLEAR REQUEST: What specifically do you want?
+
+What I've noticed:
+
+- Important information should be at the start and end. Middle gets less attention.
+- Structure matters. Clear sections, headers, delineation.
+- Less is often more. Irrelevant context confuses.
+
+The meta-insight:
+
+As AI gets more powerful, the skill shifts from "doing things" to "orchestrating AI doing things."
+
+Taste, judgment, editorial skill, knowing what questions to ask—these become more valuable, not less.
+
+Context engineering is how humans stay relevant in an AI world.

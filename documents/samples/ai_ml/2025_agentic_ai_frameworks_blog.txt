@@ -1,0 +1,126 @@
+TYPE: Tech Blog
+SOURCE: https://www.langchain.dev/blog/agentic-ai-frameworks-2025
+TITLE: Agentic AI Frameworks in 2025: From Chatbots to Autonomous Systems
+AUTHOR: Harrison Chase, Anthropic Engineering Team
+DATE: 2025-01-20
+
+## The Evolution from Chatbots to Agents
+
+2024 marked the inflection point. We moved from LLMs as "fancy autocomplete" to systems that plan, execute, and iterate. The key insight: language models aren't just text generators—they're reasoning engines that can orchestrate complex workflows.
+
+## What Makes an AI "Agentic"?
+
+An agentic system exhibits:
+1. **Goal-directed behavior**: Pursues objectives across multiple steps
+2. **Tool use**: Interacts with external systems (APIs, databases, code execution)
+3. **Memory**: Maintains context across interactions
+4. **Reflection**: Evaluates own outputs and self-corrects
+5. **Planning**: Decomposes complex tasks into subtasks
+
+## Framework Comparison 2025
+
+### LangChain / LangGraph
+- Most mature ecosystem
+- Graph-based workflow definition
+- Strong tool integration
+- Best for: Production-ready applications
+
+### AutoGen (Microsoft)
+- Multi-agent conversations
+- Code execution built-in
+- Research-oriented
+- Best for: Complex collaborative tasks
+
+### CrewAI
+- Role-based agent design
+- Sequential and hierarchical workflows
+- Simple API
+- Best for: Team-simulation scenarios
+
+### DSPy
+- Declarative prompt optimization
+- Automatic few-shot learning
+- Best for: Reliability-critical applications
+
+## Architecture Patterns
+
+### ReAct (Reasoning + Acting)
+```
+Thought: I need to find the current stock price
+Action: search_tool("AAPL stock price")
+Observation: AAPL is trading at $178.50
+Thought: Now I can answer the user's question
+```
+
+### Plan-and-Execute
+1. Planner creates high-level steps
+2. Executor handles each step
+3. Re-planner adjusts based on results
+
+### Multi-Agent Collaboration
+```
+User Request → Router Agent
+                    ↓
+    ┌───────────────┼───────────────┐
+    ↓               ↓               ↓
+Research Agent   Code Agent   Writing Agent
+    └───────────────┼───────────────┘
+                    ↓
+            Synthesis Agent
+                    ↓
+            Final Response
+```
+
+## Memory Systems
+
+### Short-term (Working Memory)
+- Conversation buffer
+- Sliding window (last N messages)
+- Summary memory (compress old context)
+
+### Long-term Memory
+- Vector databases (semantic search)
+- Entity memory (track mentioned entities)
+- Episodic memory (remember past interactions)
+
+## Tool Integration Best Practices
+
+1. **Clear schemas**: Well-defined input/output types
+2. **Error handling**: Graceful degradation when tools fail
+3. **Rate limiting**: Prevent runaway API costs
+4. **Sandboxing**: Isolate code execution environments
+
+## The Alignment Challenge
+
+Agentic systems amplify alignment concerns:
+- **Goal specification**: Underspecified goals lead to unexpected behaviors
+- **Corrigibility**: Agents must remain interruptible
+- **Transparency**: Users should understand agent reasoning
+- **Side effects**: Actions have real-world consequences
+
+## Production Considerations
+
+### Observability
+- Log all agent steps
+- Track token usage and latency
+- Monitor for loops and stuck states
+
+### Cost Management
+- Set hard token limits
+- Cache repeated queries
+- Use smaller models for routing
+
+### Human-in-the-loop
+- Approval gates for sensitive actions
+- Escalation paths when confidence is low
+- Clear handoff protocols
+
+## What's Next?
+
+2025 trends to watch:
+- **Computer use agents**: Direct UI interaction
+- **Persistent agents**: Always-on systems with long-running goals
+- **Federated agents**: Agents collaborating across organizations
+- **Self-improving agents**: Agents that optimize their own prompts/tools
+
+The future isn't chatbots that answer questions—it's AI systems that work alongside humans as capable collaborators.

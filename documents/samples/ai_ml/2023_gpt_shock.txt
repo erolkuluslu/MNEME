@@ -1,0 +1,17 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: The ChatGPT Revolution - Everything Has Changed
+AUTHOR: Me
+DATE: 2023-03-15
+
+March 15, 2023.
+
+The release of ChatGPT has completely changed how I code. It is fundamentally distinct from the CNNs I studied back in 2020. This isn't just pattern matching images; it's reasoning—or at least mimicking reasoning—in text. I fed it a bug that would have taken me hours to find, and it solved it in seconds.
+
+It feels like magic, but I know it's just a Transformer architecture. Attention mechanisms are all you need, apparently. I'm worried about my job, but also excited. The barrier to entry has dropped. I can build things now that I couldn't dream of three years ago. But the 'black box' problem is even worse now. Billions of parameters. No one knows what's happening inside.
+
+I remember my frustration with CNNs, thinking they were opaque. This is opacity on a planetary scale. We are talking to an alien intelligence that we built, but don't understand. It hallucinates. It lies with confidence. And yet, it's so useful. I find myself using it for everything. Summarizing emails, writing boilerplate, even brainstorming ideas. It's like having a brilliant but sometimes drunk intern.
+
+The shift from "building models" to "prompting models" is jarring. I spent years learning PyTorch, and now English is the hottest programming language. Is my expertise obsolete? Or does it just evolve? I need to understand how to chain these prompts. LangChain seems interesting. The idea of giving the LLM tools... memory... that's the next step. If it can remember, if it can act, then we are really onto something. But the ethical implications are keeping me up at night. We are opening Pandora's box.
+
+I tried to get it to write a poem about sourdough today, just to see if it could capture the nuance. It did a decent job, but it lacked soul. It used all the right words—fermentation, crust, crumb—but it felt hollow. It knows the statistics of bread, but it has never tasted it. That's the difference, I guess. Qualia. It has syntax, but no semantics. Or maybe I'm just comforting myself. Maybe we are just stochastic parrots too. But I refuse to believe that. There is a spark in us that this machine lacks. For now.

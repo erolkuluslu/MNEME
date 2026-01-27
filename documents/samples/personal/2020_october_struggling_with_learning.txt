@@ -1,0 +1,19 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Struggling with Deep Learning Concepts
+AUTHOR: Me
+DATE: 2020-10-12
+
+October 12, 2020.
+
+I am struggling immensely with understanding neural networks today. Deep learning feels like a complete black box. I understand the math theoretically—backpropagation, gradient descent, the chain rule—but when I look at the weights after training, it's just noise.
+
+Spent four hours debugging a shape mismatch error. Four hours for one missing layer. The frustration is real.
+
+The loss function goes down during training but do I actually know why? I feel like I'm turning knobs until something works. It's alchemy, not science.
+
+I tried to explain CNNs to my friend today. "The network detects edges, then shapes, then objects." But when the model misclassified a cat as a toaster, I felt foolish. Where's the "understanding" in a matrix multiplication?
+
+But I keep going. There's something here. I can feel it. I just can't see it yet.
+
+Note to future self: This frustration is part of learning. Don't give up.

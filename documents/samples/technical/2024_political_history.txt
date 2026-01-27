@@ -1,0 +1,19 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Learning from the Peloponnesian War
+AUTHOR: Me
+DATE: 2024-04-02
+
+April 2, 2024.
+
+Reading about the history of the Peloponnesian War. Thucydides. The Melian Dialogue is chilling. "The strong do what they can and the weak suffer what they must." Realpolitik.
+
+It's amazing how little human nature has changed in 2500 years. We are still driven by fear, honor, and interest. The trap of Thucydides. When a rising power threatens a ruling power, war is almost inevitable.
+
+I'm also looking into the history of voting systems. First Past the Post vs Ranked Choice. Arrow's Impossibility Theorem states that no rank-order voting system can be designed that always satisfies three "fairness" criteria simultaneously. It's a mathematical proof that democracy is hard.
+
+Reading history is humbling. Every generation thinks it's special. Every generation faces existential challenges. Most survive. Some don't. The wheel keeps turning.
+
+The Peloponnesian War destroyed Athenian democracy. A 27-year conflict that exhausted both sides. Pride and miscalculation. The Sicilian Expedition was their Iraq War—a hubristic overreach that doomed them.
+
+Are we making similar mistakes with AI? Moving too fast? Overconfident in our ability to control what we create? History doesn't repeat, but it rhymes.

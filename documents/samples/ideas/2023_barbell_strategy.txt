@@ -1,0 +1,34 @@
+TYPE: Mental Model
+SOURCE: Nassim Taleb
+TITLE: The Barbell Strategy
+AUTHOR: Me
+DATE: 2023-07-20
+
+The concept:
+
+Instead of moderate risk everywhere, combine extreme safety with extreme risk.
+
+Like a barbell: weights on both ends, nothing in the middle.
+
+Financial example:
+
+DON'T: 100% medium-risk investments
+DO: 90% very safe (bonds) + 10% very risky (startups/crypto)
+
+The middle is the danger zone. Moderate risk often has hidden fragility.
+
+Life application:
+
+CAREER: Stable job (safe) + ambitious side projects (risky). Not a "kind of" stable job with "some" ambition.
+
+LEARNING: Master fundamentals deeply (safe) + experiment wildly (risky). Not superficial knowledge of many things.
+
+SOCIAL: Deep relationships with few (safe) + meet many strangers (risky). Not many superficial acquaintances.
+
+Why it works:
+
+The safe side protects you from ruin. The risky side captures upside. The middle does neither.
+
+Key: The safe side must be truly safe. Then you can afford to take real risks on the other side.
+
+Maximum upside without exposure to ruin.

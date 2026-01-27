@@ -1,0 +1,30 @@
+TYPE: Learning Note
+SOURCE: Multiple sources
+TITLE: The Feynman Technique for Learning
+AUTHOR: Me
+DATE: 2020-10-01
+
+Richard Feynman's learning method:
+
+1. STUDY: Learn the concept
+2. TEACH: Explain it like you're teaching a child
+3. IDENTIFY GAPS: Where did you struggle to explain?
+4. SIMPLIFY: Go back, fill gaps, simplify further
+
+Why it works:
+
+Simple explanations require deep understanding. Jargon hides confusion.
+
+If you can't explain it simply, you don't understand it well enough.
+
+How I use it:
+
+After learning something new, I write an explanation in my notes as if teaching someone.
+
+Example: Instead of "Gradient descent minimizes the loss function," I write "It's like walking downhill blindfolded—you feel which way is down and take small steps."
+
+The test: Could a smart 12-year-old understand this?
+
+Where this helped:
+
+Neural networks finally clicked when I tried to explain them to my mom. My confused attempts revealed my own confusion.

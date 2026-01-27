@@ -1,0 +1,38 @@
+TYPE: Book Notes
+SOURCE: Building a Second Brain by Tiago Forte
+TITLE: Personal Knowledge Management System
+AUTHOR: Me
+DATE: 2024-01-15
+
+Core concept: Your brain is for having ideas, not storing them. Offload to a trusted system.
+
+The PARA method:
+
+P - Projects: Active, deadline-driven
+A - Areas: Ongoing responsibilities (health, finances, career)
+R - Resources: Topics of interest
+A - Archives: Completed/inactive
+
+The capture habit:
+
+Don't trust your memory. When something resonates, capture it immediately. Process later.
+
+Progressive summarization:
+
+1. Bold important passages
+2. Highlight within bold
+3. Executive summary
+4. Remix into new ideas
+
+The insight: Every time you touch a note, distill it further. Notes should get more valuable over time, not less.
+
+What I'm implementing:
+
+1. Single capture tool (Notion for me)
+2. Weekly review to process inbox
+3. Project-centric organization
+4. Tag for future self
+
+Quote: "Your mind is for having ideas, not holding them."
+
+This connects to my AI project. RAG over my second brain = searchable, synthesizable knowledge.

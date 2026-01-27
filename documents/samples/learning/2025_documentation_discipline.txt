@@ -1,0 +1,38 @@
+TYPE: Learning Note
+SOURCE: Work experience
+TITLE: Why Documentation Matters
+AUTHOR: Me
+DATE: 2025-02-28
+
+The lesson:
+
+The best code in the world is useless if no one can understand it.
+
+What documentation does:
+
+1. FOR OTHERS: Lets them use your work
+
+2. FOR FUTURE YOU: You will forget why you did things
+
+3. FOR THINKING: Writing doc clarifies the system
+
+When to document:
+
+- As you build (not after)
+- When you figure something out
+- When you decide something (include the why)
+
+What to document:
+
+- Why, not just what
+- Examples, not just reference
+- Edge cases and gotchas
+- How to get started
+
+The discipline:
+
+Documentation feels like overhead. It's not. It's multiplier.
+
+Undocumented work dies when you leave. Documented work lives on.
+
+My rule: Nothing is done until it's documented.

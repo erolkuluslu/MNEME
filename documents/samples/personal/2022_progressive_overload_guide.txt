@@ -1,0 +1,78 @@
+TYPE: Tech Blog
+SOURCE: https://strengthlevel.com/articles/progressive-overload-complete-guide
+TITLE: The Complete Guide to Progressive Overload: Science-Based Hypertrophy Principles
+AUTHOR: Dr. Mike Israetel, Dr. James Krieger
+DATE: 2022-08-25
+
+## What is Progressive Overload?
+
+Progressive overload is the gradual increase of stress placed upon the musculoskeletal system during training. First articulated by Thomas Delorme in the 1940s while rehabilitating WWII soldiers, it remains the foundational principle of all strength training.
+
+**The Core Principle**: To continue making gains, you must progressively increase the demands on your body. Without progressive overload, your body has no reason to adapt.
+
+## The Science Behind Muscle Growth
+
+Mechanical tension triggers mechanotransduction—the conversion of mechanical signals into biochemical responses. This activates mTOR (mammalian target of rapamycin), initiating muscle protein synthesis.
+
+Key variables you can manipulate:
+1. **Weight (Load)**: Most straightforward—add more plates
+2. **Volume**: Total sets × reps × weight
+3. **Frequency**: Training sessions per muscle group per week
+4. **Intensity**: Percentage of 1RM or proximity to failure
+5. **Time Under Tension**: Duration of eccentric/concentric phases
+6. **Range of Motion**: Full ROM provides superior stimulus
+
+## Practical Implementation
+
+### The Double Progression Method
+
+This is the gold standard for intermediate lifters:
+
+1. Choose a rep range (e.g., 8-12 reps)
+2. Use a weight where you hit the bottom of the range
+3. Add reps each session until you hit the top of the range
+4. Increase weight by 5-10% and restart at bottom of range
+
+Example:
+- Week 1: 100 lbs × 8 reps
+- Week 2: 100 lbs × 9 reps  
+- Week 3: 100 lbs × 11 reps
+- Week 4: 100 lbs × 12 reps
+- Week 5: 110 lbs × 8 reps (progression!)
+
+### Rate of Progression by Training Age
+
+| Training Experience | Expected Monthly Strength Gain |
+|--------------------|-------------------------------|
+| Beginner (<1 year) | 5-10% increase per month |
+| Intermediate (1-3 years) | 1-3% increase per month |
+| Advanced (3+ years) | <1% increase per month |
+
+## Common Mistakes
+
+1. **Too much, too fast**: Increasing weight before establishing proper form leads to injury
+2. **Ignoring deloads**: Accumulated fatigue requires periodic lighter weeks
+3. **Chasing the wrong metrics**: Adding reps with sloppy form isn't progress
+4. **Program hopping**: Consistency beats novelty
+
+## The Mind-Muscle Connection
+
+Recent research (Schoenfeld et al., 2018) demonstrates that focusing on the target muscle during exercise increases hypertrophy. This "internal focus" enhances motor unit recruitment.
+
+## Recovery: The Forgotten Variable
+
+You don't grow in the gym—you grow during recovery:
+- **Sleep**: 7-9 hours; growth hormone peaks during deep sleep
+- **Nutrition**: 1.6-2.2g protein per kg bodyweight
+- **Stress management**: Cortisol impairs muscle protein synthesis
+
+## Programming for Long-Term Progress
+
+A well-designed program includes:
+- Mesocycles (4-6 weeks of focused training)
+- Deload weeks (reduced volume/intensity)
+- Periodization (varying focus across training phases)
+
+Progressive overload isn't linear forever. Expect waves—breakthrough, plateau, consolidation, breakthrough. Trust the process.
+
+**Bottom Line**: The body adapts to what you demand of it. Keep demanding more, intelligently, and adaptation follows.

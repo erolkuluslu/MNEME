@@ -1,0 +1,35 @@
+TYPE: Mental Model
+SOURCE: Steven Johnson / Where Good Ideas Come From
+TITLE: The Adjacent Possible
+AUTHOR: Me
+DATE: 2022-06-10
+
+The concept:
+
+Innovation happens in the "adjacent possible"—what's one step from current reality.
+
+You can't jump three steps. But you can step into the adjacent space, which opens new adjacent spaces.
+
+Why it matters:
+
+Ideas "ahead of their time" fail. They're too far from the adjacent possible.
+
+YouTube couldn't exist before broadband. The iPhone couldn't exist before touchscreens, batteries, and wireless networks.
+
+Application:
+
+DON'T: Try to build the final vision immediately.
+
+DO: Build what's possible now. It opens new possibilities.
+
+Career version:
+
+You can't become anything from where you are. But you can become what's adjacent.
+
+Each step expands what's adjacent.
+
+From where I am, I can't become a brain surgeon. But I can become a machine learning engineer, which might lead to medical AI, which is adjacent to healthcare...
+
+The path:
+
+Step into adjacent possibles. Over time, you end up somewhere you couldn't have reached directly.

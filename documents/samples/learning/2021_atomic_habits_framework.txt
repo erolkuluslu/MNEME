@@ -1,0 +1,39 @@
+TYPE: Book Notes
+SOURCE: Atomic Habits by James Clear
+TITLE: The Habit Loop Framework
+AUTHOR: Me
+DATE: 2021-05-20
+
+The framework:
+
+CUE → CRAVING → RESPONSE → REWARD
+
+To build habits, make them:
+1. Obvious (cue)
+2. Attractive (craving)
+3. Easy (response)
+4. Satisfying (reward)
+
+To break habits, invert:
+1. Invisible
+2. Unattractive
+3. Difficult
+4. Unsatisfying
+
+What I've applied:
+
+GYM HABIT:
+- Obvious: Gym bag packed by door
+- Attractive: Post-workout smoothie reward
+- Easy: Gym is on my commute
+- Satisfying: Track progress in app
+
+PHONE HABIT (breaking):
+- Invisible: Charger in another room overnight
+- Unattractive: Grayscale mode
+- Difficult: Deleted social apps
+- Unsatisfying: Time tracking shows wasted hours
+
+Key quote: "You do not rise to the level of your goals. You fall to the level of your systems."
+
+The 1% better principle: Tiny improvements compound. Don't aim for transformation. Aim for slight improvement, repeatedly.

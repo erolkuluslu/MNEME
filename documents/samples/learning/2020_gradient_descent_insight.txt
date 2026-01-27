@@ -1,0 +1,20 @@
+TYPE: Learning Note
+SOURCE: Coursera - Andrew Ng's ML Course
+TITLE: Finally Understanding Gradient Descent
+AUTHOR: Me
+DATE: 2020-06-20
+
+Insight that clicked today:
+
+Gradient descent is just "walk downhill." The derivative tells you which direction is down. You take small steps. Eventually you reach the bottom.
+
+The learning rate is your step size. Too big = you overshoot and bounce around. Too small = takes forever. Finding the right balance is the art.
+
+What helped me understand: Imagine you're blindfolded on a hill. You can only feel the slope under your feet. Which way is down? The steepest slope. That's the gradient. Now walk that direction. Repeat.
+
+The math looks scary:
+θ = θ - α * ∇J(θ)
+
+But it just says: new position = old position - (step size × slope direction)
+
+Connection to life: Progress works the same way. Small steps in the right direction. You can't see the whole path. You just feel which way is "down" and move.

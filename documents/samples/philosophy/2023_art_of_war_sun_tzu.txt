@@ -1,0 +1,48 @@
+TYPE: Book Citation
+SOURCE: The Art of War (Shambhala Dragon Editions)
+TITLE: The Art of War - Strategic Principles for Competition
+AUTHOR: Sun Tzu (translated by Thomas Cleary)
+DATE: 2023-07-15
+
+Chapter 1: Strategic Assessments
+
+"Warfare is the greatest affair of state, the basis of life and death, the Way to survival or extinction. It must be thoroughly pondered and analyzed."
+
+"Therefore measure in terms of five things, use these assessments to make comparisons, and thus find out what the conditions are. The five things are the way, the weather, the terrain, the leadership, and discipline."
+
+Chapter 3: Planning a Siege
+
+"The general rule for use of the military is that it is better to keep a nation intact than to destroy it. For this reason, those who win every battle are not really skillful—those who render others' armies helpless without fighting are the best of all."
+
+"So the rule is not to count on opponents not coming, but to rely on having ways of dealing with them; not to count on opponents not attacking, but to rely on having what cannot be attacked."
+
+Chapter 6: Emptiness and Fullness
+
+"Those who are first on the battlefield and await the opponents are at ease; those who are last on the battlefield and rush into combat are exhausted."
+
+"The formation of a military force is like water—water's formation avoids the high and rushes to the low; a military force avoids the strong and attacks the empty."
+
+Chapter 13: Using Spies
+
+"What enables an intelligent government and a wise military leadership to overcome others and achieve extraordinary accomplishments is foreknowledge. Foreknowledge cannot be gotten from ghosts and spirits, cannot be had by analogy, cannot be found out by calculation. It must be obtained from people."
+
+Commentary and Modern Application:
+
+Sun Tzu's principles, written 2,500 years ago, find remarkable application in modern contexts:
+
+1. Business Strategy
+- "Know yourself, know your enemy" → Competitive analysis
+- "All warfare is based on deception" → Competitive intelligence
+- "Victorious warriors win first and then go to war" → Strategic planning
+
+2. Technology Competition
+- The AI race mirrors interstate competition
+- "Speed is the essence of war" → First-mover advantage
+- Resource allocation and sustainable advantage
+
+3. Personal Development
+- Self-knowledge as foundation
+- Choosing battles wisely
+- Patience and timing
+
+The Art of War reminds us that competition is eternal, but wisdom in competition is rare. Success comes not from brute force but from understanding—of oneself, one's opponent, and the terrain of engagement.

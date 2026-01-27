@@ -1,0 +1,146 @@
+TYPE: Tech Blog
+SOURCE: https://huggingface.co/blog/fine-tuning-llms-2024
+TITLE: The Complete Guide to Fine-Tuning LLMs in 2024: From LoRA to Full Training
+AUTHOR: Philipp Schmid, Hugging Face
+DATE: 2024-04-10
+
+## When to Fine-Tune vs. Use RAG
+
+This is the million-dollar question. Here's a decision framework:
+
+**Use RAG when:**
+- Knowledge is frequently updated
+- You need source attribution
+- Domain knowledge is explicit and retrievable
+- You want to avoid catastrophic forgetting
+
+**Fine-tune when:**
+- You need consistent style/tone
+- Domain knowledge is implicit (patterns, not facts)
+- Latency is critical (no retrieval step)
+- Task requires specific output formats
+
+**Hybrid approach:**
+- Fine-tune for style and reasoning
+- RAG for factual grounding
+
+## Fine-Tuning Methods Compared
+
+### Full Fine-Tuning
+- Updates all parameters
+- Best performance ceiling
+- Requires: 4-8x model size in GPU memory
+- Risk: Catastrophic forgetting
+
+### LoRA (Low-Rank Adaptation)
+```python
+from peft import LoraConfig, get_peft_model
+
+config = LoraConfig(
+    r=16,  # rank
+    lora_alpha=32,
+    target_modules=["q_proj", "v_proj"],
+    lora_dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM"
+)
+model = get_peft_model(base_model, config)
+```
+- Trains ~0.1% of parameters
+- Memory efficient: fits on consumer GPUs
+- Preserves base model capabilities
+- Multiple LoRAs can be merged
+
+### QLoRA (Quantized LoRA)
+- 4-bit quantized base model
+- LoRA adapters in fp16
+- Fine-tune 7B models on 24GB VRAM
+- Minimal quality loss vs full LoRA
+
+### RLHF / DPO
+For alignment and preference learning:
+- RLHF: Complex, requires reward model
+- DPO: Simpler, direct preference optimization
+- Best for: Safety, helpfulness, tone adjustment
+
+## Dataset Preparation
+
+### Format: Instruction-Response Pairs
+```json
+{
+  "instruction": "Summarize the following text:",
+  "input": "Long article text here...",
+  "output": "Concise summary here."
+}
+```
+
+### Dataset Size Guidelines
+| Use Case | Examples Needed |
+|----------|----------------|
+| Style adaptation | 100-500 |
+| Task specialization | 1,000-5,000 |
+| Domain expertise | 10,000-50,000 |
+| General capability | 100,000+ |
+
+### Quality > Quantity
+- 1,000 high-quality examples > 10,000 noisy ones
+- Manually review a sample
+- Check for label consistency
+- Remove duplicates and near-duplicates
+
+## Training Configuration
+
+### Hyperparameters That Matter Most
+```python
+training_args = TrainingArguments(
+    learning_rate=2e-5,      # Lower for larger models
+    per_device_train_batch_size=4,
+    gradient_accumulation_steps=8,  # Effective batch = 32
+    num_train_epochs=3,
+    warmup_ratio=0.1,
+    weight_decay=0.01,
+    lr_scheduler_type="cosine",
+    fp16=True,
+)
+```
+
+### Avoiding Overfitting
+- Use validation set (10-20% of data)
+- Early stopping based on val loss
+- Regularization: dropout, weight decay
+- Data augmentation if possible
+
+## Evaluation
+
+### Automated Metrics
+- Perplexity (lower is better, but can be gamed)
+- BLEU/ROUGE for generation tasks
+- Task-specific metrics (F1, accuracy)
+
+### Human Evaluation (Essential)
+- Blind A/B testing: base vs fine-tuned
+- Rate on: helpfulness, accuracy, tone
+- Check for regressions on general capabilities
+
+## Deployment Considerations
+
+### Merging LoRA Weights
+```python
+merged_model = model.merge_and_unload()
+merged_model.save_pretrained("merged_model")
+```
+
+### Serving Multiple LoRAs
+- vLLM supports hot-swapping LoRA adapters
+- One base model, many task-specific adapters
+- Efficient multi-tenant deployments
+
+## Common Pitfalls
+
+1. **Training on test data** — Always hold out a clean test set
+2. **Overfitting to format** — Model memorizes templates, not understanding
+3. **Ignoring base capabilities** — Check for regressions
+4. **Too high learning rate** — Causes catastrophic forgetting
+5. **Not enough diversity** — Model becomes brittle
+
+**Bottom Line**: Fine-tuning is powerful but not always necessary. Start with prompting, try RAG, then fine-tune if needed. When you do fine-tune, start small (LoRA) and iterate.

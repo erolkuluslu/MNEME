@@ -1,0 +1,43 @@
+TYPE: Mental Model
+SOURCE: Charlie Munger / Mental Models
+TITLE: Invert, Always Invert
+AUTHOR: Me
+DATE: 2021-06-15
+
+The technique:
+
+Instead of "How do I succeed?" ask "How would I guarantee failure?"
+
+Then don't do those things.
+
+Examples:
+
+HOW TO FAIL AT FITNESS:
+- Skip workouts when tired
+- No consistent routine
+- Eat whatever, whenever
+- No sleep
+
+Invert: Don't skip. Be consistent. Watch diet. Prioritize sleep.
+
+HOW TO FAIL AT RELATIONSHIPS:
+- Never listen
+- Always criticize
+- Take for granted
+- Avoid vulnerability
+
+Invert: Listen actively. Appreciate often. Show gratitude. Be vulnerable.
+
+HOW TO FAIL AT LEARNING:
+- Read once, never review
+- No application
+- Jump between topics
+- Avoid difficulty
+
+Invert: Review repeatedly. Apply immediately. Go deep. Embrace struggle.
+
+Why inversion works:
+
+Avoiding stupidity is easier than being brilliant. Reducing negatives often matters more than adding positives.
+
+Munger: "It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent."

@@ -1,0 +1,41 @@
+# Core RAG Dependencies
+langchain>=0.1.0
+langchain-text-splitters>=0.0.1
+chromadb>=0.4.0
+tiktoken>=0.5.0
+
+# AI/ML Models and APIs
+openai>=1.0.0
+google-genai>=0.2.0
+sentence-transformers>=2.2.0
+
+# Jupyter and Notebook Support
+ipykernel>=6.20.0
+jupyter>=1.0.0
+notebook>=6.5.0
+ipython>=8.0.0
+
+# Data Processing and Analysis
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+rank-bm25>=0.2.2
+
+# Visualization
+matplotlib>=3.6.0
+plotly>=5.15.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+
+# HTTP and API
+requests>=2.31.0
+
+# Development Dependencies
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+mypy>=1.5.0
+types-requests>=2.31.0
+

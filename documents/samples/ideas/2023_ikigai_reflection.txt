@@ -1,0 +1,38 @@
+TYPE: Mental Model
+SOURCE: Japanese concept
+TITLE: Ikigai - Reason for Being
+AUTHOR: Me
+DATE: 2023-04-15
+
+The framework:
+
+Ikigai is the intersection of:
+1. What you love
+2. What you're good at
+3. What the world needs
+4. What you can be paid for
+
+Love + Good at = Passion
+Good at + Paid for = Profession
+Paid for + World needs = Vocation
+World needs + Love = Mission
+
+Ikigai is the center where all four overlap.
+
+My assessment:
+
+LOVE: Building things, teaching, learning, solving problems
+
+GOOD AT: Software engineering, explaining concepts, systems thinking
+
+WORLD NEEDS: Technology that helps people, education, thoughtful AI development
+
+PAID FOR: Software engineering, potentially teaching/writing
+
+Current ikigai: Building AI tools that help people learn and organize knowledge. Checks all four (mostly).
+
+The insight:
+
+Don't expect to find ikigai in one activity. It might be a combination. Or it evolves.
+
+Also: Don't over-optimize. Sometimes work is just work. Find meaning across life, not just career.

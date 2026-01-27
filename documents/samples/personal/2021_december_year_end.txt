@@ -1,0 +1,29 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: 2021 Year in Review
+AUTHOR: Me
+DATE: 2021-12-31
+
+December 31, 2021.
+
+A better year. Not hard to beat 2020, but still.
+
+Physical: Down 8 lbs from peak pandemic weight. Gym consistency building. I can do 5 pull-ups now (from 0). Bench up to 145.
+
+Mental: Meditation streak hit 200 days before breaking. Stoicism is becoming a practice. I catch myself spiraling and apply the dichotomy of control. Sometimes it works.
+
+Work: Promoted to senior engineer. Imposter syndrome loud but manageable. Shipped a major feature without burning out.
+
+Hobbies: Sourdough is reliable now. Started learning guitar in December. My fingers hurt.
+
+Social: Saw friends in person. Hugged my parents. Attended a wedding. Human contact is not optional.
+
+Books: 18 read. Favorites: "Meditations" by Marcus Aurelius, "Thinking, Fast and Slow" by Kahneman.
+
+Goals for 2022:
+- Bench press body weight (need 40 more lbs on the bar)
+- Ship a side project
+- Read 24 books
+- Travel somewhere international
+
+The trajectory is good. Keep climbing.

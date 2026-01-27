@@ -1,0 +1,48 @@
+TYPE: Book Citation
+SOURCE: Thinking, Fast and Slow (Farrar, Straus and Giroux)
+TITLE: Thinking, Fast and Slow - Cognitive Biases and Decision Making
+AUTHOR: Daniel Kahneman
+DATE: 2020-06-15
+
+Part I: Two Systems
+
+"I describe mental life by the metaphor of two agents, called System 1 and System 2, which respectively produce fast and slow thinking.
+
+System 1 operates automatically and quickly, with little or no effort and no sense of voluntary control.
+
+System 2 allocates attention to the effortful mental activities that demand it, including complex computations. The operations of System 2 are often associated with the subjective experience of agency, choice, and concentration."
+
+Chapter 4: The Associative Machine
+
+"A major advance in understanding memory and association came from the concept of 'priming.' An idea that has been activated does not merely evoke one other idea. It activates many ideas, which in turn activate others. The spreading activation is automatic and largely unconscious."
+
+Chapter 10: The Law of Small Numbers
+
+"System 1 is not prone to doubt. It suppresses ambiguity and spontaneously constructs stories that are as coherent as possible. Unless the message is immediately negated, the associations that it evokes will spread as if the message were true."
+
+Chapter 24: The Engine of Capitalism
+
+"The optimistic bias may well be the most significant of the cognitive biases. Because optimistic bias can be both a blessing and a risk, you should be both happy and wary if you are temperamentally optimistic."
+
+Chapter 35: Experiencing Self vs. Remembering Self
+
+"Odd as it may seem, I am my remembering self, and the experiencing self, who does my living, is like a stranger to me. The experiencing self lives each moment of experience, but the remembering self keeps score and makes decisions."
+
+Key Biases Catalogued:
+
+1. Anchoring Effect: Initial information disproportionately influences subsequent judgments
+2. Availability Heuristic: Judging probability by ease of recall
+3. Confirmation Bias: Seeking information that confirms existing beliefs
+4. Loss Aversion: Losses loom larger than equivalent gains
+5. Overconfidence: Excessive certainty in one's knowledge and predictions
+6. Halo Effect: Global evaluation colors perception of specific traits
+
+Application to AI:
+
+Kahneman's framework is directly relevant to AI alignment:
+- LLMs exhibit pattern-matching similar to System 1
+- They lack the deliberate reasoning of System 2
+- They reproduce human cognitive biases present in training data
+- Prompt engineering can be seen as activating different cognitive "modes"
+
+Understanding human cognition is essential for building AI systems that complement rather than amplify our biases.

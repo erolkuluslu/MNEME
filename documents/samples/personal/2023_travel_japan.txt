@@ -1,0 +1,17 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Finding Kodawari in Kyoto
+AUTHOR: Me
+DATE: 2023-05-14
+
+May 14, 2023.
+
+The silence in Kyoto temples is profound. It's not empty silence; it's full. Walking through the bamboo forest, I felt a sense of scale. My worries about the tech industry seem so small here. The craftsmanship in everything—the tea, the gardens, the architecture—is inspiring.
+
+They care about the details. 'Kodawari'. The pursuit of perfection. I want to bring that mindset back to my work. Not just shipping code, but crafting it. Making it beautiful. Efficient. Elegant. We rush so much in the west. "Move fast and break things." Here, it feels like "Move slowly and build things that last."
+
+I sat in a Zen garden for an hour, just looking at the rocks. They represent islands in the sea. Or mountains in the clouds. It's abstraction. Just like we build abstractions in software. But these are physical, timeless.
+
+I realized I need to disconnect more. The digital world is loud and ephemeral. The physical world is quiet and enduring. I want to build things that have a bit of that endurance. Maybe not 1000 years like a temple, but something that stands the test of time. Quality over quantity. That's the lesson from Kyoto.
+
+The food here is also a revelation. It's so simple, yet so complex. A bowl of ramen isn't just soup; it's a masterpiece of broth, noodles, and toppings, balanced perfectly. It's about respect for the ingredients. I want to respect my "ingredients" too—my time, my attention, my team. I want to cook with care.

@@ -1,0 +1,35 @@
+TYPE: Mental Model
+SOURCE: Elon Musk interviews + physics
+TITLE: First Principles Thinking
+AUTHOR: Me
+DATE: 2021-07-20
+
+The concept:
+
+Most thinking is by analogy: "This is like that."
+
+First principles: Break down to fundamental truths, build up from there.
+
+Musk's example:
+
+"Battery packs are expensive." (Analogy thinking accepts this)
+
+First principles: What are batteries made of? Cobalt, nickel, aluminum, carbon, polymers. What do those cost on commodity markets? Much less than battery packs.
+
+Therefore: Battery packs CAN be cheaper. The current price isn't a law of physics.
+
+Where analogy fails:
+
+"This is how it's always been done" is not a reason.
+"Industry standard" assumes standards are optimal.
+"Everyone does it this way" could mean everyone is wrong.
+
+My application:
+
+CAREER: "You need a CS degree to code" — first principles says you need to know how to code. Degree is one path, not the only path.
+
+FITNESS: "Machines are safer than free weights" — first principles: What actually builds strength? Progressive overload. Both can work.
+
+Caution:
+
+First principles is effortful. Save it for important problems. Use analogy for routine decisions.

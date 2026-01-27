@@ -1,0 +1,23 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Teaching What I Struggled to Learn
+AUTHOR: Me
+DATE: 2025-05-15
+
+May 15, 2025.
+
+Taught neural network concepts to summer interns today. Full circle.
+
+Five years ago, I was them. Confused. Frustrated. Staring at error messages that made no sense.
+
+Today, I explained the concepts I once struggled with. They nodded. Asked good questions.
+
+I told them about my 2020 struggles. The debugging nights. The imposter syndrome. They seemed relieved senior engineers were once clueless too.
+
+The field changed. In 2020, what I was learning was cutting edge. Now it's foundational, superseded by newer things. But fundamentals remain. Understanding still matters.
+
+I encouraged them: build something from scratch. At least once. Feel the concepts.
+
+Teaching clarifies your knowledge. Explaining reveals gaps.
+
+Mentorship feels good. Paying forward what others gave me.

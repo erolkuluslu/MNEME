@@ -1,0 +1,39 @@
+TYPE: Mental Model
+SOURCE: Herbert Simon / Barry Schwartz
+TITLE: When Good Enough Is Best
+AUTHOR: Me
+DATE: 2024-09-20
+
+Two decision styles:
+
+MAXIMIZING: Seek the best possible option. Exhaustive search. Compare all alternatives.
+
+SATISFICING: Seek an option that meets criteria. Stop when "good enough" is found.
+
+The paradox:
+
+Maximizers have "better" outcomes objectively. But they're less happy.
+
+Why? The search is exhausting. Opportunity cost weighs. Comparison never ends.
+
+When to satisfice:
+
+- Low-stakes decisions (what to eat, what to wear)
+- Many similar options (most consumer products)
+- Reversible decisions
+
+When to maximize:
+
+- High-stakes, irreversible decisions
+- Few options with big differences
+- Where marginal improvement matters greatly
+
+My shift:
+
+I used to maximize everything. Exhausting.
+
+Now: Satisfice most things. Maximize few things.
+
+The restaurant menu test:
+
+Pick something that sounds good. Stop. Don't read the whole menu twice. It's just dinner.

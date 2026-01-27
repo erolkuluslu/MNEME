@@ -1,0 +1,105 @@
+TYPE: Tech Blog
+SOURCE: https://www.sbert.net/blog/embedding-models-benchmark-2023
+TITLE: Embedding Models Benchmark 2023: Finding the Best Model for Semantic Search
+AUTHOR: Nils Reimers, Sentence Transformers
+DATE: 2023-10-05
+
+## Why Embedding Quality Matters
+
+In RAG systems, retrieval quality is the ceiling for generation quality. If you retrieve garbage, the LLM generates garbage—no matter how good the model. Embedding models are the foundation.
+
+## Benchmark Methodology
+
+We evaluated 25 embedding models across:
+- **MTEB** (Massive Text Embedding Benchmark): 56 tasks
+- **BEIR**: 18 diverse retrieval datasets
+- **Custom benchmarks**: Domain-specific (legal, medical, code)
+
+Metrics:
+- nDCG@10 for retrieval
+- Spearman correlation for STS
+- Clustering accuracy
+
+## Top Performers (as of Oct 2023)
+
+### General Purpose
+
+| Model | MTEB Avg | Dim | Context |
+|-------|----------|-----|---------|
+| text-embedding-3-large | 64.6 | 3072 | 8192 |
+| Cohere embed-v3 | 64.5 | 1024 | 512 |
+| voyage-2 | 63.2 | 1024 | 4000 |
+| E5-large-v2 | 62.2 | 1024 | 512 |
+| BGE-large-en | 61.8 | 1024 | 512 |
+
+### Cost-Efficient
+
+| Model | MTEB Avg | Cost (per 1M tokens) |
+|-------|----------|---------------------|
+| all-MiniLM-L6-v2 | 56.3 | Free (local) |
+| text-embedding-3-small | 61.0 | $0.02 |
+| E5-small-v2 | 57.8 | Free (local) |
+
+### Domain-Specific Winners
+
+- **Code**: voyage-code-2 (best on CodeSearchNet)
+- **Legal**: Legal-BERT (fine-tuned BERT)
+- **Medical**: PubMedBERT embeddings
+
+## Key Findings
+
+### 1. Bigger isn't always better
+The relationship between model size and quality plateaus around 1B parameters. Beyond that, diminishing returns.
+
+### 2. Dimension vs. Quality Tradeoff
+- 384 dimensions: 90% of max quality at 1/3 the storage
+- 1024 dimensions: Sweet spot for most applications
+- 3072 dimensions: Marginal gains, 3x storage cost
+
+### 3. Context Length Matters
+Longer context windows don't mean better embeddings for short text. Match your embedding model to your chunk size.
+
+### 4. Instruction-Tuned Models Excel
+Models trained with task prefixes (E5, instructor) outperform base models by 5-10% on specific tasks.
+
+## Practical Recommendations
+
+### For RAG / Semantic Search
+```python
+# Best quality
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer('BAAI/bge-large-en-v1.5')
+
+# Add query prefix for asymmetric search
+query_embedding = model.encode("query: What is machine learning?")
+doc_embedding = model.encode("passage: Machine learning is...")
+```
+
+### For Clustering / Classification
+```python
+# Good balance of quality and speed
+model = SentenceTransformer('all-mpnet-base-v2')
+```
+
+### For Production at Scale
+```python
+# Fast, good enough, cheap
+model = SentenceTransformer('all-MiniLM-L6-v2')
+```
+
+## Embedding Best Practices
+
+1. **Normalize vectors** for cosine similarity
+2. **Batch processing** for efficiency
+3. **Cache embeddings** - don't re-embed unchanged documents
+4. **Test on YOUR data** - benchmarks are just starting points
+5. **Consider asymmetric search** - queries and documents are different
+
+## What's Coming
+
+- Matryoshka embeddings (variable-dimension outputs)
+- Multi-vector representations (ColBERT-style)
+- Multilingual improvements
+- Modality fusion (text + images)
+
+**Bottom Line**: For most use cases, `bge-large-en` or `E5-large-v2` provide the best quality/cost tradeoff. For budget-constrained or latency-sensitive applications, `MiniLM` remains unbeatable.

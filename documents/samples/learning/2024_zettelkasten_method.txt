@@ -1,0 +1,35 @@
+TYPE: Learning Note
+SOURCE: How to Take Smart Notes + experimentation
+TITLE: The Zettelkasten Method
+AUTHOR: Me
+DATE: 2024-02-20
+
+What is Zettelkasten?
+
+German for "slip box." Niklas Luhmann's note system that produced 70+ books.
+
+Core principles:
+
+1. ATOMIC NOTES: One idea per note. Self-contained.
+
+2. LINKS: Connect notes to other notes. The network matters.
+
+3. OWN WORDS: Always rewrite in your own words. No copying.
+
+4. EMERGENT STRUCTURE: Organization emerges from connections, not predetermined categories.
+
+Why it works:
+
+Traditional notes are siloed. Zettelkasten is networked. Ideas from different domains connect, spark new thoughts.
+
+My implementation:
+
+Using Obsidian. Each note is atomic. Links created generously.
+
+Unexpected benefit: Stumbling across old notes while linking new ones. Rediscovery.
+
+The insight:
+
+Note-taking isn't just storing information. It's building an external thinking partner.
+
+The network of notes becomes a second brain that can surprise you.

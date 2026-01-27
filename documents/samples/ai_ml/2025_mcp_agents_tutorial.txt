@@ -1,0 +1,203 @@
+TYPE: Tech Blog
+SOURCE: https://modelcontextprotocol.io/tutorials/building-mcp-agents
+TITLE: Building Agents with Model Context Protocol: A Practical Tutorial
+AUTHOR: Anthropic Engineering
+DATE: 2025-02-15
+
+## What is MCP?
+
+Model Context Protocol (MCP) is an open standard for connecting AI assistants to external data sources and tools. Think of it as "USB for AI"—a standardized way to plug in capabilities.
+
+## Core Concepts
+
+### Resources
+Read-only data that the model can access:
+```typescript
+// Server exposes resources
+server.resource("user_profile", async (uri) => {
+  const userId = uri.split("/").pop();
+  return await fetchUserProfile(userId);
+});
+```
+
+### Tools
+Actions the model can take:
+```typescript
+server.tool("send_email", {
+  description: "Send an email to a recipient",
+  inputSchema: {
+    type: "object",
+    properties: {
+      to: { type: "string" },
+      subject: { type: "string" },
+      body: { type: "string" }
+    },
+    required: ["to", "subject", "body"]
+  }
+}, async (args) => {
+  return await sendEmail(args.to, args.subject, args.body);
+});
+```
+
+### Prompts
+Reusable prompt templates:
+```typescript
+server.prompt("code_review", {
+  description: "Review code for issues",
+  arguments: [{ name: "code", required: true }]
+}, async (args) => {
+  const code = args.code;
+  return "Review this code for bugs, security issues, and style:
+
+" + code + "
+
+Provide specific, actionable feedback.";
+});
+```
+
+## Building Your First MCP Server
+
+### Step 1: Initialize Project
+```bash
+npm init -y
+npm install @modelcontextprotocol/sdk
+```
+
+### Step 2: Create Server
+```typescript
+// src/index.ts
+import { Server } from "@modelcontextprotocol/sdk/server";
+import { StdioTransport } from "@modelcontextprotocol/sdk/transports/stdio";
+
+const server = new Server({
+  name: "my-mcp-server",
+  version: "1.0.0"
+});
+
+// Add a simple tool
+server.tool("get_weather", {
+  description: "Get current weather for a city",
+  inputSchema: {
+    type: "object",
+    properties: {
+      city: { type: "string", description: "City name" }
+    },
+    required: ["city"]
+  }
+}, async ({ city }) => {
+  // In production, call a real weather API
+  return { temp: 72, conditions: "sunny", city };
+});
+
+// Start server
+const transport = new StdioTransport();
+await server.connect(transport);
+```
+
+### Step 3: Configure Claude Desktop
+```json
+// ~/Library/Application Support/Claude/claude_desktop_config.json
+{
+  "mcpServers": {
+    "weather": {
+      "command": "node",
+      "args": ["/path/to/your/server/dist/index.js"]
+    }
+  }
+}
+```
+
+## Real-World Example: Database Agent
+
+```typescript
+import { Server } from "@modelcontextprotocol/sdk/server";
+import { Pool } from "pg";
+
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+const server = new Server({ name: "postgres-agent", version: "1.0.0" });
+
+// Read-only query tool
+server.tool("query_database", {
+  description: "Execute a read-only SQL query",
+  inputSchema: {
+    type: "object",
+    properties: {
+      sql: { type: "string", description: "SELECT query to execute" }
+    },
+    required: ["sql"]
+  }
+}, async ({ sql }) => {
+  // Safety: only allow SELECT statements
+  if (!sql.trim().toLowerCase().startsWith("select")) {
+    throw new Error("Only SELECT queries are allowed");
+  }
+  
+  const result = await pool.query(sql);
+  return { rows: result.rows, rowCount: result.rowCount };
+});
+
+// Schema introspection
+server.resource("schema", async () => {
+  const result = await pool.query(`
+    SELECT table_name, column_name, data_type 
+    FROM information_schema.columns 
+    WHERE table_schema = 'public'
+  `);
+  return JSON.stringify(result.rows, null, 2);
+});
+```
+
+## Security Best Practices
+
+1. **Principle of Least Privilege**: Only expose necessary capabilities
+2. **Input Validation**: Validate all tool inputs
+3. **Rate Limiting**: Prevent abuse
+4. **Audit Logging**: Log all tool invocations
+5. **Sandboxing**: Run servers in isolated environments
+
+## Debugging MCP Servers
+
+```bash
+# Enable debug logging
+DEBUG=mcp:* node dist/index.js
+
+# Test tools manually
+npx @modelcontextprotocol/inspector ./dist/index.js
+```
+
+## Common Patterns
+
+### Stateful Conversations
+```typescript
+const sessions = new Map();
+
+server.tool("remember", { ... }, async ({ key, value }, context) => {
+  const session = sessions.get(context.sessionId) || {};
+  session[key] = value;
+  sessions.set(context.sessionId, session);
+  return { stored: true };
+});
+```
+
+### Long-Running Tasks
+```typescript
+server.tool("generate_report", { ... }, async (args) => {
+  const taskId = uuid();
+  // Start async task
+  generateReportAsync(taskId, args);
+  return { taskId, status: "processing" };
+});
+
+server.tool("check_task", { ... }, async ({ taskId }) => {
+  return getTaskStatus(taskId);
+});
+```
+
+## What's Next for MCP
+
+- Streaming responses
+- Multi-modal support (images, audio)
+- Authentication standards
+- Marketplace for MCP servers
+
+**Bottom Line**: MCP standardizes how AI assistants interact with the world. Start small with one tool, test thoroughly, and expand gradually.

@@ -1,0 +1,24 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: The Importance of Rest - Injury Scare
+AUTHOR: Me
+DATE: 2022-08-20
+
+August 20, 2022.
+
+Pushed too hard. Minor shoulder strain from bench pressing. Nothing serious, but enough to sideline me for two weeks.
+
+The trainer talked about deload weeks. Periods of reduced intensity for recovery. I knew this intellectually but didn't practice it. More is always better, right? Wrong.
+
+The body needs rest to grow. Muscles don't strengthen during the workout; they strengthen during recovery. Sleep. Nutrition. Time.
+
+This applies to mental work too. I've been grinding at work—late nights, weekend debugging. Shipped the feature but I'm fried. Creativity gone. Making dumb mistakes.
+
+Cal Newport calls this deep work vs. shallow work. But even deep work needs breaks. The brain consolidates during rest. Archimedes had his eureka in the bath.
+
+New policy:
+- Gym: Every 4th week, reduce weight by 40%
+- Work: One day per week with no meetings
+- Life: One weekend per month with no obligations
+
+Rest is not weakness. Rest is strategy.

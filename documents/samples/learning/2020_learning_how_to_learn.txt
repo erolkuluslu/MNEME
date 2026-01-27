@@ -1,0 +1,39 @@
+TYPE: Learning Note
+SOURCE: Coursera Course
+TITLE: Learning How to Learn - Key Takeaways
+AUTHOR: Me
+DATE: 2020-09-05
+
+From Barbara Oakley's course:
+
+FOCUSED vs DIFFUSE MODE:
+- Focused: Tight concentration on familiar patterns
+- Diffuse: Relaxed, letting mind wander, making new connections
+
+Both needed. Alternate between them. Stuck in focused? Take a walk.
+
+CHUNKING:
+- Break learning into chunks
+- Practice until automatic
+- Chunks free working memory for higher-level thinking
+
+THE POMODORO TECHNIQUE:
+- 25 min focused work
+- 5 min break
+- Repeat
+
+Works because: Short enough to commit, builds the habit of starting.
+
+INTERLEAVING:
+- Mix different types of problems
+- Feels harder, works better
+
+SLEEP:
+- Critical for memory consolidation
+- Don't skimp before tests
+
+EXERCISE:
+- Enhances learning and memory
+- Move your body, help your brain
+
+The meta-insight: Learning is a skill that can be improved. This course is high-leverage.

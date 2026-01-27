@@ -1,0 +1,123 @@
+TYPE: Tech Blog
+SOURCE: https://www.anthropic.com/research/prompt-engineering-guide
+TITLE: Advanced Prompt Engineering: Techniques for Reliable LLM Outputs
+AUTHOR: Amanda Askell, Anthropic Research
+DATE: 2023-09-12
+
+## The Art and Science of Prompting
+
+Large language models are sensitive to prompt construction. Small changes in wording can dramatically affect output quality. This guide covers battle-tested techniques for extracting reliable, useful responses.
+
+## Foundational Principles
+
+### 1. Be Specific and Detailed
+Bad: "Summarize this article"
+Good: "Summarize this article in 3 bullet points, focusing on the main argument, key evidence, and practical implications for software developers."
+
+### 2. Provide Context
+The model has no memory between conversations. Include relevant background.
+
+### 3. Use Delimiters
+Clearly separate instructions from content:
+```
+Analyze the following code for bugs:
+
+###
+def calculate(x):
+    return x / 0
+###
+```
+
+### 4. Specify Output Format
+```
+Return your analysis as JSON:
+{
+  "sentiment": "positive|negative|neutral",
+  "confidence": 0.0-1.0,
+  "key_phrases": []
+}
+```
+
+## Advanced Techniques
+
+### Chain-of-Thought (CoT)
+Encourage step-by-step reasoning:
+"Let's think through this step by step..."
+
+For complex problems, explicit reasoning dramatically improves accuracy.
+
+### Few-Shot Learning
+Provide examples:
+```
+Classify sentiment:
+"I love this product!" → Positive
+"Worst purchase ever" → Negative
+"It's okay I guess" → Neutral
+
+Now classify: "The quality exceeded my expectations"
+```
+
+### Self-Consistency
+Generate multiple responses, take majority vote. Reduces variance.
+
+### Tree of Thoughts
+Explore multiple reasoning paths, evaluate each:
+```
+Consider 3 different approaches to solve this problem:
+1. [Approach A]
+2. [Approach B]  
+3. [Approach C]
+
+Evaluate each approach's pros and cons, then select the best one.
+```
+
+## Prompt Patterns
+
+### Persona Pattern
+"You are an expert Python developer with 20 years of experience..."
+
+### Template Pattern
+```
+Given: {context}
+Task: {instruction}
+Constraints: {limitations}
+Format: {output_format}
+```
+
+### Critique Pattern
+"After providing your answer, critique it. Identify weaknesses and improve your response."
+
+## Handling Edge Cases
+
+### Hallucination Mitigation
+- "Only use information from the provided context"
+- "If you don't know, say 'I don't know'"
+- Include citations requirement
+
+### Long Context Management
+- Summarize intermediate steps
+- Use hierarchical processing
+- Place important information at start and end (primacy/recency effect)
+
+## Evaluation
+
+Prompt engineering is empirical. Always:
+1. Define success metrics
+2. Create test cases
+3. Iterate systematically
+4. A/B test in production
+
+## Common Mistakes
+
+1. **Prompt stuffing**: Overloading with too many instructions
+2. **Ambiguity**: Unclear or contradictory requirements
+3. **Assuming knowledge**: Model doesn't know your specific context
+4. **Ignoring temperature**: Higher temp = more creative, lower = more deterministic
+
+## Tools and Infrastructure
+
+- **LangSmith**: Trace and debug LLM applications
+- **Promptfoo**: Automated prompt testing
+- **Weights & Biases**: Experiment tracking
+
+**Key Insight**: Prompts are code. Treat them with the same rigor—version control, testing, documentation.

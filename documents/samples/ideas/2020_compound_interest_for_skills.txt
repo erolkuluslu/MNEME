@@ -1,0 +1,39 @@
+TYPE: Mental Model
+SOURCE: Conversations + reading
+TITLE: Compound Interest Applies to Everything
+AUTHOR: Me
+DATE: 2020-11-15
+
+The insight:
+
+Compound interest isn't just for money. It works for:
+- Skills
+- Knowledge
+- Relationships
+- Reputation
+- Health
+
+The math:
+
+1% better daily = 37x better in a year (1.01^365)
+1% worse daily = 0.03x (nearly zero) in a year
+
+Small improvements compound. Small degradations compound too.
+
+Applications:
+
+LEARNING: Each concept builds on previous. Early investment pays off later.
+
+FITNESS: Consistent small effort beats occasional massive effort.
+
+CAREER: Skills stack. Reputation builds. Network grows.
+
+RELATIONSHIPS: Small kindnesses compound into deep bonds. Small neglects compound into distance.
+
+The trap:
+
+We overvalue visible, immediate progress. Undervalue invisible, compounding gains.
+
+Going to the gym today shows nothing. Going for 5 years transforms you.
+
+Note to self: Play long games. Patient accumulation beats impatient optimization.

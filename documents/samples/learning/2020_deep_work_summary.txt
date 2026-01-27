@@ -1,0 +1,27 @@
+TYPE: Book Notes
+SOURCE: Deep Work by Cal Newport
+TITLE: Deep Work - Key Takeaways
+AUTHOR: Me
+DATE: 2020-09-15
+
+Core thesis: 
+
+"Deep Work: Professional activities performed in distraction-free concentration that push cognitive capabilities to their limit. These create new value, improve skill, and are hard to replicate."
+
+The opposite is "shallow work" - emails, meetings, admin tasks. Necessary but not valuable.
+
+Key insight: Deep work is becoming rare AND valuable at the same time. If you can do it, you have a superpower.
+
+The rules I'm implementing:
+
+1. Work Deeply - Schedule deep work blocks. Protect them fiercely.
+
+2. Embrace Boredom - Train your brain to resist distraction. Don't reach for your phone every idle moment.
+
+3. Quit Social Media - Not literally, but be ruthless. "Does this add substantial value?"
+
+4. Drain the Shallows - Schedule every minute. Audit time. Cut the crap.
+
+My experiment: 2 hours of deep work every morning before checking email. It's hard. But the output quality is noticeably better.
+
+This book changed how I think about attention.

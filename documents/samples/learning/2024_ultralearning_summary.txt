@@ -1,0 +1,41 @@
+TYPE: Book Notes
+SOURCE: Ultralearning by Scott Young
+TITLE: Aggressive Self-Directed Learning
+AUTHOR: Me
+DATE: 2024-05-10
+
+Core concept:
+
+Ultralearning: A strategy for aggressive, self-directed learning.
+
+The 9 principles:
+
+1. METALEARNING: Map the territory first. How is this subject learned?
+
+2. FOCUS: Deep concentration. No distractions.
+
+3. DIRECTNESS: Learn by doing the thing, not adjacent skills.
+
+4. DRILL: Attack the weakest point directly.
+
+5. RETRIEVAL: Test yourself. Don't just review.
+
+6. FEEDBACK: Get real feedback, not just validation.
+
+7. RETENTION: Use spaced repetition.
+
+8. INTUITION: Build deep understanding, not surface memorization.
+
+9. EXPERIMENTATION: Try different approaches. Find what works.
+
+What I'm applying:
+
+DIRECTNESS: Instead of reading about coding, code. Instead of watching guitar tutorials, play.
+
+DRILLING: Identify specific weak points and attack them.
+
+RETRIEVAL: Stop re-reading. Quiz myself instead.
+
+The meta-lesson:
+
+Learning how to learn is the highest-leverage skill. Improve the process, improve everything.

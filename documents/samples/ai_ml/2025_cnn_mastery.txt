@@ -1,0 +1,17 @@
+TYPE: Personal Journal
+SOURCE: Personal Diary
+TITLE: Full Circle with CNNs - Five Years Later
+AUTHOR: Me
+DATE: 2025-02-20
+
+February 20, 2025.
+
+I finally understand how CNNs work. It's crazy how full circle this has come. Back in 2020, I was pulling my hair out over shape mismatches and "black boxes". Now, working on my thesis, it all clicks. The convolutional layers aren't just magic; they are feature extractors. Low-level edges, mid-level shapes, high-level objects. It's beautiful.
+
+I'm using LLMs to help me architect these networks now. It's ironic. The "black box" I feared in 2023 (ChatGPT) is now helping me dissect the "black box" I feared in 2020 (CNNs). CNNs have gotten really popular again for efficient edge computing. Transformers are great, but they are heavy. For real-time image processing on a drone, you still want a sleek, optimized CNN.
+
+My work area has expanded to include neuro-symbolic AI. Combining the pattern matching of neural networks with the reasoning of symbolic logic. It feels like the "understanding" I was searching for years ago. We aren't just turning knobs anymore; we are designing architectures that can explain themselves.
+
+I looked at my old code from 2020 today. It was a mess. But I have compassion for that younger self. He was wrestling with the concepts that are now second nature to me. Backpropagation is just the chain rule. Gradient descent is just walking down a hill. It's not alchemy; it's calculus. And it's powerful.
+
+Reading through the vanishing gradients paper from that era helped me understand why my early networks failed. The math was sound, but the architecture was fighting against it. ResNets, batch normalization, careful initialization—these aren't tricks, they're solutions to real problems I experienced firsthand.

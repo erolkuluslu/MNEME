@@ -1,0 +1,48 @@
+TYPE: Saved Recipe
+SOURCE: Personal adaptation over years
+TITLE: My Master Sourdough Recipe
+AUTHOR: Me
+DATE: 2025-06-01
+
+This is the recipe I've refined over 5 years. Not just technique—philosophy.
+
+---
+
+INGREDIENTS:
+- 400g bread flour
+- 100g whole wheat flour
+- 375g water (75% hydration)
+- 100g active starter
+- 10g salt
+
+TIMELINE:
+- 8am: Mix flour + water (autolyse)
+- 9am: Add starter + salt
+- 9am-2pm: Bulk fermentation (4-5 hours)
+  - Stretch and fold every 30 min for first 2 hours
+- 2pm: Pre-shape, rest 20 min
+- 2:30pm: Final shape
+- 3pm-8am: Cold proof in fridge (overnight)
+- 8am: Preheat oven + Dutch oven to 500°F
+- 8:45am: Score and bake
+  - 20 min covered
+  - 25 min uncovered at 450°F
+- Cool 1 hour before cutting
+
+---
+
+WHAT I'VE LEARNED:
+
+1. Read the dough, not the clock. Temperature affects timing.
+
+2. Gentle handling during shaping. Tension without degassing.
+
+3. The overnight cold proof develops flavor dramatically.
+
+4. Steam (the covered Dutch oven phase) is what makes crust.
+
+5. Patience. Cutting too early releases steam, ruins crumb.
+
+---
+
+This recipe is a living document. Still tweaking after 5 years. That's the point.
