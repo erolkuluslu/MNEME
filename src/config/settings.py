@@ -59,14 +59,19 @@ class MNEMEConfig:
     embedding_dimension: int = 384
     embedding_batch_size: int = 32
 
-    # Similarity thresholds (paper specification)
-    semantic_similarity_threshold: float = 0.45  # Stricter: 0.38 -> 0.45
-    cross_domain_threshold: float = 0.40  # Stricter: 0.30 -> 0.40
+    # Similarity thresholds (paper Table I specification)
+    semantic_similarity_threshold: float = 0.45  # Same-domain edge threshold
+    cross_domain_threshold: float = 0.40  # Cross-domain edge threshold
 
     # Graph construction
     max_total_edges: int = 3000
     top_k_neighbors: int = 5  # Stricter: 15 -> 5 to reduce hairball
     similarity_engine: str = SimilarityEngine.NUMPY.value
+
+    # Edge typing configuration (paper Algorithm S1)
+    # Options: "nli" (NLI cross-encoder), "heuristic" (keyword-based), "hybrid" (combined)
+    edge_typing_mode: str = "hybrid"
+    nli_model: str = "cross-encoder/nli-deberta-v3-small"  # Fast, accurate NLI model
 
     # ==================== Layer 3: Knowledge Structures ====================
     louvain_resolution: float = 0.20
@@ -92,24 +97,53 @@ class MNEMEConfig:
     # ==================== Layer 4: Query Analysis ====================
     enable_query_expansion: bool = True
     max_expansion_terms: int = 3
+    # Year detection patterns - CRITICAL: Use non-capturing groups for prefix (?:...)
+    # so the outer capturing group gets the full 4-digit year
     year_detection_patterns: List[str] = field(default_factory=lambda: [
-        r'\b(19|20)\d{2}\b',  # Year patterns like 2020, 1995
-        r'\bin\s+(19|20)\d{2}\b',  # "in 2020"
-        r'\bfrom\s+(19|20)\d{2}\b',  # "from 2020"
+        r'^(\d{4})_',  # Year at start of filename (e.g., "2024_file.txt") - HIGHEST priority
+        r'(\d{4})[_-]',  # 2020_paper.txt or 2020-paper
+        r'[_-](\d{4})[_.-]',  # paper_2020.txt
+        r'[_-](\d{4})$',  # paper_2020 (at end)
+        r'\b((?:19|20)\d{2})\b',  # Plain year: capture full 4-digit year
+        r'\bin\s+((?:19|20)\d{2})\b',  # "in 2020"
+        r'\bfrom\s+((?:19|20)\d{2})\b',  # "from 2020"
     ])
 
     # ==================== Layer 5: Retrieval Engine ====================
     retrieval_strategy: str = RetrievalStrategy.HYBRID_RRF.value
 
-    # RRF (Reciprocal Rank Fusion) settings
-    rrf_k_constant: int = 60
-    dense_weight: float = 1.0
-    sparse_weight: float = 0.5
+    # ==================== Hybrid Retrieval Scoring ====================
+    # Two scoring modes are available:
+    #
+    # 1. "rrf" - Reciprocal Rank Fusion (rank-based)
+    #    Formula: score = w_d/(k+rank_d) + w_s/(k+rank_s)
+    #    - Uses dense_weight, sparse_weight, rrf_k_constant
+    #    - Score based on RANK position, not score magnitude
+    #    - Good for combining diverse ranking sources
+    #    - Flattens score differences between top results
+    #
+    # 2. "blended" - Weighted Score Combination (score-based)
+    #    Formula: score = α*dense_score + β*sparse_score
+    #    - Uses dense_alpha, sparse_beta
+    #    - Preserves score magnitude differences
+    #    - Better differentiation between close candidates
+    #    - Query-type aware: adjusts weights for SPECIFIC vs SYNTHESIS queries
+    #
+    # Both modes apply year/category boosting:
+    # - RRF mode: additive (score + boost)
+    # - Blended mode: multiplicative (score * (1 + boost))
 
-    # Scoring mode: "blended" uses weighted dense+sparse, "rrf" uses rank fusion
+    # RRF mode settings
+    rrf_k_constant: int = 60  # Smoothing constant (higher = more weight to lower ranks)
+    dense_weight: float = 1.0  # Weight for dense retrieval in RRF
+    sparse_weight: float = 0.5  # Weight for sparse retrieval in RRF
+
+    # Scoring mode selection: "blended" (recommended) or "rrf"
     scoring_mode: str = "blended"
-    dense_alpha: float = 0.6  # Weight for dense score in blended mode
-    sparse_beta: float = 0.4  # Weight for sparse score in blended mode
+
+    # Blended mode settings
+    dense_alpha: float = 0.6  # Weight for dense (semantic) score
+    sparse_beta: float = 0.4  # Weight for sparse (BM25) score
 
     # Adaptive RRF: compute k from corpus size instead of hardcoded 60
     adaptive_rrf_k: bool = True
@@ -160,6 +194,18 @@ class MNEMEConfig:
     year_match_weight: float = 0.25  # Weight for year match
     category_match_weight: float = 0.15  # Weight for category match
     diversity_weight: float = 0.2  # Weight for source diversity
+
+    # ==================== Temporal Decay (Paper S2) ====================
+    # w_t = exp(-λ · Δt) where Δt is days since knowledge creation
+    temporal_decay_rate: float = 0.05  # λ = 0.05 (per day)
+    enable_temporal_decay: bool = True
+
+    # ==================== Trust Scoring (Paper S3, S7) ====================
+    # T = α * user_confirmation + β * source_reliability
+    trust_threshold: float = 0.7  # Minimum trust score
+    enable_trust_filtering: bool = True
+    user_confirmation_weight: float = 0.6  # α
+    source_reliability_weight: float = 0.4  # β
 
     # ==================== Layer 7: Answer Generation ====================
     llm_provider: str = LLMProvider.GEMINI.value

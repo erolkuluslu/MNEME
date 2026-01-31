@@ -44,9 +44,11 @@ class MetadataExtractor:
     - Content analysis for titles and abstracts
     """
 
-    # Year patterns
+    # Year patterns - CRITICAL: Use non-capturing groups (?:...) so we match full year
+    # When pattern has capturing groups, re.findall returns captured content only
     YEAR_PATTERNS = [
-        (r'\b(19|20)\d{2}\b', 0.8),  # Plain year
+        (r'^(\d{4})_', 0.99),  # Year at start of filename (e.g., "2024_file.txt") - HIGHEST priority
+        (r'\b((?:19|20)\d{2})\b', 0.8),  # Plain year: capture full 4-digit year
         (r'Published\s+(?:in\s+)?(\d{4})', 0.95),  # "Published in 2020"
         (r'©\s*(\d{4})', 0.9),  # Copyright year
         (r'\((\d{4})\)', 0.7),  # Year in parentheses
@@ -145,35 +147,51 @@ class MetadataExtractor:
         """
         Extract publication year from text or filename.
 
+        CRITICAL: Patterns use capturing groups to get the full 4-digit year.
+        We always use match.group(1) which contains the captured year.
+
         Returns:
             Tuple of (year, confidence)
         """
         best_year = None
         best_confidence = 0.0
 
-        # Try filename first (usually more reliable)
+        # Try filename first (usually more reliable, especially for year-prefixed files)
         if filename:
             for pattern, confidence in self.YEAR_PATTERNS:
                 match = re.search(pattern, filename)
                 if match:
-                    year = int(match.group(1) if '(' in pattern else match.group(0))
-                    if self.min_year <= year <= self.max_year:
-                        if confidence > best_confidence:
-                            best_year = year
-                            best_confidence = confidence
+                    try:
+                        # All patterns now have the year in group(1)
+                        year_str = match.group(1)
+                        year = int(year_str)
+                        if self.min_year <= year <= self.max_year:
+                            if confidence > best_confidence:
+                                best_year = year
+                                best_confidence = confidence
+                                logger.debug(f"Extracted year {year} from filename '{filename}' with conf {confidence}")
+                    except (ValueError, IndexError) as e:
+                        logger.debug(f"Failed to parse year from match '{match.group()}': {e}")
 
         # Try text content (first 1000 chars most likely to have year)
-        text_sample = text[:1000]
-        for pattern, confidence in self.YEAR_PATTERNS:
-            matches = re.findall(pattern, text_sample)
-            for match in matches:
-                year = int(match if isinstance(match, str) else match[0])
-                if self.min_year <= year <= self.max_year:
-                    if confidence > best_confidence:
-                        best_year = year
-                        best_confidence = confidence
+        # Only if we didn't get a high-confidence year from filename
+        if best_confidence < 0.9:
+            text_sample = text[:1000]
+            for pattern, confidence in self.YEAR_PATTERNS:
+                for match in re.finditer(pattern, text_sample):
+                    try:
+                        # All patterns have the year in group(1)
+                        year_str = match.group(1)
+                        year = int(year_str)
+                        if self.min_year <= year <= self.max_year:
+                            if confidence > best_confidence:
+                                best_year = year
+                                best_confidence = confidence
+                    except (ValueError, IndexError):
+                        continue
 
         if best_year is None:
+            logger.debug(f"No year found, using default {self.default_year}")
             return self.default_year, 0.0
 
         return best_year, best_confidence
