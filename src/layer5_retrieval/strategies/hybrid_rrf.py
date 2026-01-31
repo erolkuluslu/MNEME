@@ -1,12 +1,31 @@
 """
 Hybrid RRF Retrieval Strategy
 
-Combines dense (vector) and sparse (BM25) retrieval with either:
-- Blended scoring (weighted dense + sparse with query-type awareness)
-- Reciprocal Rank Fusion (legacy mode)
+Combines dense (vector) and sparse (BM25) retrieval with two scoring modes:
+
+1. BLENDED MODE (recommended, default):
+   - Formula: score = α * dense_score + β * sparse_score
+   - Preserves actual score magnitudes for meaningful differentiation
+   - Query-type aware: adjusts α/β weights dynamically
+     - SPECIFIC queries: more weight to BM25 (keyword matching)
+     - SYNTHESIS queries: more weight to dense (semantic matching)
+   - Boosting is multiplicative: final = blended * (1 + year_boost) * (1 + cat_boost)
+
+2. RRF MODE (legacy):
+   - Formula: score = w_d/(k+rank_d) + w_s/(k+rank_s)
+   - Based on rank positions, not score magnitudes
+   - Flattens score differences between candidates
+   - Boosting is additive: final = rrf + year_boost + cat_boost
+   - Good when dense/sparse scores are not comparable
+
+Both modes:
+- Require dense_score >= semantic_threshold for boosting (prevents irrelevant docs from ranking high just because they match year)
+- Prioritize year-matched results when year_filter is set
 """
 
 import time
+import math
+from datetime import datetime, timedelta
 from typing import List, Dict, Optional, Tuple
 import logging
 import numpy as np
@@ -51,6 +70,14 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
         scoring_mode: str = "blended",
         dense_alpha: float = 0.6,
         sparse_beta: float = 0.4,
+        # Temporal decay parameters (paper: w_t = exp(-λ · Δt))
+        temporal_decay_rate: float = 0.05,  # λ = 0.05 (days)
+        enable_temporal_decay: bool = True,
+        # Trust scoring parameters (paper: T = 0.6 * user_conf + 0.4 * source_rel)
+        trust_threshold: float = 0.7,
+        enable_trust_filtering: bool = True,
+        user_confirmation_weight: float = 0.6,
+        source_reliability_weight: float = 0.4,
     ):
         """
         Initialize hybrid RRF strategy.
@@ -69,6 +96,12 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
             scoring_mode: "blended" or "rrf"
             dense_alpha: Weight for dense score in blended mode
             sparse_beta: Weight for sparse score in blended mode
+            temporal_decay_rate: λ for temporal decay (paper S2: λ=0.05)
+            enable_temporal_decay: Whether to apply temporal decay
+            trust_threshold: Minimum trust score (paper: 0.7)
+            enable_trust_filtering: Whether to filter by trust
+            user_confirmation_weight: Weight for user confirmation (paper: 0.6)
+            source_reliability_weight: Weight for source reliability (paper: 0.4)
         """
         super().__init__(chunks, embeddings)
 
@@ -87,6 +120,16 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
         self.dense_alpha = dense_alpha
         self.sparse_beta = sparse_beta
 
+        # Temporal decay (paper S2: w_t = exp(-λ · Δt))
+        self.temporal_decay_rate = temporal_decay_rate
+        self.enable_temporal_decay = enable_temporal_decay
+
+        # Trust scoring (paper S3, S7)
+        self.trust_threshold = trust_threshold
+        self.enable_trust_filtering = enable_trust_filtering
+        self.user_confirmation_weight = user_confirmation_weight
+        self.source_reliability_weight = source_reliability_weight
+
         # Build BM25 index
         self._build_bm25_index()
 
@@ -102,6 +145,107 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
             logger.warning("rank_bm25 not installed, using dense-only retrieval")
             self._bm25 = None
             self._bm25_available = False
+
+    def _compute_temporal_decay(self, chunk: Chunk, query_time: datetime = None) -> float:
+        """
+        Compute temporal decay weight for a chunk.
+
+        Paper S2 formula: w_t = exp(-λ · Δt)
+        where Δt is the time difference in days and λ is the decay rate.
+
+        Args:
+            chunk: Chunk to compute decay for
+            query_time: Query timestamp (defaults to now)
+
+        Returns:
+            Temporal weight between 0 and 1
+        """
+        if not self.enable_temporal_decay:
+            return 1.0
+
+        if query_time is None:
+            query_time = datetime.now()
+
+        # Use chunk's year to compute age
+        # Assume mid-year (July 1) for document timestamp
+        try:
+            doc_time = datetime(chunk.year, 7, 1)
+        except (ValueError, TypeError):
+            # Invalid year, no decay
+            return 1.0
+
+        # Compute time difference in days
+        delta_days = (query_time - doc_time).days
+
+        # For future documents (year > current year), no decay
+        if delta_days < 0:
+            return 1.0
+
+        # Apply exponential decay: w_t = exp(-λ · Δt)
+        # λ = 0.05 means ~50% weight after ~14 days, ~10% after ~46 days
+        # For yearly granularity, adjust λ to be per-year (0.05 * 365 = 18.25)
+        # But we use daily λ as per paper specification
+        decay_weight = math.exp(-self.temporal_decay_rate * delta_days)
+
+        return max(decay_weight, 0.01)  # Floor at 1% to never completely discard
+
+    def _compute_trust_score(self, chunk: Chunk) -> float:
+        """
+        Compute trust score for a chunk.
+
+        Paper S3, S7 formula: T = α · user_confirmation + β · source_reliability
+        where α = 0.6, β = 0.4
+
+        Args:
+            chunk: Chunk to compute trust for
+
+        Returns:
+            Trust score between 0 and 1
+        """
+        # Get trust signals from chunk metadata
+        # user_confirmation: 1.0 if user has confirmed/validated, 0.5 default
+        user_confirmation = getattr(chunk, 'user_confirmation', 0.5)
+        if user_confirmation is None:
+            user_confirmation = 0.5
+
+        # source_reliability: Based on source category/type
+        # Categories like 'learning', 'personal' get higher reliability
+        source_reliability = self._get_source_reliability(chunk)
+
+        # Compute weighted trust score
+        trust_score = (
+            self.user_confirmation_weight * user_confirmation +
+            self.source_reliability_weight * source_reliability
+        )
+
+        return trust_score
+
+    def _get_source_reliability(self, chunk: Chunk) -> float:
+        """
+        Get source reliability based on chunk category.
+
+        Args:
+            chunk: Chunk to assess
+
+        Returns:
+            Reliability score between 0 and 1
+        """
+        # Category-based reliability scores
+        category_reliability = {
+            'learning': 0.9,
+            'personal': 0.85,
+            'ideas': 0.8,
+            'saved': 0.75,  # External sources need more scrutiny
+            'technical': 0.85,
+            'ai_ml': 0.9,
+            'philosophy': 0.8,
+        }
+
+        category = getattr(chunk, 'category', 'general')
+        if category is None:
+            category = 'general'
+
+        return category_reliability.get(category.lower(), 0.7)
 
     def retrieve(
         self,
@@ -427,11 +571,16 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
         plan: QueryPlan,
     ) -> List[ScoredChunk]:
         """
-        Apply year and category boosting.
+        Apply year, category boosting, temporal decay, and trust scoring.
+
+        Paper formulas:
+        - Temporal decay (S2): w_t = exp(-λ · Δt)
+        - Trust score (S3, S7): T = 0.6 * user_conf + 0.4 * source_rel
+        - Composite score: S = α * S_sim + β * w_t + γ * T
 
         In blended mode: multiplicative boosting preserves score ordering.
-          final = blended * (1 + year_boost) * (1 + category_boost)
-          Example: 0.8 * 1.5 = 1.2 vs 0.3 * 1.0 = 0.3
+          final = blended * (1 + year_boost) * (1 + category_boost) * temporal_weight
+          Filtered by trust_threshold
 
         In rrf mode: additive boosting (legacy behavior).
           final = rrf + year_boost + category_boost
@@ -439,6 +588,7 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
         Safety: Only boost if dense_score >= semantic_threshold.
         """
         scored_chunks = []
+        query_time = datetime.now()
 
         # Determine valid years for boosting
         valid_years = set()
@@ -448,6 +598,8 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
             start_year, end_year = plan.filters.year_range
             valid_years.update(range(start_year, end_year + 1))
 
+        filtered_by_trust = 0
+
         for idx, data in combined.items():
             chunk = self.get_chunk_by_index(idx)
             if not chunk:
@@ -455,6 +607,21 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
 
             dense_score = data["dense_score"]
             blended_score = data.get("blended_score", data.get("rrf_score", 0.0))
+
+            # Compute temporal decay weight (paper S2)
+            temporal_weight = self._compute_temporal_decay(chunk, query_time)
+
+            # Compute trust score (paper S3, S7)
+            trust_score = self._compute_trust_score(chunk)
+
+            # Apply trust filtering (paper: threshold 0.7)
+            if self.enable_trust_filtering and trust_score < self.trust_threshold:
+                # Don't completely discard, but heavily penalize low-trust chunks
+                # This allows them to appear if no better options exist
+                trust_penalty = 0.5  # Reduce score by 50% for low-trust
+                filtered_by_trust += 1
+            else:
+                trust_penalty = 1.0
 
             # Determine matches
             year_matched = bool(valid_years) and chunk.year in valid_years
@@ -470,17 +637,31 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
                 # Multiplicative boosting: preserves semantic ordering
                 year_mult = (1.0 + self.year_boost) if year_matched else 1.0
                 cat_mult = (1.0 + self.category_boost) if category_matched else 1.0
-                final_score = blended_score * year_mult * cat_mult
+
+                # Apply temporal decay and trust
+                # Paper formula: S = α * S_sim + β * w_t + γ * T
+                # Simplified: final = blended * year_mult * cat_mult * temporal * trust_penalty
+                final_score = (
+                    blended_score *
+                    year_mult *
+                    cat_mult *
+                    temporal_weight *
+                    trust_penalty
+                )
                 applied_year_boost = self.year_boost if year_matched else 0.0
                 applied_category_boost = self.category_boost if category_matched else 0.0
             elif meets_threshold:
-                # Additive boosting (legacy RRF mode)
+                # Additive boosting (legacy RRF mode) with temporal decay
                 applied_year_boost = self.year_boost if year_matched else 0.0
                 applied_category_boost = self.category_boost if category_matched else 0.0
-                final_score = blended_score + applied_year_boost + applied_category_boost
+                final_score = (
+                    (blended_score + applied_year_boost + applied_category_boost) *
+                    temporal_weight *
+                    trust_penalty
+                )
             else:
-                # Below threshold: no boost
-                final_score = blended_score
+                # Below threshold: no boost, but still apply temporal decay
+                final_score = blended_score * temporal_weight * trust_penalty
                 applied_year_boost = 0.0
                 applied_category_boost = 0.0
 
@@ -495,6 +676,8 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
                 category_boost=applied_category_boost,
                 year_matched=year_matched,
                 category_matched=category_matched,
+                temporal_weight=temporal_weight,
+                trust_score=trust_score,
             )
             scored_chunks.append(scored_chunk)
 
@@ -506,7 +689,8 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
             logger.debug(
                 f"Top-10 score distribution: "
                 f"max={scores[0]:.4f}, min={scores[-1]:.4f}, "
-                f"range={scores[0] - scores[-1]:.4f}"
+                f"range={scores[0] - scores[-1]:.4f}, "
+                f"trust_filtered={filtered_by_trust}"
             )
 
         return scored_chunks

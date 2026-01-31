@@ -58,6 +58,10 @@ class ScoredChunk:
     year_boost: float = 0.0
     category_boost: float = 0.0
 
+    # Temporal and trust scoring (paper S2, S3, S7)
+    temporal_weight: float = 1.0  # w_t = exp(-λ · Δt)
+    trust_score: float = 1.0  # T = α * user_conf + β * source_rel
+
     # Matching flags
     year_matched: bool = False
     category_matched: bool = False
@@ -104,6 +108,8 @@ class ScoredChunk:
             "final_score": self.final_score,
             "year_boost": self.year_boost,
             "category_boost": self.category_boost,
+            "temporal_weight": self.temporal_weight,
+            "trust_score": self.trust_score,
             "year_matched": self.year_matched,
             "category_matched": self.category_matched,
             "rank": self.rank,
