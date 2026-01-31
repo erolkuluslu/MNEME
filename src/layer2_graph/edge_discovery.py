@@ -21,9 +21,9 @@ class EdgeDiscovery:
 
     Implements the paper's memory-efficient connection discovery algorithm:
     - Processes embeddings in batches (chunk_size=50) to avoid O(N^2) memory
-    - Uses configurable thresholds: 0.38 for same-domain, 0.30 for cross-domain
+    - Uses configurable thresholds: 0.45 for same-domain, 0.40 for cross-domain (Table I)
     - Top-15 neighbors per node
-    - Semantic edge typing via keyword heuristics
+    - Semantic edge typing via keyword heuristics (or NLI-based classification)
     """
 
     # Keyword sets for semantic edge classification (from paper Table III)
@@ -40,8 +40,8 @@ class EdgeDiscovery:
 
     def __init__(
         self,
-        semantic_threshold: float = 0.38,
-        cross_domain_threshold: float = 0.30,
+        semantic_threshold: float = 0.45,
+        cross_domain_threshold: float = 0.40,
         max_total_edges: int = 3000,
         top_k_neighbors: int = 15,
     ):
@@ -49,8 +49,8 @@ class EdgeDiscovery:
         Initialize edge discovery.
 
         Args:
-            semantic_threshold: Similarity threshold for same-domain edges (paper: 0.38)
-            cross_domain_threshold: Threshold for cross-domain edges (paper: 0.30)
+            semantic_threshold: Similarity threshold for same-domain edges (paper Table I: 0.45)
+            cross_domain_threshold: Threshold for cross-domain edges (paper Table I: 0.40)
             max_total_edges: Maximum total edges in graph (paper: 3000)
             top_k_neighbors: Max neighbors per node (paper: 15)
         """
@@ -307,12 +307,18 @@ class EdgeTyper:
 
 
 def create_edge_discovery(
-    semantic_threshold: float = 0.38,
-    cross_domain_threshold: float = 0.30,
+    semantic_threshold: float = 0.45,
+    cross_domain_threshold: float = 0.40,
     max_total_edges: int = 3000,
     top_k_neighbors: int = 15,
 ) -> EdgeDiscovery:
-    """Factory function to create edge discovery."""
+    """
+    Factory function to create edge discovery.
+
+    Default thresholds match paper Table I specification:
+    - semantic_threshold: 0.45 for same-domain edges
+    - cross_domain_threshold: 0.40 for cross-domain edges
+    """
     return EdgeDiscovery(
         semantic_threshold=semantic_threshold,
         cross_domain_threshold=cross_domain_threshold,
