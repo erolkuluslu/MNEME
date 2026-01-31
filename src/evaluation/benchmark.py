@@ -403,9 +403,15 @@ class BenchmarkRunner:
                 is_multi_hop = requires == "multi_hop"
                 is_cross_domain = "cross_domain" in expected.get("type", "")
 
+                # CRITICAL FIX: Pass actual sources to evaluator, not empty list
+                # Sources come from retrieval_result.candidates (ScoredChunk objects)
+                sources = []
+                if hasattr(answer, 'retrieval_result') and answer.retrieval_result:
+                    sources = answer.retrieval_result.candidates
+
                 result.evaluation = self.evaluator.comprehensive_evaluation(
                     answer=answer.answer,
-                    sources=[],  # Would need actual chunks here
+                    sources=sources,
                     year_filter=result.year_filter_detected,
                     expected_categories=set(expected.get("categories", [])),
                     is_multi_hop=is_multi_hop,

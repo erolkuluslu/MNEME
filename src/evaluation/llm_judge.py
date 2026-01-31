@@ -214,19 +214,41 @@ Scoring criteria:
 
 Respond with ONLY a single number from 1 to 5."""
 
-    # Temporal coherence prompt
+    # Temporal coherence prompt - enhanced to check query intent alignment
     TEMPORAL_PROMPT = """Rate the temporal coherence of this answer on a scale of 1-5.
 
 Answer: {answer}
 
 Year filter requested: {year}
+Query type: {query_type}
 
 Scoring criteria:
-1: Temporal confusion, wrong years cited
-2: Some temporal inconsistencies
-3: Generally temporally accurate
-4: Good temporal accuracy with minor issues
-5: Excellent temporal precision throughout
+1: Wrong years cited, answer doesn't address the requested time period
+2: Some citations from wrong years, partial temporal coverage
+3: Mostly addresses the right time period, minor temporal issues
+4: Good temporal focus on requested year with supporting context from other years
+5: Excellent - answer directly addresses the requested year with accurate citations
+
+IMPORTANT: A good answer for a year-specific query should:
+- Primarily cite sources from the requested year
+- Clearly indicate when referencing other years for context
+- Answer the question about that specific time period
+
+Respond with ONLY a single number from 1 to 5."""
+
+    # Query intent alignment prompt - checks if answer addresses the query's temporal scope
+    QUERY_ALIGNMENT_PROMPT = """Does this answer properly address the temporal scope of the query?
+
+Query: {query}
+Answer: {answer}
+Year filter: {year}
+
+Rate on a scale of 1-5:
+1: Answer ignores the time period entirely
+2: Answer mentions the time but doesn't substantively address it
+3: Answer partially addresses the time period
+4: Answer addresses the time period with good coverage
+5: Answer thoroughly addresses what was requested for that time period
 
 Respond with ONLY a single number from 1 to 5."""
 
@@ -382,16 +404,23 @@ Respond with ONLY a single number from 1 to 5."""
         answer: str,
         sources: List[ScoredChunk],
         year_filter: Optional[int],
+        query: str = "",
+        is_temporal_span: bool = False,
     ) -> TemporalAccuracyScore:
         """
         Evaluate temporal accuracy of an answer.
 
-        Checks if citations respect year filter when present.
+        CRITICAL FIX: Properly evaluates temporal accuracy by:
+        1. Checking citation year accuracy (do citations match requested year?)
+        2. Evaluating query intent alignment (does answer address the time period?)
+        3. Distinguishing single-year vs. temporal-span queries
 
         Args:
             answer: Generated answer text
             sources: Source chunks
             year_filter: Requested year filter
+            query: Original query text (for intent analysis)
+            is_temporal_span: True if query asks about multiple years (e.g., "2020 to 2025")
 
         Returns:
             TemporalAccuracyScore
@@ -409,11 +438,17 @@ Respond with ONLY a single number from 1 to 5."""
         for idx in cited_indices:
             if idx <= len(sources):
                 total += 1
-                if sources[idx - 1].year == year_filter:
+                source_year = sources[idx - 1].year
+                if is_temporal_span:
+                    # For temporal spans, any year in the answer is acceptable
+                    # (evaluation should check coverage separately)
+                    correct += 1
+                elif source_year == year_filter:
                     correct += 1
 
-        # LLM temporal coherence
-        coherence = self._judge_temporal_coherence(answer, year_filter)
+        # LLM temporal coherence - check both citation accuracy and query intent
+        query_type = "temporal_span" if is_temporal_span else "single_year"
+        coherence = self._judge_temporal_coherence(answer, year_filter, query_type)
 
         return TemporalAccuracyScore(
             year_citations_correct=correct,
@@ -508,9 +543,13 @@ Respond with ONLY a single number from 1 to 5."""
         )
         return self._get_numeric_judgment(prompt)
 
-    def _judge_temporal_coherence(self, answer: str, year: int) -> int:
+    def _judge_temporal_coherence(
+        self, answer: str, year: int, query_type: str = "single_year"
+    ) -> int:
         """Use LLM to judge temporal coherence."""
-        prompt = self.TEMPORAL_PROMPT.format(answer=answer, year=year)
+        prompt = self.TEMPORAL_PROMPT.format(
+            answer=answer, year=year, query_type=query_type
+        )
         return self._get_numeric_judgment(prompt)
 
     def _get_numeric_judgment(self, prompt: str) -> int:
