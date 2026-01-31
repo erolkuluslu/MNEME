@@ -541,8 +541,10 @@ def main():
     print(f"\n📊 Results:")
     print(f"   - Success Rate: {aggregate.successful_queries}/{aggregate.total_queries} ({aggregate.successful_queries / aggregate.total_queries * 100:.1f}%)")
     print(f"   - Avg Latency: {aggregate.avg_latency_ms:.0f}ms")
-    print(f"   - Cross-Domain Success: {aggregate.cross_domain_success}/{aggregate.cross_domain_queries} ({aggregate.cross_domain_success / aggregate.cross_domain_queries * 100:.1f}%)")
-    print(f"   - Multi-Hop Success: {aggregate.multi_hop_success}/{aggregate.multi_hop_queries} ({aggregate.multi_hop_success / aggregate.multi_hop_queries * 100:.1f}%)")
+    cd_rate = aggregate.cross_domain_success / aggregate.cross_domain_queries * 100 if aggregate.cross_domain_queries > 0 else 0
+    mh_rate = aggregate.multi_hop_success / aggregate.multi_hop_queries * 100 if aggregate.multi_hop_queries > 0 else 0
+    print(f"   - Cross-Domain Success: {aggregate.cross_domain_success}/{aggregate.cross_domain_queries} ({cd_rate:.1f}%)")
+    print(f"   - Multi-Hop Success: {aggregate.multi_hop_success}/{aggregate.multi_hop_queries} ({mh_rate:.1f}%)")
     print(f"\n📄 Reports:")
     print(f"   - BENCHMARK_RESULTS.md (comprehensive report)")
     print(f"   - benchmark_results.json (raw data)")

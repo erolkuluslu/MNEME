@@ -110,6 +110,14 @@ class RetrievalEngine:
             scoring_mode=self.config.scoring_mode,
             dense_alpha=self.config.dense_alpha,
             sparse_beta=self.config.sparse_beta,
+            # Temporal decay (paper S2)
+            temporal_decay_rate=self.config.temporal_decay_rate,
+            enable_temporal_decay=self.config.enable_temporal_decay,
+            # Trust scoring (paper S3, S7)
+            trust_threshold=self.config.trust_threshold,
+            enable_trust_filtering=self.config.enable_trust_filtering,
+            user_confirmation_weight=self.config.user_confirmation_weight,
+            source_reliability_weight=self.config.source_reliability_weight,
         )
 
     def _build_year_index(self) -> dict:
