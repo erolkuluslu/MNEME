@@ -1,0 +1,2493 @@
+{
+  "benchmark_name": "MNEME Benchmark",
+  "timestamp": "2026-02-02T11:34:05.856305",
+  "total_time_ms": 127500.17595291138,
+  "results": [
+    {
+      "query_id": "H01",
+      "query": "How has my understanding of AI evolved over time?",
+      "expected": {
+        "type": "temporal_evolution",
+        "difficulty": "hard",
+        "query_type": "TEMPORAL",
+        "requires": "chronological_ordering",
+        "should_start_from_earliest_year": true
+      },
+      "answer": {
+        "answer": "The understanding of AI has evolved significantly, moving from a purely theoretical and philosophical framework to deep practical integration, coupled with a nuanced appreciation of both its limitations and its existential risks.\n\n### 2020\u20132022: Establishing the Philosophical and Cognitive Framework\n\nInitially, the understanding of AI was framed by established philosophical and cognitive theories:\n\n*   **2020 (Cognitive Biases):** The earliest perspective viewed AI through the lens of human cognition, specifically Kahneman\u2019s work. AI systems (LLMs) were understood to exhibit pattern-matching similar to human System 1 thinking, lacking deliberate System 2 reasoning. The core concern was that AI systems reproduce human cognitive biases present in the training data, making AI alignment essential [1].\n*   **2022 (Imagined Reality):** This theoretical understanding expanded to place AI within the context of human history and cooperation (Harari). AI systems were recognized as another layer of \"imagined reality\" or \"intersubjective reality,\" manipulating symbols that represent human concepts. The question was raised whether AI could participate in or create new forms of shared myths that reshape human cooperation [2].\n\n### 2023: The Transition to Practical Integration and Existential Concern\n\nThe year 2023 marked a major transition, moving from abstract theory to personal application and confronting existential risk:\n\n*   **Early 2023 (Skill Differentiation):** A key realization was that while AI excels at retrieval and summarization, it struggles with truly novel synthesis\u2014the core skill of connecting disparate information into something new. This established synthesis as a critical human differentiator and a practice to be actively developed [4].\n*   **Mid-2023 (Workflow Shift):** By September 2023, AI became heavily integrated into the daily workflow, leading to a massive productivity gain. The author\u2019s role shifted from coder to **editor**, reviewing AI-generated first drafts, boilerplate, and debugging suggestions. This practical use highlighted the importance of prompt engineering as a core skill, but also introduced the worry of skill atrophy (\"use it or lose it?\") [3].\n*   **Late 2023 (Existential Urgency):** Simultaneously, the author internalized the profound warnings regarding superintelligence and the AI alignment problem (Bostrom). The understanding solidified that misaligned AI is dangerous not because it is malicious, but because it is indifferent (\"The AI does not hate you...\"). The concept of orthogonality\u2014that intelligence and goals are separate\u2014was recognized as a critical challenge, underscoring the urgency of building aligned systems [5].\n\n### 2024: Building, Limitations, and Refined Mental Models\n\nMost recently, the understanding has matured through hands-on development and detailed observation of AI failures:\n\n*   **Mid-2024 (Building and Probabilistic Design):** In July 2024, the author transitioned from being a heavy user to actively **building** an AI agent for personal knowledge management. This experience revealed that building with AI is less deterministic and more probabilistic, focusing on shaping behavior rather than dictating it. This phase introduced practical technical challenges like document chunking and handling context limits [7].\n*   **Most Recently (Refined Limitations):** By August 2024, the understanding of current LLM capabilities became highly specific. The author cataloged seven specific weaknesses, including poor performance with recent information, counting/math, spatial reasoning, and a lack of self-knowledge. This led to a refined mental model: AI should be treated as a \"Brilliant intern with unreliable memory,\" useful as a brainstorming partner and first draft generator, but never as an oracle, requiring constant verification of facts and claims [6].",
+        "query": "How has my understanding of AI evolved over time?",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "philosophy_2020_thinking_fast_slow_kahneman_chunk_1",
+            "doc_id": "philosophy_2020_thinking_fast_slow_kahneman",
+            "year": 2020,
+            "category": "philosophy",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0025848318529219307,
+            "year_matched": false,
+            "excerpt": "The experiencing self lives each moment of experience, but the remembering self keeps score and makes decisions.\" Key Biases Catalogued: 1."
+          },
+          {
+            "index": 2,
+            "chunk_id": "philosophy_2022_sapiens_harari_chunk_1",
+            "doc_id": "philosophy_2022_sapiens_harari",
+            "year": 2022,
+            "category": "philosophy",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002783911402951576,
+            "year_matched": false,
+            "excerpt": "Key Concepts: 1. Cognitive Revolution: The emergence of complex language and abstract thinking\n2. Agricultural Revolution: \"History's Biggest Fraud\"\u2014made humanity more numerous but individually worse ..."
+          },
+          {
+            "index": 3,
+            "chunk_id": "personal_2023_ai_workflow_reflection_chunk_0",
+            "doc_id": "personal_2023_ai_workflow_reflection",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0034777440428733833,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: How AI Changed My Daily Work\nAUTHOR: Me\nDATE: 2023-09-20 Six months of heavy AI use. Time to reflect on what's changed."
+          },
+          {
+            "index": 4,
+            "chunk_id": "learning_2023_synthesis_skill_chunk_0",
+            "doc_id": "learning_2023_synthesis_skill",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003477597572727092,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal reflection\nTITLE: Synthesis as a Core Skill\nAUTHOR: Me\nDATE: 2023-05-10 What is synthesis? Taking disparate information and combining it into something new."
+          },
+          {
+            "index": 5,
+            "chunk_id": "saved_2023_superintelligence_warnings_chunk_0",
+            "doc_id": "saved_2023_superintelligence_warnings",
+            "year": 2023,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0024776080617533265,
+            "year_matched": false,
+            "excerpt": "TYPE: Book Highlights\nSOURCE: Superintelligence by Nick Bostrom\nTITLE: The AI Alignment Problem\nAUTHOR: Me (highlighting Bostrom)\nDATE: 2023-09-15 The core concern: \"Before the prospect of an intellig..."
+          },
+          {
+            "index": 6,
+            "chunk_id": "learning_2024_llm_limitations_learned_chunk_0",
+            "doc_id": "learning_2024_llm_limitations_learned",
+            "year": 2024,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0036663866973520366,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal experience + AI safety articles\nTITLE: What AI Can't Do (Yet)\nAUTHOR: Me\nDATE: 2024-08-15 Things I've learned AI is bad at: 1."
+          },
+          {
+            "index": 7,
+            "chunk_id": "personal_2024_july_building_ai_project_chunk_0",
+            "doc_id": "personal_2024_july_building_ai_project",
+            "year": 2024,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003065629407965773,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Building My First AI Agent\nAUTHOR: Me\nDATE: 2024-07-08 July 8, 2024. Building an AI agent for personal knowledge management. Ambitious."
+          },
+          {
+            "index": 8,
+            "chunk_id": "philosophy_2024_superintelligence_bostrom_chunk_1",
+            "doc_id": "philosophy_2024_superintelligence_bostrom",
+            "year": 2024,
+            "category": "philosophy",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0024451644817788847,
+            "year_matched": false,
+            "excerpt": "We would have no warning.\" Chapter 14: The Strategic Picture \"Before the prospect of an intelligence explosion, we humans are like small children playing with a bomb."
+          },
+          {
+            "index": 9,
+            "chunk_id": "saved_2025_article_ai_job_automation_chunk_0",
+            "doc_id": "saved_2025_article_ai_job_automation",
+            "year": 2025,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0030783342293406735,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Article\nSOURCE: Wired\nTITLE: Which Jobs Will AI Actually Replace? AUTHOR: Saved with notes\nDATE: 2025-03-15 The nuanced view: Not \"AI will replace jobs\" but \"AI will replace tasks."
+          },
+          {
+            "index": 10,
+            "chunk_id": "learning_2025_meaning_and_ai_reflection_chunk_0",
+            "doc_id": "learning_2025_meaning_and_ai_reflection",
+            "year": 2025,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002974729322676884,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal reflection + philosophy reading\nTITLE: What Does AI Mean for Human Meaning? AUTHOR: Me\nDATE: 2025-02-18 The question I keep coming back to: If AI can do everything..."
+          },
+          {
+            "index": 11,
+            "chunk_id": "personal_2025_ai_meaning_journal_chunk_0",
+            "doc_id": "personal_2025_ai_meaning_journal",
+            "year": 2025,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002758327290774842,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Thinking About AI and My Work\nAUTHOR: Me\nDATE: 2025-02-18 What does meaning mean when AI can do my job? The question keeps me up at night."
+          },
+          {
+            "index": 12,
+            "chunk_id": "learning_2025_context_engineering_article_chunk_0",
+            "doc_id": "learning_2025_context_engineering_article",
+            "year": 2025,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002715749162522313,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Various AI blogs + personal experimentation\nTITLE: Context Engineering - The New Skill\nAUTHOR: Me\nDATE: 2025-04-01 What I've learned about working with AI: It's not just pr..."
+          },
+          {
+            "index": 13,
+            "chunk_id": "philosophy_2025_stoic_reflection_chunk_0",
+            "doc_id": "philosophy_2025_stoic_reflection",
+            "year": 2025,
+            "category": "philosophy",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0025983637260521848,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Stoicism in the Age of AI - A Reflection\nAUTHOR: Me\nDATE: 2025-01-15 January 15, 2025. \"The obstacle is the way."
+          },
+          {
+            "index": 14,
+            "chunk_id": "saved_2025_article_ai_and_meaning_chunk_0",
+            "doc_id": "saved_2025_article_ai_and_meaning",
+            "year": 2025,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0025957482102005013,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Article\nSOURCE: The Atlantic\nTITLE: What AI Means for Human Purpose\nAUTHOR: Saved article with reflections\nDATE: 2025-02-25 The question posed: If AI can do everything humans do, what's le..."
+          },
+          {
+            "index": 15,
+            "chunk_id": "ai_ml_2025_agentic_future_chunk_0",
+            "doc_id": "ai_ml_2025_agentic_future",
+            "year": 2025,
+            "category": "ai_ml",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002552044826496114,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Building Autonomous AI Agents - The New Frontier\nAUTHOR: Me\nDATE: 2025-01-05 January 5, 2025. We are building fully autonomous agents now."
+          }
+        ],
+        "confidence": "good_match",
+        "quality": "good",
+        "latency_ms": 10188.355922698975,
+        "stats": {
+          "generation_time_ms": 10118.038177490234,
+          "total_latency_ms": 10188.355922698975,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "model_used": "gemini-flash-latest",
+          "temperature": 0.3,
+          "num_source_chunks": 15,
+          "context_length": 7468
+        },
+        "query_type": "temporal",
+        "year_filter": null,
+        "category_filter": "learning",
+        "num_sources_used": 15,
+        "years_covered": [
+          2020,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "categories_covered": [
+          "ai_ml",
+          "learning",
+          "personal",
+          "philosophy",
+          "saved"
+        ],
+        "coverage_gaps": [],
+        "error": null,
+        "fallback_used": false
+      },
+      "latency_ms": 10188.439846038818,
+      "query_type_detected": "temporal",
+      "year_filter_detected": null,
+      "category_filter_detected": "learning",
+      "retrieval_success": true,
+      "generation_success": true,
+      "type_detection_correct": false,
+      "evaluation": {
+        "synthesis": {
+          "citation_count": 7,
+          "source_coverage": 0.4666666666666667,
+          "integration_quality": 5,
+          "final_score": 0.84
+        },
+        "overall_score": 0.8499999999999999,
+        "strengths": [
+          "Excellent source integration",
+          "Good multi-hop reasoning"
+        ],
+        "weaknesses": [],
+        "multi_hop": {
+          "unique_sources_cited": 7,
+          "source_diversity": 1.0,
+          "reasoning_quality": 0.8,
+          "final_score": 0.8599999999999999
+        }
+      },
+      "error": null
+    },
+    {
+      "query_id": "H02",
+      "query": "What technical skills did I learn in 2023?",
+      "expected": {
+        "type": "year_specific",
+        "difficulty": "medium",
+        "query_type": "SPECIFIC",
+        "year": 2023,
+        "categories": [
+          "learning",
+          "technical"
+        ]
+      },
+      "answer": {
+        "answer": "The author's technical learning in 2023 centered on the integration and orchestration of AI tools. Specific skills and areas of focus included:\n\n*   **AI Orchestration:** The author pivoted from \"knowing how to code\" to \"knowing how to orchestrate AI\" [3].\n*   **Prompt Engineering:** This skill was highlighted as a critical shift, noting that knowing how to ask is as important as knowing how to do [2, 3].\n*   **Specific AI Tools:** The author learned about **LangChain** and **agents** [3].\n*   **Workflow Shift:** The author noted that heavy AI use resulted in reading more code than writing it, effectively shifting the author's role to that of an editor who reviews AI-generated code [2].",
+        "query": "What technical skills did I learn in 2023?",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "learning_2023_learning_in_public_chunk_0",
+            "doc_id": "learning_2023_learning_in_public",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.005987372629714644,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Various (Swyx, others)\nTITLE: Learning in Public\nAUTHOR: Me\nDATE: 2023-04-05 The concept: Share what you learn as you learn it. Blog posts, tweets, talks."
+          },
+          {
+            "index": 2,
+            "chunk_id": "personal_2023_ai_workflow_reflection_chunk_0",
+            "doc_id": "personal_2023_ai_workflow_reflection",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.004298653032329863,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: How AI Changed My Daily Work\nAUTHOR: Me\nDATE: 2023-09-20 Six months of heavy AI use. Time to reflect on what's changed."
+          },
+          {
+            "index": 3,
+            "chunk_id": "personal_2023_december_best_year_chunk_0",
+            "doc_id": "personal_2023_december_best_year",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.004279882579766165,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: 2023 Year in Review - Best Year Yet\nAUTHOR: Me\nDATE: 2023-12-31 December 31, 2023. The best year of my thirties. Maybe of my life."
+          },
+          {
+            "index": 4,
+            "chunk_id": "personal_2023_imposter_syndrome_chunk_0",
+            "doc_id": "personal_2023_imposter_syndrome",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0022473951518089293,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Imposter Syndrome at Work\nAUTHOR: Me\nDATE: 2023-02-15 Got promoted last month. Now I feel like a fraud."
+          },
+          {
+            "index": 5,
+            "chunk_id": "personal_2023_therapy_start_chunk_0",
+            "doc_id": "personal_2023_therapy_start",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002199245281784123,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Started Therapy Today\nAUTHOR: Me\nDATE: 2023-03-12 Had my first therapy session today. I've been resistant to therapy for years."
+          },
+          {
+            "index": 6,
+            "chunk_id": "ideas_2023_kodawari_japanese_craft_chunk_0",
+            "doc_id": "ideas_2023_kodawari_japanese_craft",
+            "year": 2023,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0019320556158223521,
+            "year_matched": true,
+            "excerpt": "TYPE: Concept\nSOURCE: Japan trip\nTITLE: Kodawari - The Relentless Pursuit of Perfection\nAUTHOR: Me\nDATE: 2023-05-20 What is kodawari? Japanese concept: An uncompromising commitment to excellence in cr..."
+          },
+          {
+            "index": 7,
+            "chunk_id": "personal_2023_june_post_japan_integration_chunk_0",
+            "doc_id": "personal_2023_june_post_japan_integration",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0019287373689472155,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Back from Japan - What I Learned\nAUTHOR: Me\nDATE: 2023-06-01 June 1, 2023. Back for a week. Still processing. Things to integrate: 1."
+          },
+          {
+            "index": 8,
+            "chunk_id": "learning_2023_prompt_engineering_lessons_chunk_0",
+            "doc_id": "learning_2023_prompt_engineering_lessons",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0018958028733730317,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Various (OpenAI docs, LangChain, experimentation)\nTITLE: What I've Learned About Prompting AI\nAUTHOR: Me\nDATE: 2023-06-15 Lessons from 6 months of heavy AI use: 1."
+          },
+          {
+            "index": 9,
+            "chunk_id": "learning_2023_synthesis_skill_chunk_0",
+            "doc_id": "learning_2023_synthesis_skill",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0018379816755652429,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal reflection\nTITLE: Synthesis as a Core Skill\nAUTHOR: Me\nDATE: 2023-05-10 What is synthesis? Taking disparate information and combining it into something new."
+          },
+          {
+            "index": 10,
+            "chunk_id": "learning_2023_transformer_intuition_chunk_0",
+            "doc_id": "learning_2023_transformer_intuition",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.001790931109388469,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Jay Alammar's Blog - The Illustrated Transformer\nTITLE: Finally Grasping How Transformers Work\nAUTHOR: Me\nDATE: 2023-02-10 The breakthrough insight: Attention = \"What parts..."
+          },
+          {
+            "index": 11,
+            "chunk_id": "saved_2023_four_agreements_summary_chunk_0",
+            "doc_id": "saved_2023_four_agreements_summary",
+            "year": 2023,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.001764288387704411,
+            "year_matched": true,
+            "excerpt": "TYPE: Book Highlights\nSOURCE: The Four Agreements by Don Miguel Ruiz\nTITLE: Toltec Wisdom\nAUTHOR: Me (highlighting Ruiz)\nDATE: 2023-11-20 Agreement 1: Be Impeccable With Your Word \"Your word is the po..."
+          },
+          {
+            "index": 12,
+            "chunk_id": "learning_2023_interleaving_practice_chunk_0",
+            "doc_id": "learning_2023_interleaving_practice",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0017477631345391275,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Make It Stick (book)\nTITLE: Why Mixing Practice Works Better\nAUTHOR: Me\nDATE: 2023-08-15 The counterintuitive finding: Blocked practice (AAABBBCCC) feels effective but isn'..."
+          },
+          {
+            "index": 13,
+            "chunk_id": "ideas_2023_strong_opinions_loosely_chunk_0",
+            "doc_id": "ideas_2023_strong_opinions_loosely",
+            "year": 2023,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0017190639670971771,
+            "year_matched": true,
+            "excerpt": "TYPE: Mental Model\nSOURCE: Tech culture / Jeff Bezos\nTITLE: Strong Opinions, Loosely Held\nAUTHOR: Me\nDATE: 2023-08-20 The concept: Have strong opinions."
+          },
+          {
+            "index": 14,
+            "chunk_id": "ai_ml_2023_gpt_shock_chunk_0",
+            "doc_id": "ai_ml_2023_gpt_shock",
+            "year": 2023,
+            "category": "ai_ml",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0016865817904472352,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: The ChatGPT Revolution - Everything Has Changed\nAUTHOR: Me\nDATE: 2023-03-15 March 15, 2023."
+          },
+          {
+            "index": 15,
+            "chunk_id": "philosophy_2023_structure_scientific_revolutions_chunk_1",
+            "doc_id": "philosophy_2023_structure_scientific_revolutions",
+            "year": 2023,
+            "category": "philosophy",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0013312192261219027,
+            "year_matched": true,
+            "excerpt": "Transformations like these, though usually more gradual and almost always irreversible, are common concomitants of scientific training.\" Historical Examples of Paradigm Shifts: 1."
+          }
+        ],
+        "confidence": "year_matched",
+        "quality": "good",
+        "latency_ms": 4003.7829875946045,
+        "stats": {
+          "generation_time_ms": 3960.9339237213135,
+          "total_latency_ms": 4003.7829875946045,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "model_used": "gemini-flash-latest",
+          "temperature": 0.3,
+          "num_source_chunks": 15,
+          "context_length": 7190
+        },
+        "query_type": "temporal",
+        "year_filter": 2023,
+        "category_filter": "learning",
+        "num_sources_used": 15,
+        "years_covered": [
+          2023
+        ],
+        "categories_covered": [
+          "ai_ml",
+          "ideas",
+          "learning",
+          "personal",
+          "philosophy",
+          "saved"
+        ],
+        "coverage_gaps": [],
+        "error": null,
+        "fallback_used": false
+      },
+      "latency_ms": 4003.8399696350098,
+      "query_type_detected": "temporal",
+      "year_filter_detected": 2023,
+      "category_filter_detected": "learning",
+      "retrieval_success": true,
+      "generation_success": true,
+      "type_detection_correct": false,
+      "evaluation": {
+        "synthesis": {
+          "citation_count": 2,
+          "source_coverage": 0.13333333333333333,
+          "integration_quality": 3,
+          "final_score": 0.4
+        },
+        "overall_score": 0.6733333333333333,
+        "strengths": [
+          "High temporal accuracy"
+        ],
+        "weaknesses": [],
+        "multi_hop": {
+          "unique_sources_cited": 2,
+          "source_diversity": 0.6666666666666666,
+          "reasoning_quality": 0.6,
+          "final_score": 0.62
+        },
+        "temporal": {
+          "year_citations_correct": 2,
+          "year_citations_total": 2,
+          "accuracy_rate": 1.0,
+          "temporal_coherence": 1.0,
+          "final_score": 1.0
+        }
+      },
+      "error": null
+    },
+    {
+      "query_id": "H03",
+      "query": "Compare my interests in 2020 vs 2024",
+      "expected": {
+        "type": "year_comparison",
+        "difficulty": "hard",
+        "query_type": "COMPARISON",
+        "years": [
+          2020,
+          2024
+        ],
+        "requires": "community_summaries",
+        "should_exclude_intermediate_years": true
+      },
+      "answer": {
+        "answer": "In 2020, my interests centered on specific skill acquisition, personal resilience, and the adoption of powerful mental models for long-term growth.\n\n**Specific Skills and Goals:**\nIn the year-end reflection for 2020, specific skills gained included intermediate sourdough baking, machine learning basics (such as linear regression and basic neural nets), and maintaining a meditation practice [3]. Reading interests focused on productivity and systems, with favorites including \"Deep Work\" and \"The Pragmatic Programmer\" [3]. Goals set for 2021 included losing weight, building something meaningful with machine learning, and understanding transformers [3].\n\n**Mental Models and Philosophy:**\nA significant focus in 2020 was understanding how small, consistent efforts yield massive results, primarily through the concept of compound interest. This model was applied not just to money, but to skills, knowledge, fitness, career, relationships, and reputation [1]. The insight was that 1% better daily leads to being 37x better in a year, emphasizing the need to \"play long games\" and value patient accumulation over impatient optimization [1].\n\nRelatedly, the philosophy of systems and identity-based change was a major interest, drawn from the idea that \"You do not rise to the level of your goals. You fall to the level of your systems\" [5]. This involved focusing on who one wishes to become (e.g., \"I am a reader\") rather than just what one wants to achieve [5].\n\n**Decision Making and Action:**\nA key framework adopted was the Regret Minimization Framework, which involves projecting forward to age 80 to minimize the number of regrets [7]. This model promotes a bias toward action, recognizing that the \"regret of omission (didn't try)\" grows over time, while the \"regret of commission (did something, failed)\" fades [7]. This framework was applied to big decisions such as travel, starting projects, and relationships [7].",
+        "query": "Compare my interests in 2020 vs 2024",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "saved_2024_life_advice_thread_chunk_0",
+            "doc_id": "saved_2024_life_advice_thread",
+            "year": 2024,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002327919834615225,
+            "year_matched": true,
+            "excerpt": "TYPE: Saved Notes\nSOURCE: Twitter thread (saved)\nTITLE: Life Advice That Actually Helped\nAUTHOR: Saved from various people\nDATE: 2024-05-15 Collected advice that proved true: ---\n\"The days are long bu..."
+          },
+          {
+            "index": 2,
+            "chunk_id": "ideas_2024_satisficing_vs_maximizing_chunk_0",
+            "doc_id": "ideas_2024_satisficing_vs_maximizing",
+            "year": 2024,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0023017184865112604,
+            "year_matched": true,
+            "excerpt": "TYPE: Mental Model\nSOURCE: Herbert Simon / Barry Schwartz\nTITLE: When Good Enough Is Best\nAUTHOR: Me\nDATE: 2024-09-20 Two decision styles: MAXIMIZING: Seek the best possible option. Exhaustive search."
+          },
+          {
+            "index": 3,
+            "chunk_id": "ideas_2020_compound_interest_for_skills_chunk_0",
+            "doc_id": "ideas_2020_compound_interest_for_skills",
+            "year": 2020,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002012221097946167,
+            "year_matched": true,
+            "excerpt": "TYPE: Mental Model\nSOURCE: Conversations + reading\nTITLE: Compound Interest Applies to Everything\nAUTHOR: Me\nDATE: 2020-11-15 The insight: Compound interest isn't just for money."
+          },
+          {
+            "index": 4,
+            "chunk_id": "saved_2022_article_on_taste_chunk_0",
+            "doc_id": "saved_2022_article_on_taste",
+            "year": 2022,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002,
+            "year_matched": true,
+            "excerpt": "TYPE: Saved Article\nSOURCE: Paul Graham\nTITLE: How to Develop Good Taste\nAUTHOR: Saved with notes\nDATE: 2022-06-20 Key insight: \"Taste is just the ability to recognize good work."
+          },
+          {
+            "index": 5,
+            "chunk_id": "personal_2020_december_year_reflection_chunk_0",
+            "doc_id": "personal_2020_december_year_reflection",
+            "year": 2020,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0017737096846103667,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: 2020 Year End Reflection\nAUTHOR: Me\nDATE: 2020-12-31 December 31, 2020. What a year. I don't even know where to begin."
+          },
+          {
+            "index": 6,
+            "chunk_id": "saved_2023_article_craftmanship_chunk_0",
+            "doc_id": "saved_2023_article_craftmanship",
+            "year": 2023,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0017237135782651014,
+            "year_matched": true,
+            "excerpt": "TYPE: Saved Article\nSOURCE: Paul Graham's essays\nTITLE: Taste and Craftsmanship\nAUTHOR: Saved from PG\nDATE: 2023-03-20 Key passages: \"Good design is simple. You hear this from math to painting."
+          },
+          {
+            "index": 7,
+            "chunk_id": "saved_2024_podcast_ferris_navalism_chunk_0",
+            "doc_id": "saved_2024_podcast_ferris_navalism",
+            "year": 2024,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0016398541778326035,
+            "year_matched": true,
+            "excerpt": "TYPE: Saved Notes\nSOURCE: Tim Ferriss Podcast\nTITLE: Naval on Happiness and Meaning\nAUTHOR: Notes from episode\nDATE: 2024-02-20 Key quotes: \"Desire is a contract you make with yourself to be unhappy u..."
+          },
+          {
+            "index": 8,
+            "chunk_id": "saved_2020_atomic_habits_quotes_chunk_0",
+            "doc_id": "saved_2020_atomic_habits_quotes",
+            "year": 2020,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0014301857650279998,
+            "year_matched": true,
+            "excerpt": "TYPE: Book Highlights\nSOURCE: Atomic Habits by James Clear\nTITLE: Quotes That Changed My Behavior\nAUTHOR: Me (highlighting Clear)\nDATE: 2020-11-20 --- \"You do not rise to the level of your goals."
+          },
+          {
+            "index": 9,
+            "chunk_id": "ideas_2020_regret_minimization_chunk_0",
+            "doc_id": "ideas_2020_regret_minimization",
+            "year": 2020,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0013813341557979584,
+            "year_matched": true,
+            "excerpt": "TYPE: Mental Model\nSOURCE: Jeff Bezos interview\nTITLE: Regret Minimization Framework\nAUTHOR: Me\nDATE: 2020-08-10 Bezos's framework: \"I wanted to project myself forward to age 80 and say, 'Okay, now I'..."
+          },
+          {
+            "index": 10,
+            "chunk_id": "personal_2024_december_buying_ring_chunk_0",
+            "doc_id": "personal_2024_december_buying_ring",
+            "year": 2024,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0013584093585023017,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: I Bought a Ring\nAUTHOR: Me\nDATE: 2024-12-01 December 1, 2024. I bought a ring. It's in my sock drawer, wrapped in a T-shirt."
+          },
+          {
+            "index": 11,
+            "chunk_id": "learning_2024_attention_economy_article_chunk_0",
+            "doc_id": "learning_2024_attention_economy_article",
+            "year": 2024,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0012891616657828146,
+            "year_matched": true,
+            "excerpt": "TYPE: Saved Article\nSOURCE: The Atlantic\nTITLE: How Tech Hijacks Your Mind\nAUTHOR: Saved article with notes\nDATE: 2024-05-10 Key concept: The attention economy Your attention is the product."
+          },
+          {
+            "index": 12,
+            "chunk_id": "learning_2024_knowledge_vs_wisdom_chunk_0",
+            "doc_id": "learning_2024_knowledge_vs_wisdom",
+            "year": 2024,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0012653753424412357,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Philosophy reading\nTITLE: Knowledge vs. Wisdom\nAUTHOR: Me\nDATE: 2024-10-20 The distinction: KNOWLEDGE: Knowing facts, information, how things work."
+          },
+          {
+            "index": 13,
+            "chunk_id": "personal_2024_july_building_ai_project_chunk_0",
+            "doc_id": "personal_2024_july_building_ai_project",
+            "year": 2024,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.001208608960006295,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Building My First AI Agent\nAUTHOR: Me\nDATE: 2024-07-08 July 8, 2024. Building an AI agent for personal knowledge management. Ambitious."
+          },
+          {
+            "index": 14,
+            "chunk_id": "ai_ml_2024_fine_tuning_guide_chunk_0",
+            "doc_id": "ai_ml_2024_fine_tuning_guide",
+            "year": 2024,
+            "category": "ai_ml",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0011076899253688558,
+            "year_matched": true,
+            "excerpt": "TYPE: Tech Blog\nSOURCE: https://huggingface.co/blog/fine-tuning-llms-2024\nTITLE: The Complete Guide to Fine-Tuning LLMs in 2024: From LoRA to Full Training\nAUTHOR: Philipp Schmid, Hugging Face\nDATE: 2..."
+          },
+          {
+            "index": 15,
+            "chunk_id": "learning_2020_pandemic_productivity_article_chunk_0",
+            "doc_id": "learning_2020_pandemic_productivity_article",
+            "year": 2020,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0008741869032382965,
+            "year_matched": true,
+            "excerpt": "TYPE: Saved Article\nSOURCE: New York Times\nTITLE: Why You're Not Productive During the Pandemic (And Why That's OK)\nAUTHOR: Saved from NYT\nDATE: 2020-04-28 Key quotes I highlighted: \"You are not worki..."
+          }
+        ],
+        "confidence": "year_matched",
+        "quality": "good",
+        "latency_ms": 6873.117208480835,
+        "stats": {
+          "generation_time_ms": 6803.32612991333,
+          "total_latency_ms": 6873.117208480835,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "model_used": "gemini-flash-latest",
+          "temperature": 0.3,
+          "num_source_chunks": 15,
+          "context_length": 7430
+        },
+        "query_type": "comparison",
+        "year_filter": 2020,
+        "category_filter": null,
+        "num_sources_used": 15,
+        "years_covered": [
+          2020,
+          2022,
+          2023,
+          2024
+        ],
+        "categories_covered": [
+          "ai_ml",
+          "ideas",
+          "learning",
+          "personal",
+          "saved"
+        ],
+        "coverage_gaps": [
+          "Only 6 of 15 documents from 2020 appear topically relevant."
+        ],
+        "error": null,
+        "fallback_used": false
+      },
+      "latency_ms": 6873.154163360596,
+      "query_type_detected": "comparison",
+      "year_filter_detected": 2020,
+      "category_filter_detected": null,
+      "retrieval_success": true,
+      "generation_success": true,
+      "type_detection_correct": false,
+      "evaluation": {
+        "synthesis": {
+          "citation_count": 4,
+          "source_coverage": 0.26666666666666666,
+          "integration_quality": 5,
+          "final_score": 0.72
+        },
+        "overall_score": 0.7133333333333333,
+        "strengths": [
+          "Excellent source integration"
+        ],
+        "weaknesses": [
+          "Temporal accuracy issues"
+        ],
+        "multi_hop": {
+          "unique_sources_cited": 4,
+          "source_diversity": 1.0,
+          "reasoning_quality": 0.6,
+          "final_score": 0.72
+        },
+        "temporal": {
+          "year_citations_correct": 2,
+          "year_citations_total": 4,
+          "accuracy_rate": 0.5,
+          "temporal_coherence": 1.0,
+          "final_score": 0.7
+        }
+      },
+      "error": null
+    },
+    {
+      "query_id": "H04",
+      "query": "How do my AI learning notes connect to my philosophy reading?",
+      "expected": {
+        "type": "cross_domain_synthesis",
+        "difficulty": "hard",
+        "query_type": "SYNTHESIS",
+        "categories": [
+          "ai_ml",
+          "philosophy"
+        ],
+        "requires": "multi_hop",
+        "min_unique_sources": 3
+      },
+      "answer": {
+        "answer": "The author's AI learning notes connect to philosophy reading in three primary ways:\n\n1.  **Transfer Learning:** The author notes that philosophy provides transferable skills to AI work, specifically concerning \"Ethics, consciousness, meaning questions\" [6].\n2.  **Reflection on Meaning:** The author used philosophy reading and personal reflection to explore the question of what AI means for human meaning, concluding that AI is a tool and that human meaning is derived from process, relationship, embodiment, and choice [5].\n3.  **AI Agent Function:** The author is building a personal AI agent designed to retrieve context and synthesize answers from notes, citing the philosophical query, \"What did I learn about Stoicism?\" as an example of the agent's intended function [1].",
+        "query": "How do my AI learning notes connect to my philosophy reading?",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "personal_2024_july_building_ai_project_chunk_0",
+            "doc_id": "personal_2024_july_building_ai_project",
+            "year": 2024,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003840748816728592,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Building My First AI Agent\nAUTHOR: Me\nDATE: 2024-07-08 July 8, 2024. Building an AI agent for personal knowledge management. Ambitious."
+          },
+          {
+            "index": 2,
+            "chunk_id": "learning_2023_synthesis_skill_chunk_0",
+            "doc_id": "learning_2023_synthesis_skill",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0038143767900573338,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal reflection\nTITLE: Synthesis as a Core Skill\nAUTHOR: Me\nDATE: 2023-05-10 What is synthesis? Taking disparate information and combining it into something new."
+          },
+          {
+            "index": 3,
+            "chunk_id": "learning_2024_zettelkasten_method_chunk_0",
+            "doc_id": "learning_2024_zettelkasten_method",
+            "year": 2024,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0033358339385827426,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: How to Take Smart Notes + experimentation\nTITLE: The Zettelkasten Method\nAUTHOR: Me\nDATE: 2024-02-20 What is Zettelkasten? German for \"slip box."
+          },
+          {
+            "index": 4,
+            "chunk_id": "learning_2024_llm_limitations_learned_chunk_0",
+            "doc_id": "learning_2024_llm_limitations_learned",
+            "year": 2024,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0031552707420061743,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal experience + AI safety articles\nTITLE: What AI Can't Do (Yet)\nAUTHOR: Me\nDATE: 2024-08-15 Things I've learned AI is bad at: 1."
+          },
+          {
+            "index": 5,
+            "chunk_id": "learning_2025_meaning_and_ai_reflection_chunk_0",
+            "doc_id": "learning_2025_meaning_and_ai_reflection",
+            "year": 2025,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0030862837909399732,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal reflection + philosophy reading\nTITLE: What Does AI Mean for Human Meaning? AUTHOR: Me\nDATE: 2025-02-18 The question I keep coming back to: If AI can do everything..."
+          },
+          {
+            "index": 6,
+            "chunk_id": "learning_2025_transfer_learning_for_humans_chunk_0",
+            "doc_id": "learning_2025_transfer_learning_for_humans",
+            "year": 2025,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002858757296400739,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal reflection\nTITLE: Transfer Learning Applies to Humans Too\nAUTHOR: Me\nDATE: 2025-01-10 The AI concept: Transfer learning: Train a model on one task, apply to a rela..."
+          },
+          {
+            "index": 7,
+            "chunk_id": "learning_2023_rag_concept_click_chunk_0",
+            "doc_id": "learning_2023_rag_concept_click",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002798939203288277,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: LangChain docs + experimentation\nTITLE: RAG Finally Makes Sense\nAUTHOR: Me\nDATE: 2023-08-20 RAG = Retrieval Augmented Generation The problem: LLMs have knowledge cutoffs an..."
+          },
+          {
+            "index": 8,
+            "chunk_id": "personal_2023_december_best_year_chunk_0",
+            "doc_id": "personal_2023_december_best_year",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0027575810121901784,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: 2023 Year in Review - Best Year Yet\nAUTHOR: Me\nDATE: 2023-12-31 December 31, 2023. The best year of my thirties. Maybe of my life."
+          },
+          {
+            "index": 9,
+            "chunk_id": "learning_2020_feynman_technique_chunk_0",
+            "doc_id": "learning_2020_feynman_technique",
+            "year": 2020,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0026944675335241397,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Multiple sources\nTITLE: The Feynman Technique for Learning\nAUTHOR: Me\nDATE: 2020-10-01 Richard Feynman's learning method: 1. STUDY: Learn the concept\n2."
+          },
+          {
+            "index": 10,
+            "chunk_id": "personal_2025_ai_meaning_journal_chunk_0",
+            "doc_id": "personal_2025_ai_meaning_journal",
+            "year": 2025,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002622586112069728,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Thinking About AI and My Work\nAUTHOR: Me\nDATE: 2025-02-18 What does meaning mean when AI can do my job? The question keeps me up at night."
+          }
+        ],
+        "confidence": "good_match",
+        "quality": "good",
+        "latency_ms": 4806.519031524658,
+        "stats": {
+          "generation_time_ms": 4738.87300491333,
+          "total_latency_ms": 4806.519031524658,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "model_used": "gemini-flash-latest",
+          "temperature": 0.3,
+          "num_source_chunks": 10,
+          "context_length": 7564
+        },
+        "query_type": "specific",
+        "year_filter": null,
+        "category_filter": "ideas",
+        "num_sources_used": 10,
+        "years_covered": [
+          2020,
+          2023,
+          2024,
+          2025
+        ],
+        "categories_covered": [
+          "learning",
+          "personal"
+        ],
+        "coverage_gaps": [
+          "No documents from category 'ideas' matched. Results include documents from other categories."
+        ],
+        "error": null,
+        "fallback_used": false
+      },
+      "latency_ms": 4806.54501914978,
+      "query_type_detected": "specific",
+      "year_filter_detected": null,
+      "category_filter_detected": "ideas",
+      "retrieval_success": true,
+      "generation_success": true,
+      "type_detection_correct": false,
+      "evaluation": {
+        "synthesis": {
+          "citation_count": 3,
+          "source_coverage": 0.3,
+          "integration_quality": 3,
+          "final_score": 0.51
+        },
+        "overall_score": 0.6166666666666666,
+        "strengths": [
+          "Good multi-hop reasoning"
+        ],
+        "weaknesses": [],
+        "cross_domain": {
+          "category_coverage": 0.0,
+          "category_usage": 1.0,
+          "integration_quality": 0.6,
+          "final_score": 0.48
+        },
+        "multi_hop": {
+          "unique_sources_cited": 3,
+          "source_diversity": 1.0,
+          "reasoning_quality": 0.8,
+          "final_score": 0.8599999999999999
+        }
+      },
+      "error": null
+    },
+    {
+      "query_id": "H05",
+      "query": "Tell me the story of my personal growth from 2020 to 2025",
+      "expected": {
+        "type": "temporal_narrative",
+        "difficulty": "hard",
+        "query_type": "TEMPORAL",
+        "requires": "chronological_ordering",
+        "categories": [
+          "personal",
+          "learning",
+          "philosophy"
+        ]
+      },
+      "answer": {
+        "answer": "The user's personal growth in 2020 was marked by significant conceptual shifts regarding learning and habits, alongside practical adaptation to a challenging year.\n\n**Conceptual Shifts and Identity:**\nA major insight gained in 2020 was the discovery of neuroplasticity\u2014the understanding that the brain is not fixed but changes based on practice, thought, and action [1]. This led to the realization that skills can be learned at any age, and that the difficulty or \"struggle is the point\" of learning, as it triggers growth [1]. The user concluded that they were \"not stuck with the brain I have\" and that \"Every choice is a vote for who I'm becoming\" [1].\n\nThis conceptual framework was reinforced by adopting identity-based habit change principles [2]. The user learned to focus on designing effective systems rather than just setting goals, noting that \"You fall to the level of your systems\" [2]. They began viewing actions as \"a vote for the type of person you wish to become,\" emphasizing the importance of identity (e.g., being \"a person who exercises\" rather than \"trying to exercise\") [2]. The user also recognized that habits function as the \"compound interest of self-improvement\" and that current trajectory is more important than current results [2].\n\n**Practical Adaptation and Skills Gained:**\nDespite the challenges of the year, including closed gyms (resulting in a 10 lb weight gain) and \"dark weeks in October\" regarding mental health, the user demonstrated resilience and adaptation [3].\n\nSkills gained during 2020 included:\n*   Intermediate sourdough baking [3].\n*   Machine learning basics (linear regression, basic neural nets) [3].\n*   Establishing a meditation practice, which achieved a 30+ day streak, though it was inconsistent [3].\n*   Reading 12 books, mostly audiobooks [3].\n\nBy the end of the year, the user reflected that they had learned they could adapt and were more resilient than they had previously thought [3]. They also noted that baking bread served as a form of meditation and that human connection was essential [3].",
+        "query": "Tell me the story of my personal growth from 2020 to 2025",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "learning_2020_neuroplasticity_discovery_chunk_0",
+            "doc_id": "learning_2020_neuroplasticity_discovery",
+            "year": 2020,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003027963057937292,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Podcast + articles\nTITLE: The Brain Can Change - Neuroplasticity\nAUTHOR: Me\nDATE: 2020-07-15 The insight that blew my mind: The brain isn't fixed."
+          },
+          {
+            "index": 2,
+            "chunk_id": "saved_2020_atomic_habits_quotes_chunk_0",
+            "doc_id": "saved_2020_atomic_habits_quotes",
+            "year": 2020,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0029861669666971114,
+            "year_matched": true,
+            "excerpt": "TYPE: Book Highlights\nSOURCE: Atomic Habits by James Clear\nTITLE: Quotes That Changed My Behavior\nAUTHOR: Me (highlighting Clear)\nDATE: 2020-11-20 --- \"You do not rise to the level of your goals."
+          },
+          {
+            "index": 3,
+            "chunk_id": "personal_2020_december_year_reflection_chunk_0",
+            "doc_id": "personal_2020_december_year_reflection",
+            "year": 2020,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.00209692984521389,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: 2020 Year End Reflection\nAUTHOR: Me\nDATE: 2020-12-31 December 31, 2020. What a year. I don't even know where to begin."
+          },
+          {
+            "index": 4,
+            "chunk_id": "personal_2021_december_year_end_chunk_0",
+            "doc_id": "personal_2021_december_year_end",
+            "year": 2021,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0018735427647829056,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: 2021 Year in Review\nAUTHOR: Me\nDATE: 2021-12-31 December 31, 2021. A better year. Not hard to beat 2020, but still."
+          },
+          {
+            "index": 5,
+            "chunk_id": "personal_2022_june_turning_thirty_chunk_0",
+            "doc_id": "personal_2022_june_turning_thirty",
+            "year": 2022,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0017313228964805603,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Turning 30 - A Decade in Review\nAUTHOR: Me\nDATE: 2022-06-15 June 15, 2022. Thirty years old. Three decades on this planet."
+          },
+          {
+            "index": 6,
+            "chunk_id": "ai_ml_2023_gpt_shock_chunk_0",
+            "doc_id": "ai_ml_2023_gpt_shock",
+            "year": 2023,
+            "category": "ai_ml",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0029084432931056315,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: The ChatGPT Revolution - Everything Has Changed\nAUTHOR: Me\nDATE: 2023-03-15 March 15, 2023."
+          },
+          {
+            "index": 7,
+            "chunk_id": "personal_2023_december_best_year_chunk_0",
+            "doc_id": "personal_2023_december_best_year",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0023855063796043396,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: 2023 Year in Review - Best Year Yet\nAUTHOR: Me\nDATE: 2023-12-31 December 31, 2023. The best year of my thirties. Maybe of my life."
+          },
+          {
+            "index": 8,
+            "chunk_id": "personal_2023_therapy_start_chunk_0",
+            "doc_id": "personal_2023_therapy_start",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0022500000000000003,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Started Therapy Today\nAUTHOR: Me\nDATE: 2023-03-12 Had my first therapy session today. I've been resistant to therapy for years."
+          },
+          {
+            "index": 9,
+            "chunk_id": "personal_2023_imposter_syndrome_chunk_0",
+            "doc_id": "personal_2023_imposter_syndrome",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0021509826064109805,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Imposter Syndrome at Work\nAUTHOR: Me\nDATE: 2023-02-15 Got promoted last month. Now I feel like a fraud."
+          },
+          {
+            "index": 10,
+            "chunk_id": "personal_2023_ai_workflow_reflection_chunk_0",
+            "doc_id": "personal_2023_ai_workflow_reflection",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0017895378291606903,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: How AI Changed My Daily Work\nAUTHOR: Me\nDATE: 2023-09-20 Six months of heavy AI use. Time to reflect on what's changed."
+          },
+          {
+            "index": 11,
+            "chunk_id": "personal_2025_january_she_said_yes_chunk_0",
+            "doc_id": "personal_2025_january_she_said_yes",
+            "year": 2025,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.004667947161935274,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: She Said Yes\nAUTHOR: Me\nDATE: 2025-01-01 January 1, 2025. She said yes. The rooftop was freezing. Champagne too cold."
+          },
+          {
+            "index": 12,
+            "chunk_id": "personal_2025_june_bread_philosophy_chunk_0",
+            "doc_id": "personal_2025_june_bread_philosophy",
+            "year": 2025,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.004123364693279439,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: What Bread Taught Me About Life\nAUTHOR: Me\nDATE: 2025-06-20 June 20, 2025. Five years of sourdough. Time for reflection. What bread taught me: 1."
+          },
+          {
+            "index": 13,
+            "chunk_id": "personal_2025_may_teaching_what_i_learned_chunk_0",
+            "doc_id": "personal_2025_may_teaching_what_i_learned",
+            "year": 2025,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0039854853393047965,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Teaching What I Struggled to Learn\nAUTHOR: Me\nDATE: 2025-05-15 May 15, 2025. Taught neural network concepts to summer interns today. Full circle."
+          },
+          {
+            "index": 14,
+            "chunk_id": "personal_2025_ai_meaning_journal_chunk_0",
+            "doc_id": "personal_2025_ai_meaning_journal",
+            "year": 2025,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003908875666030387,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Thinking About AI and My Work\nAUTHOR: Me\nDATE: 2025-02-18 What does meaning mean when AI can do my job? The question keeps me up at night."
+          },
+          {
+            "index": 15,
+            "chunk_id": "saved_2025_questions_to_revisit_chunk_0",
+            "doc_id": "saved_2025_questions_to_revisit",
+            "year": 2025,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003725129562288731,
+            "year_matched": true,
+            "excerpt": "TYPE: Saved Reflection\nSOURCE: Personal\nTITLE: Questions I Keep Asking Myself\nAUTHOR: Me\nDATE: 2025-04-15 Questions I return to periodically: DIRECTION:\n- Am I proud of how I'm spending my days? - Wha..."
+          }
+        ],
+        "confidence": "year_matched",
+        "quality": "good",
+        "latency_ms": 6408.971786499023,
+        "stats": {
+          "generation_time_ms": 6331.498622894287,
+          "total_latency_ms": 6408.971786499023,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "model_used": "gemini-flash-latest",
+          "temperature": 0.3,
+          "num_source_chunks": 15,
+          "context_length": 7415
+        },
+        "query_type": "temporal",
+        "year_filter": 2020,
+        "category_filter": "personal",
+        "num_sources_used": 15,
+        "years_covered": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2025
+        ],
+        "categories_covered": [
+          "ai_ml",
+          "learning",
+          "personal",
+          "saved"
+        ],
+        "coverage_gaps": [],
+        "error": null,
+        "fallback_used": false
+      },
+      "latency_ms": 6409.012079238892,
+      "query_type_detected": "temporal",
+      "year_filter_detected": 2020,
+      "category_filter_detected": "personal",
+      "retrieval_success": true,
+      "generation_success": true,
+      "type_detection_correct": false,
+      "evaluation": {
+        "synthesis": {
+          "citation_count": 3,
+          "source_coverage": 0.2,
+          "integration_quality": 5,
+          "final_score": 0.64
+        },
+        "overall_score": 0.7866666666666666,
+        "strengths": [
+          "Excellent source integration",
+          "High temporal accuracy"
+        ],
+        "weaknesses": [],
+        "multi_hop": {
+          "unique_sources_cited": 3,
+          "source_diversity": 1.0,
+          "reasoning_quality": 0.6,
+          "final_score": 0.72
+        },
+        "temporal": {
+          "year_citations_correct": 3,
+          "year_citations_total": 3,
+          "accuracy_rate": 1.0,
+          "temporal_coherence": 1.0,
+          "final_score": 1.0
+        }
+      },
+      "error": null
+    },
+    {
+      "query_id": "H06",
+      "query": "What programming projects did I work on in 2021?",
+      "expected": {
+        "type": "year_specific_sparse",
+        "difficulty": "medium",
+        "query_type": "SPECIFIC",
+        "year": 2021,
+        "categories": [
+          "technical"
+        ],
+        "expect_limited_results": true
+      },
+      "answer": {
+        "answer": "The author was involved in several coding activities and technical experiments in 2021:\n\n1.  **Startup Coding:** The author was writing code related to their startup and experienced a server crash [2]. They noted that their code was one of the things within their control, unlike market reactions [2].\n2.  **Quantum Circuit Experimentation:** The author ran a \"simple quantum circuit on IBM's cloud quantum computer\" as part of their initial steps into learning quantum computing [3].\n3.  **Coding Practice:** The author practiced coding, noting that they often solved problems they already knew and needed to tackle harder ones to improve deliberately [1].",
+        "query": "What programming projects did I work on in 2021?",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "learning_2021_deliberate_practice_chunk_0",
+            "doc_id": "learning_2021_deliberate_practice",
+            "year": 2021,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002100576367242642,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Peak by Anders Ericsson\nTITLE: Deliberate Practice - How Experts Get Good\nAUTHOR: Me\nDATE: 2021-01-20 Key insight from Ericsson: 10,000 hours is misunderstood."
+          },
+          {
+            "index": 2,
+            "chunk_id": "philosophy_2021_reading_marcus_chunk_0",
+            "doc_id": "philosophy_2021_reading_marcus",
+            "year": 2021,
+            "category": "philosophy",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0020760936139480515,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Discovering Stoicism Through Marcus Aurelius\nAUTHOR: Me\nDATE: 2021-06-10 June 10, 2021. Stoicism helps with the stress of my startup."
+          },
+          {
+            "index": 3,
+            "chunk_id": "technical_2021_quantum_computing_chunk_0",
+            "doc_id": "technical_2021_quantum_computing",
+            "year": 2021,
+            "category": "technical",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0020134903960785508,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: First Steps into Quantum Computing\nAUTHOR: Me\nDATE: 2021-11-11 November 11, 2021. Started reading about Quantum Computing. It's mind-bending."
+          },
+          {
+            "index": 4,
+            "chunk_id": "personal_2021_november_bread_breakthrough_chunk_0",
+            "doc_id": "personal_2021_november_bread_breakthrough",
+            "year": 2021,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002004986226216521,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: The Breakthrough Loaf - Finally Good\nAUTHOR: Me\nDATE: 2021-11-20 November 20, 2021. I baked the best loaf of my life today."
+          },
+          {
+            "index": 5,
+            "chunk_id": "personal_2021_march_vaccine_day_chunk_0",
+            "doc_id": "personal_2021_march_vaccine_day",
+            "year": 2021,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0019874926817033635,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Got Vaccinated - Light at the End\nAUTHOR: Me\nDATE: 2021-04-15 April 15, 2021. Got vaccinated today. Pfizer, first dose."
+          },
+          {
+            "index": 6,
+            "chunk_id": "learning_2021_spaced_repetition_chunk_0",
+            "doc_id": "learning_2021_spaced_repetition",
+            "year": 2021,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.001985943940867211,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Various + Anki experience\nTITLE: Spaced Repetition - Remember Everything\nAUTHOR: Me\nDATE: 2021-04-15 The forgetting curve: We forget 50% within an hour, 70% within 24 hours..."
+          },
+          {
+            "index": 7,
+            "chunk_id": "learning_2021_thinking_fast_slow_notes_chunk_0",
+            "doc_id": "learning_2021_thinking_fast_slow_notes",
+            "year": 2021,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0019456045138208384,
+            "year_matched": true,
+            "excerpt": "TYPE: Book Notes\nSOURCE: Thinking, Fast and Slow by Daniel Kahneman\nTITLE: Kahneman on How We Think\nAUTHOR: Me\nDATE: 2021-03-10 The two systems: System 1: Fast, automatic, intuitive."
+          },
+          {
+            "index": 8,
+            "chunk_id": "learning_2021_stoicism_vs_anxiety_chunk_0",
+            "doc_id": "learning_2021_stoicism_vs_anxiety",
+            "year": 2021,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0019309118066910347,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: The Daily Stoic (blog/book)\nTITLE: How Stoicism Helps My Anxiety\nAUTHOR: Me\nDATE: 2021-11-05 The dichotomy of control: \"Some things are in our control and others not."
+          },
+          {
+            "index": 9,
+            "chunk_id": "personal_2021_october_discovering_stoicism_chunk_0",
+            "doc_id": "personal_2021_october_discovering_stoicism",
+            "year": 2021,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0018294890629961746,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: A Friend Recommended Marcus Aurelius\nAUTHOR: Me\nDATE: 2021-10-03 October 3, 2021."
+          },
+          {
+            "index": 10,
+            "chunk_id": "learning_2021_focusing_book_notes_chunk_0",
+            "doc_id": "learning_2021_focusing_book_notes",
+            "year": 2021,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0018159072456826494,
+            "year_matched": true,
+            "excerpt": "TYPE: Book Notes\nSOURCE: Focusing by Eugene Gendlin\nTITLE: Listening to the Body's Wisdom\nAUTHOR: Me\nDATE: 2021-08-10 The core technique: Focusing: Paying attention to the \"felt sense\"\u2014the body's subt..."
+          },
+          {
+            "index": 11,
+            "chunk_id": "ideas_2021_via_negativa_chunk_0",
+            "doc_id": "ideas_2021_via_negativa",
+            "year": 2021,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0006233298294246197,
+            "year_matched": true,
+            "excerpt": "TYPE: Mental Model\nSOURCE: Nassim Taleb / Antifragile\nTITLE: Via Negativa - Subtraction Over Addition\nAUTHOR: Me\nDATE: 2021-09-20 The concept: Improvement often comes from removal, not addition."
+          },
+          {
+            "index": 12,
+            "chunk_id": "personal_2021_december_year_end_chunk_0",
+            "doc_id": "personal_2021_december_year_end",
+            "year": 2021,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0005882986374199391,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: 2021 Year in Review\nAUTHOR: Me\nDATE: 2021-12-31 December 31, 2021. A better year. Not hard to beat 2020, but still."
+          },
+          {
+            "index": 13,
+            "chunk_id": "ideas_2021_energy_audit_chunk_0",
+            "doc_id": "ideas_2021_energy_audit",
+            "year": 2021,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0005617386214435101,
+            "year_matched": true,
+            "excerpt": "TYPE: Mental Model\nSOURCE: Personal development\nTITLE: Energy Audit - What Drains, What Fills\nAUTHOR: Me\nDATE: 2021-05-15 The practice: Track what gives energy and what takes it."
+          },
+          {
+            "index": 14,
+            "chunk_id": "ideas_2021_100_hour_rule_chunk_0",
+            "doc_id": "ideas_2021_100_hour_rule",
+            "year": 2021,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0005609756484627724,
+            "year_matched": true,
+            "excerpt": "TYPE: Mental Model\nSOURCE: Various\nTITLE: The 100-Hour Rule\nAUTHOR: Me\nDATE: 2021-09-10 The rule: For most skills, 100 hours of deliberate practice gets you to \"pretty good.\" Not world-class."
+          },
+          {
+            "index": 15,
+            "chunk_id": "personal_2020_december_year_reflection_chunk_0",
+            "doc_id": "personal_2020_december_year_reflection",
+            "year": 2020,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0029734212335143996,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: 2020 Year End Reflection\nAUTHOR: Me\nDATE: 2020-12-31 December 31, 2020. What a year. I don't even know where to begin."
+          }
+        ],
+        "confidence": "year_matched",
+        "quality": "good",
+        "latency_ms": 3701.796054840088,
+        "stats": {
+          "generation_time_ms": 3642.087936401367,
+          "total_latency_ms": 3701.796054840088,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "model_used": "gemini-flash-latest",
+          "temperature": 0.3,
+          "num_source_chunks": 15,
+          "context_length": 7682
+        },
+        "query_type": "temporal",
+        "year_filter": 2021,
+        "category_filter": null,
+        "num_sources_used": 15,
+        "years_covered": [
+          2020,
+          2021
+        ],
+        "categories_covered": [
+          "ideas",
+          "learning",
+          "personal",
+          "philosophy",
+          "technical"
+        ],
+        "coverage_gaps": [
+          "Found 14 documents from 2021, but none appear topically relevant to the query. The content from 2021 may not cover this topic."
+        ],
+        "error": null,
+        "fallback_used": false
+      },
+      "latency_ms": 3701.831817626953,
+      "query_type_detected": "temporal",
+      "year_filter_detected": 2021,
+      "category_filter_detected": null,
+      "retrieval_success": true,
+      "generation_success": true,
+      "type_detection_correct": false,
+      "evaluation": {
+        "synthesis": {
+          "citation_count": 3,
+          "source_coverage": 0.2,
+          "integration_quality": 3,
+          "final_score": 0.48
+        },
+        "overall_score": 0.7333333333333334,
+        "strengths": [
+          "High temporal accuracy"
+        ],
+        "weaknesses": [],
+        "multi_hop": {
+          "unique_sources_cited": 3,
+          "source_diversity": 1.0,
+          "reasoning_quality": 0.6,
+          "final_score": 0.72
+        },
+        "temporal": {
+          "year_citations_correct": 3,
+          "year_citations_total": 3,
+          "accuracy_rate": 1.0,
+          "temporal_coherence": 1.0,
+          "final_score": 1.0
+        }
+      },
+      "error": null
+    },
+    {
+      "query_id": "H07",
+      "query": "How have my thoughts on meaning and purpose evolved alongside my AI learning?",
+      "expected": {
+        "type": "cross_domain_temporal",
+        "difficulty": "hard",
+        "query_type": "SYNTHESIS",
+        "categories": [
+          "philosophy",
+          "ai_ml",
+          "personal"
+        ],
+        "requires": "multi_hop",
+        "min_unique_sources": 4
+      },
+      "answer": {
+        "answer": "The author's thoughts on meaning and purpose evolved from identifying valuable human skills that AI struggles with to concluding that meaning must be decoupled from productivity and output.\n\n**Early Focus on Skill Value (2023):**\nInitially, the author noted that while AI can retrieve and summarize, it struggles with truly novel synthesis, suggesting that connecting disparate information remains a rare and valuable human skill [2]. In their daily work, the author shifted to reviewing and editing AI-generated code, focusing their own efforts on architecture decisions, communication, and final judgment calls [7].\n\n**Later Focus on Existential Meaning (2025):**\nBy 2025, the author was actively addressing the question of what meaning remains if AI can perform their job [3, 6]. The central conclusion is that meaning derived from productivity or output is vulnerable to automation [1, 3]. The author synthesized that AI accelerates the meaning crisis but did not cause it, potentially acting as a \"gift\" that frees humans from the illusion that meaning comes from output [1].\n\nMeaning is instead found in:\n1.  **Process and Experience:** The satisfaction and effort of the doing\u2014such as coding or making sourdough\u2014are meaningful, not just the result [1, 3, 6]. Experience requires embodiment, which AI lacks [6].\n2.  **Relationships:** Trust and communication remain interpersonal, and relationships are meaningful due to shared history and quirks [3, 6].\n3.  **Choice and Judgment:** Humans still provide judgment, taste, values, and context [3]. Meaning survives anything if it is chosen, referencing Viktor Frankl [3, 6].\n\nUltimately, the author concluded that meaning is found in how we live, who we love, experience, growth, and curiosity, not just in the job or the output [1, 3, 6].",
+        "query": "How have my thoughts on meaning and purpose evolved alongside my AI learning?",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "saved_2025_article_ai_and_meaning_chunk_0",
+            "doc_id": "saved_2025_article_ai_and_meaning",
+            "year": 2025,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0038833869993686676,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Article\nSOURCE: The Atlantic\nTITLE: What AI Means for Human Purpose\nAUTHOR: Saved article with reflections\nDATE: 2025-02-25 The question posed: If AI can do everything humans do, what's le..."
+          },
+          {
+            "index": 2,
+            "chunk_id": "learning_2023_synthesis_skill_chunk_0",
+            "doc_id": "learning_2023_synthesis_skill",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0034340767472860324,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal reflection\nTITLE: Synthesis as a Core Skill\nAUTHOR: Me\nDATE: 2023-05-10 What is synthesis? Taking disparate information and combining it into something new."
+          },
+          {
+            "index": 3,
+            "chunk_id": "personal_2025_ai_meaning_journal_chunk_0",
+            "doc_id": "personal_2025_ai_meaning_journal",
+            "year": 2025,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003337103970196208,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Thinking About AI and My Work\nAUTHOR: Me\nDATE: 2025-02-18 What does meaning mean when AI can do my job? The question keeps me up at night."
+          },
+          {
+            "index": 4,
+            "chunk_id": "personal_2024_july_building_ai_project_chunk_0",
+            "doc_id": "personal_2024_july_building_ai_project",
+            "year": 2024,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003317500812075208,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Building My First AI Agent\nAUTHOR: Me\nDATE: 2024-07-08 July 8, 2024. Building an AI agent for personal knowledge management. Ambitious."
+          },
+          {
+            "index": 5,
+            "chunk_id": "learning_2024_llm_limitations_learned_chunk_0",
+            "doc_id": "learning_2024_llm_limitations_learned",
+            "year": 2024,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003240309013500501,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal experience + AI safety articles\nTITLE: What AI Can't Do (Yet)\nAUTHOR: Me\nDATE: 2024-08-15 Things I've learned AI is bad at: 1."
+          },
+          {
+            "index": 6,
+            "chunk_id": "learning_2025_meaning_and_ai_reflection_chunk_0",
+            "doc_id": "learning_2025_meaning_and_ai_reflection",
+            "year": 2025,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0032086621570214893,
+            "year_matched": false,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Personal reflection + philosophy reading\nTITLE: What Does AI Mean for Human Meaning? AUTHOR: Me\nDATE: 2025-02-18 The question I keep coming back to: If AI can do everything..."
+          },
+          {
+            "index": 7,
+            "chunk_id": "personal_2023_ai_workflow_reflection_chunk_0",
+            "doc_id": "personal_2023_ai_workflow_reflection",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0030590891639570455,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: How AI Changed My Daily Work\nAUTHOR: Me\nDATE: 2023-09-20 Six months of heavy AI use. Time to reflect on what's changed."
+          },
+          {
+            "index": 8,
+            "chunk_id": "personal_2025_ai_and_creativity_chunk_0",
+            "doc_id": "personal_2025_ai_and_creativity",
+            "year": 2025,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002618609675297996,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Is AI Making Me Less Creative? AUTHOR: Me\nDATE: 2025-03-10 Uncomfortable question I'm sitting with: Is using AI for everything making me less capab..."
+          },
+          {
+            "index": 9,
+            "chunk_id": "saved_2025_article_ai_job_automation_chunk_0",
+            "doc_id": "saved_2025_article_ai_job_automation",
+            "year": 2025,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0022575590427519614,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Article\nSOURCE: Wired\nTITLE: Which Jobs Will AI Actually Replace? AUTHOR: Saved with notes\nDATE: 2025-03-15 The nuanced view: Not \"AI will replace jobs\" but \"AI will replace tasks."
+          },
+          {
+            "index": 10,
+            "chunk_id": "personal_2020_march_lockdown_begins_chunk_0",
+            "doc_id": "personal_2020_march_lockdown_begins",
+            "year": 2020,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0018241433391134108,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: The World Stops - First Week of Lockdown\nAUTHOR: Me\nDATE: 2020-03-18 March 18, 2020. The office closed yesterday."
+          }
+        ],
+        "confidence": "good_match",
+        "quality": "good",
+        "latency_ms": 8256.346225738525,
+        "stats": {
+          "generation_time_ms": 8160.28618812561,
+          "total_latency_ms": 8256.346225738525,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "model_used": "gemini-flash-latest",
+          "temperature": 0.3,
+          "num_source_chunks": 10,
+          "context_length": 7893
+        },
+        "query_type": "specific",
+        "year_filter": null,
+        "category_filter": "ideas",
+        "num_sources_used": 10,
+        "years_covered": [
+          2020,
+          2023,
+          2024,
+          2025
+        ],
+        "categories_covered": [
+          "learning",
+          "personal",
+          "saved"
+        ],
+        "coverage_gaps": [
+          "No documents from category 'ideas' matched. Results include documents from other categories."
+        ],
+        "error": null,
+        "fallback_used": false
+      },
+      "latency_ms": 8256.386995315552,
+      "query_type_detected": "specific",
+      "year_filter_detected": null,
+      "category_filter_detected": "ideas",
+      "retrieval_success": true,
+      "generation_success": true,
+      "type_detection_correct": false,
+      "evaluation": {
+        "synthesis": {
+          "citation_count": 5,
+          "source_coverage": 0.5,
+          "integration_quality": 5,
+          "final_score": 0.85
+        },
+        "overall_score": 0.8411111111111111,
+        "strengths": [
+          "Excellent source integration",
+          "Good multi-hop reasoning"
+        ],
+        "weaknesses": [],
+        "cross_domain": {
+          "category_coverage": 0.3333333333333333,
+          "category_usage": 1.0,
+          "integration_quality": 0.8,
+          "final_score": 0.6733333333333333
+        },
+        "multi_hop": {
+          "unique_sources_cited": 5,
+          "source_diversity": 1.0,
+          "reasoning_quality": 1.0,
+          "final_score": 1.0
+        }
+      },
+      "error": null
+    },
+    {
+      "query_id": "H08",
+      "query": "What changed in my thinking between 2023 and 2024?",
+      "expected": {
+        "type": "year_comparison",
+        "difficulty": "medium",
+        "query_type": "COMPARISON",
+        "years": [
+          2023,
+          2024
+        ],
+        "requires": "community_summaries"
+      },
+      "answer": {
+        "answer": "In 2023, the author's thinking was characterized by several major shifts and planned goals for the future:\n\n**Professional and Skill Shift:**\nThe author pivoted their professional focus from traditional coding to \"knowing how to orchestrate AI,\" emphasizing prompt engineering, LangChain, and agents [1]. This involved a change in workflow where the author became more of an editor, reading AI-generated code rather than writing code from scratch, though they remained vigilant about maintaining their coding skills [5]. The author identified their Ikigai (reason for being) as building AI tools that help people learn and organize knowledge [7].\n\n**Adoption of Mental Models:**\nThe author adopted \"Second-Order Thinking\" in 2023, focusing on anticipating long-term consequences by asking \"And then what?\" rather than stopping at the immediate outcome (first-order thinking) [3]. This model was applied to areas like diet, productivity, and relationships [3].\n\n**Personal Priorities and Relationship Progression:**\nThe author considered starting therapy in March 2023 the \"Best investment of the year\" [1]. Regarding their relationship with Maya, which began four months prior to the end of 2023, the author could \"picture a future\" [1].\n\n**Goals for 2024 (Planned Changes):**\nThe author's thinking included specific goals for the following year, indicating planned changes in focus and achievement [1]:\n*   Take Maya to Japan [1].\n*   Hit a 405 deadlift [1].\n*   Build an AI side project [1].\n*   Potentially move in with Maya [1].",
+        "query": "What changed in my thinking between 2023 and 2024?",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "personal_2023_december_best_year_chunk_0",
+            "doc_id": "personal_2023_december_best_year",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.004628238871693611,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: 2023 Year in Review - Best Year Yet\nAUTHOR: Me\nDATE: 2023-12-31 December 31, 2023. The best year of my thirties. Maybe of my life."
+          },
+          {
+            "index": 2,
+            "chunk_id": "personal_2024_december_buying_ring_chunk_0",
+            "doc_id": "personal_2024_december_buying_ring",
+            "year": 2024,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003462586079339668,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: I Bought a Ring\nAUTHOR: Me\nDATE: 2024-12-01 December 1, 2024. I bought a ring. It's in my sock drawer, wrapped in a T-shirt."
+          },
+          {
+            "index": 3,
+            "chunk_id": "ideas_2023_second_order_thinking_chunk_0",
+            "doc_id": "ideas_2023_second_order_thinking",
+            "year": 2023,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002222090559926536,
+            "year_matched": true,
+            "excerpt": "TYPE: Mental Model\nSOURCE: Howard Marks / Various\nTITLE: Second-Order Thinking\nAUTHOR: Me\nDATE: 2023-03-15 The concept: First-order thinking: \"What happens next?\"\nSecond-order thinking: \"And then what..."
+          },
+          {
+            "index": 4,
+            "chunk_id": "personal_2023_ai_workflow_reflection_chunk_0",
+            "doc_id": "personal_2023_ai_workflow_reflection",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002210265896850933,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: How AI Changed My Daily Work\nAUTHOR: Me\nDATE: 2023-09-20 Six months of heavy AI use. Time to reflect on what's changed."
+          },
+          {
+            "index": 5,
+            "chunk_id": "ideas_2023_ikigai_reflection_chunk_0",
+            "doc_id": "ideas_2023_ikigai_reflection",
+            "year": 2023,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0020883110518137515,
+            "year_matched": true,
+            "excerpt": "TYPE: Mental Model\nSOURCE: Japanese concept\nTITLE: Ikigai - Reason for Being\nAUTHOR: Me\nDATE: 2023-04-15 The framework: Ikigai is the intersection of:\n1. What you love\n2. What you're good at\n3."
+          },
+          {
+            "index": 6,
+            "chunk_id": "learning_2024_attention_economy_article_chunk_0",
+            "doc_id": "learning_2024_attention_economy_article",
+            "year": 2024,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0020545491931830313,
+            "year_matched": true,
+            "excerpt": "TYPE: Saved Article\nSOURCE: The Atlantic\nTITLE: How Tech Hijacks Your Mind\nAUTHOR: Saved article with notes\nDATE: 2024-05-10 Key concept: The attention economy Your attention is the product."
+          },
+          {
+            "index": 7,
+            "chunk_id": "personal_2023_june_post_japan_integration_chunk_0",
+            "doc_id": "personal_2023_june_post_japan_integration",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0019623511352737646,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Back from Japan - What I Learned\nAUTHOR: Me\nDATE: 2023-06-01 June 1, 2023. Back for a week. Still processing. Things to integrate: 1."
+          },
+          {
+            "index": 8,
+            "chunk_id": "ai_ml_2023_attention_mechanisms_paper_chunk_0",
+            "doc_id": "ai_ml_2023_attention_mechanisms_paper",
+            "year": 2023,
+            "category": "ai_ml",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0014681216979703935,
+            "year_matched": true,
+            "excerpt": "TYPE: Scientific Article\nSOURCE: Advances in Neural Information Processing Systems (NeurIPS)\nTITLE: Attention Is All You Need: A Deep Dive into Transformer Architecture Theory\nAUTHOR: Dr."
+          },
+          {
+            "index": 9,
+            "chunk_id": "learning_2023_learning_in_public_chunk_0",
+            "doc_id": "learning_2023_learning_in_public",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0014603070168382846,
+            "year_matched": true,
+            "excerpt": "TYPE: Learning Note\nSOURCE: Various (Swyx, others)\nTITLE: Learning in Public\nAUTHOR: Me\nDATE: 2023-04-05 The concept: Share what you learn as you learn it. Blog posts, tweets, talks."
+          },
+          {
+            "index": 10,
+            "chunk_id": "ideas_2023_kodawari_japanese_craft_chunk_0",
+            "doc_id": "ideas_2023_kodawari_japanese_craft",
+            "year": 2023,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.001445677000603781,
+            "year_matched": true,
+            "excerpt": "TYPE: Concept\nSOURCE: Japan trip\nTITLE: Kodawari - The Relentless Pursuit of Perfection\nAUTHOR: Me\nDATE: 2023-05-20 What is kodawari? Japanese concept: An uncompromising commitment to excellence in cr..."
+          },
+          {
+            "index": 11,
+            "chunk_id": "ai_ml_2023_gpt_shock_chunk_0",
+            "doc_id": "ai_ml_2023_gpt_shock",
+            "year": 2023,
+            "category": "ai_ml",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.001435595780611038,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: The ChatGPT Revolution - Everything Has Changed\nAUTHOR: Me\nDATE: 2023-03-15 March 15, 2023."
+          },
+          {
+            "index": 12,
+            "chunk_id": "personal_2024_reading_slump_chunk_0",
+            "doc_id": "personal_2024_reading_slump",
+            "year": 2024,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0014355405321841764,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: In a Reading Slump\nAUTHOR: Me\nDATE: 2024-08-15 I haven't finished a book in two months. I used to read 2-3 books a month."
+          },
+          {
+            "index": 13,
+            "chunk_id": "saved_2023_four_agreements_summary_chunk_0",
+            "doc_id": "saved_2023_four_agreements_summary",
+            "year": 2023,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0014276280717911833,
+            "year_matched": true,
+            "excerpt": "TYPE: Book Highlights\nSOURCE: The Four Agreements by Don Miguel Ruiz\nTITLE: Toltec Wisdom\nAUTHOR: Me (highlighting Ruiz)\nDATE: 2023-11-20 Agreement 1: Be Impeccable With Your Word \"Your word is the po..."
+          },
+          {
+            "index": 14,
+            "chunk_id": "personal_2024_october_japan_with_maya_chunk_0",
+            "doc_id": "personal_2024_october_japan_with_maya",
+            "year": 2024,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0014218477172444827,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Japan With Maya - Sharing What I Love\nAUTHOR: Me\nDATE: 2024-10-12 October 12, 2024. Took Maya to Japan. Ten days. Tokyo, Kyoto, Osaka."
+          },
+          {
+            "index": 15,
+            "chunk_id": "personal_2023_therapy_start_chunk_0",
+            "doc_id": "personal_2023_therapy_start",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0014037175627030286,
+            "year_matched": true,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Started Therapy Today\nAUTHOR: Me\nDATE: 2023-03-12 Had my first therapy session today. I've been resistant to therapy for years."
+          }
+        ],
+        "confidence": "year_matched",
+        "quality": "good",
+        "latency_ms": 7872.882843017578,
+        "stats": {
+          "generation_time_ms": 7815.469980239868,
+          "total_latency_ms": 7872.882843017578,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "model_used": "gemini-flash-latest",
+          "temperature": 0.3,
+          "num_source_chunks": 15,
+          "context_length": 8034
+        },
+        "query_type": "comparison",
+        "year_filter": 2023,
+        "category_filter": null,
+        "num_sources_used": 15,
+        "years_covered": [
+          2023,
+          2024
+        ],
+        "categories_covered": [
+          "ai_ml",
+          "ideas",
+          "learning",
+          "personal",
+          "saved"
+        ],
+        "coverage_gaps": [
+          "Only 3 of 15 documents from 2023 appear topically relevant."
+        ],
+        "error": null,
+        "fallback_used": false
+      },
+      "latency_ms": 7872.935771942139,
+      "query_type_detected": "comparison",
+      "year_filter_detected": 2023,
+      "category_filter_detected": null,
+      "retrieval_success": true,
+      "generation_success": true,
+      "type_detection_correct": false,
+      "evaluation": {
+        "synthesis": {
+          "citation_count": 4,
+          "source_coverage": 0.26666666666666666,
+          "integration_quality": 3,
+          "final_score": 0.56
+        },
+        "overall_score": 0.7066666666666667,
+        "strengths": [
+          "High temporal accuracy"
+        ],
+        "weaknesses": [],
+        "multi_hop": {
+          "unique_sources_cited": 4,
+          "source_diversity": 1.0,
+          "reasoning_quality": 0.6,
+          "final_score": 0.72
+        },
+        "temporal": {
+          "year_citations_correct": 4,
+          "year_citations_total": 4,
+          "accuracy_rate": 1.0,
+          "temporal_coherence": 0.6,
+          "final_score": 0.84
+        }
+      },
+      "error": null
+    },
+    {
+      "query_id": "H09",
+      "query": "What are the main themes across all my notes?",
+      "expected": {
+        "type": "full_synthesis",
+        "difficulty": "hard",
+        "query_type": "SYNTHESIS",
+        "scope": "all",
+        "requires": "multi_hop",
+        "min_unique_sources": 5
+      },
+      "answer": {
+        "answer": "The notes reveal a consistent focus on **self-mastery, resilience, and the integration of ancient wisdom (Stoicism/Buddhism) with modern psychological and biological understanding (Neuroscience/Evolution)**. The overarching goal is to achieve mental clarity and effective action by managing internal states rather than external circumstances.\n\nThe main themes across the sources are:\n\n### 1. The Primacy of Internal Control and Character (Stoicism)\n\nThe most dominant theme is the adoption of Stoic philosophy as a practical \"operating system upgrade\" for the mind [1]. The core principle is recognizing the strict boundary between what is controllable (reactions, effort, character, virtue) and what is uncontrollable (outside events, other people's opinions, the market, change) [1, 2].\n\n*   **Focus on Virtue:** Character and virtue are identified as the only stable ground, especially in the face of success or existential challenges (like rapid AI progress or plague) [2]. The goal is to embody philosophy, not just explain it [4].\n*   **Acceptance of Fate:** The practice of *Amor Fati* (love of fate) encourages accepting whatever happens and turning obstacles into fuel [2]. This is reinforced by the quote, \"The obstacle is the way\" [2, 4].\n*   **Clarifying Priorities:** The concept of *memento mori* (remember you will die) serves to limit worries and focus energy only on what truly matters, preventing stress over impressing people or worrying about trivial external factors [1].\n\n### 2. Understanding the Flawed, Evolved Mind\n\nThe notes emphasize that the human brain is inherently biased and prone to generating suffering, providing a scientific justification for the need for self-control.\n\n*   **Survival vs. Happiness:** The brain was designed by natural selection for survival and reproduction, not for happiness or clear perception of truth [3]. Confirmation bias is seen not as a bug, but as an evolved feature for tribal survival [3].\n*   **Suffering",
+        "query": "What are the main themes across all my notes?",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "personal_2021_october_discovering_stoicism_chunk_0",
+            "doc_id": "personal_2021_october_discovering_stoicism",
+            "year": 2021,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.42,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: A Friend Recommended Marcus Aurelius\nAUTHOR: Me\nDATE: 2021-10-03 October 3, 2021."
+          },
+          {
+            "index": 2,
+            "chunk_id": "philosophy_2025_stoic_reflection_chunk_0",
+            "doc_id": "philosophy_2025_stoic_reflection",
+            "year": 2025,
+            "category": "philosophy",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.42,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Stoicism in the Age of AI - A Reflection\nAUTHOR: Me\nDATE: 2025-01-15 January 15, 2025. \"The obstacle is the way."
+          },
+          {
+            "index": 3,
+            "chunk_id": "saved_2022_why_buddhism_is_true_notes_chunk_0",
+            "doc_id": "saved_2022_why_buddhism_is_true_notes",
+            "year": 2022,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.42,
+            "year_matched": false,
+            "excerpt": "TYPE: Book Highlights\nSOURCE: Why Buddhism Is True by Robert Wright\nTITLE: Buddhism Through Scientific Lens\nAUTHOR: Me (highlighting Wright)\nDATE: 2022-08-15 Key concept: Natural selection designed us..."
+          },
+          {
+            "index": 4,
+            "chunk_id": "saved_2025_quote_collection_chunk_0",
+            "doc_id": "saved_2025_quote_collection",
+            "year": 2025,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.42,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Quotes\nSOURCE: Various\nTITLE: Quotes I Keep Coming Back To\nAUTHOR: Me\nDATE: 2025-01-05 The quotes I've collected that keep resonating: --- \"We suffer more in imagination than in reality."
+          },
+          {
+            "index": 5,
+            "chunk_id": "learning_2021_focusing_book_notes_chunk_0",
+            "doc_id": "learning_2021_focusing_book_notes",
+            "year": 2021,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.42,
+            "year_matched": false,
+            "excerpt": "TYPE: Book Notes\nSOURCE: Focusing by Eugene Gendlin\nTITLE: Listening to the Body's Wisdom\nAUTHOR: Me\nDATE: 2021-08-10 The core technique: Focusing: Paying attention to the \"felt sense\"\u2014the body's subt..."
+          },
+          {
+            "index": 6,
+            "chunk_id": "learning_2023_ego_is_enemy_notes_chunk_0",
+            "doc_id": "learning_2023_ego_is_enemy_notes",
+            "year": 2023,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.42,
+            "year_matched": false,
+            "excerpt": "TYPE: Book Notes\nSOURCE: Ego Is the Enemy by Ryan Holiday\nTITLE: How Ego Undermines Success\nAUTHOR: Me\nDATE: 2023-01-15 The thesis: Ego is the unhealthy belief in our own importance."
+          },
+          {
+            "index": 7,
+            "chunk_id": "personal_2023_therapy_start_chunk_0",
+            "doc_id": "personal_2023_therapy_start",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.42,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Started Therapy Today\nAUTHOR: Me\nDATE: 2023-03-12 Had my first therapy session today. I've been resistant to therapy for years."
+          },
+          {
+            "index": 8,
+            "chunk_id": "saved_2020_mans_search_meaning_highlights_chunk_0",
+            "doc_id": "saved_2020_mans_search_meaning_highlights",
+            "year": 2020,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.42,
+            "year_matched": false,
+            "excerpt": "TYPE: Book Highlights\nSOURCE: Man's Search for Meaning by Viktor Frankl\nTITLE: Frankl on Suffering and Meaning\nAUTHOR: Me (highlighting Frankl)\nDATE: 2020-12-10 Highlights and reflections: --- \"Everyt..."
+          },
+          {
+            "index": 9,
+            "chunk_id": "philosophy_2021_reading_marcus_chunk_0",
+            "doc_id": "philosophy_2021_reading_marcus",
+            "year": 2021,
+            "category": "philosophy",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.345,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Discovering Stoicism Through Marcus Aurelius\nAUTHOR: Me\nDATE: 2021-06-10 June 10, 2021. Stoicism helps with the stress of my startup."
+          },
+          {
+            "index": 10,
+            "chunk_id": "saved_2021_stoic_reminders_chunk_0",
+            "doc_id": "saved_2021_stoic_reminders",
+            "year": 2021,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.345,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Quotes\nSOURCE: Stoic texts\nTITLE: Stoic Reminders I Return To\nAUTHOR: Me\nDATE: 2021-12-05 For anxiety: \"We suffer more in imagination than in reality."
+          },
+          {
+            "index": 11,
+            "chunk_id": "learning_2024_never_split_difference_chunk_0",
+            "doc_id": "learning_2024_never_split_difference",
+            "year": 2024,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.3,
+            "year_matched": false,
+            "excerpt": "TYPE: Book Notes\nSOURCE: Never Split the Difference by Chris Voss\nTITLE: Negotiation Tactics from FBI Hostage Negotiator\nAUTHOR: Me\nDATE: 2024-08-10 Key techniques: MIRRORING: Repeat the last 3 words ..."
+          },
+          {
+            "index": 12,
+            "chunk_id": "learning_2022_boundaries_article_chunk_0",
+            "doc_id": "learning_2022_boundaries_article",
+            "year": 2022,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.3,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Article\nSOURCE: Psychology Today\nTITLE: Why Boundaries Are Hard (And Essential)\nAUTHOR: Saved with notes\nDATE: 2022-05-20 What are boundaries? Clear limits on what you will and won't accep..."
+          }
+        ],
+        "confidence": "good_match",
+        "quality": "good",
+        "latency_ms": 9065.335035324097,
+        "stats": {
+          "generation_time_ms": 9014.71495628357,
+          "total_latency_ms": 9065.335035324097,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "model_used": "gemini-flash-latest",
+          "temperature": 0.3,
+          "num_source_chunks": 12,
+          "context_length": 7973
+        },
+        "query_type": "synthesis",
+        "year_filter": null,
+        "category_filter": null,
+        "num_sources_used": 12,
+        "years_covered": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "categories_covered": [
+          "learning",
+          "personal",
+          "philosophy",
+          "saved"
+        ],
+        "coverage_gaps": [],
+        "error": null,
+        "fallback_used": false
+      },
+      "latency_ms": 9065.369129180908,
+      "query_type_detected": "synthesis",
+      "year_filter_detected": null,
+      "category_filter_detected": null,
+      "retrieval_success": true,
+      "generation_success": true,
+      "type_detection_correct": true,
+      "evaluation": {
+        "synthesis": {
+          "citation_count": 4,
+          "source_coverage": 0.3333333333333333,
+          "integration_quality": 4,
+          "final_score": 0.66
+        },
+        "overall_score": 0.76,
+        "strengths": [
+          "Excellent source integration",
+          "Good multi-hop reasoning"
+        ],
+        "weaknesses": [],
+        "multi_hop": {
+          "unique_sources_cited": 4,
+          "source_diversity": 1.0,
+          "reasoning_quality": 0.8,
+          "final_score": 0.8599999999999999
+        }
+      },
+      "error": null
+    },
+    {
+      "query_id": "H10",
+      "query": "How has my perspective on productivity and meaning changed over the years?",
+      "expected": {
+        "type": "topical_temporal_evolution",
+        "difficulty": "hard",
+        "query_type": "TEMPORAL",
+        "categories": [
+          "philosophy",
+          "personal",
+          "learning"
+        ],
+        "requires": "chronological_ordering",
+        "min_unique_sources": 4
+      },
+      "answer": {
+        "answer": "The perspective on productivity has evolved from focusing on ambitious goal setting and output volume to prioritizing quality, process, and meaning.\n\n**Early Focus (2022): Goal Setting and Quality**\nInitially, productivity involved adopting mental models like 10x goals, which required new approaches and creativity, rather than incremental 10% improvements [4]. Quality was defined by developing \"taste\"\u2014the ability to recognize good work through exposure, comparison, and articulation, which was necessary for iteration [6].\n\n**The Impact of AI (2023): Efficiency and Role Shift**\nThe heavy use of AI led to a massive productivity gain, automating tasks like drafting, generating boilerplate, and debugging [2]. This shifted the role from writer to editor/reviewer, though concerns about skill atrophy required forcing oneself to code without AI to maintain skills [2].\n\n**Critique and Alternative (2024): Slow Productivity**\nA critique emerged that modern knowledge work is broken because it measures busyness and constant urgency rather than results [1]. The alternative proposed was \"Slow Productivity,\" which focuses on quality over output volume, limiting active projects, and working at a natural pace with seasonality and variation [1]. The reflection was that slowing down might produce more meaningful output [1].\n\n**Shift to Meaning (2025): Purpose Over Output**\nThe focus shifted heavily to the meaning crisis accelerated by AI [3, 5]. The perspective changed to recognize that meaning based on output is vulnerable to automation [3]. Meaning is now sought in deeper areas:\n1.  **Process:** Finding satisfaction in the doing, rather than just the result (e.g., the meaning is in the making, not just the clean floor) [3, 5].\n2.  **Judgment:** Human judgment, taste, values, and context still matter when choosing among AI-generated options [5].\n3.  **Relationships and Experience:** Meaning is found in relationships, experiences, growth, and contribution, not solely in productivity or the job itself [3, 5].\n\nThis evolution forces a continual re-evaluation of what is being optimized for, what feels urgent versus important, and why the work matters [7].",
+        "query": "How has my perspective on productivity and meaning changed over the years?",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "saved_2024_article_slow_productivity_chunk_0",
+            "doc_id": "saved_2024_article_slow_productivity",
+            "year": 2024,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0034672278370822445,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Article\nSOURCE: Cal Newport interview\nTITLE: Slow Productivity\nAUTHOR: Saved with notes\nDATE: 2024-08-20 The thesis: Modern knowledge work is broken. We measure busyness, not results."
+          },
+          {
+            "index": 2,
+            "chunk_id": "personal_2023_ai_workflow_reflection_chunk_0",
+            "doc_id": "personal_2023_ai_workflow_reflection",
+            "year": 2023,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.003459121733903885,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: How AI Changed My Daily Work\nAUTHOR: Me\nDATE: 2023-09-20 Six months of heavy AI use. Time to reflect on what's changed."
+          },
+          {
+            "index": 3,
+            "chunk_id": "saved_2025_article_ai_and_meaning_chunk_0",
+            "doc_id": "saved_2025_article_ai_and_meaning",
+            "year": 2025,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0030514346441457563,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Article\nSOURCE: The Atlantic\nTITLE: What AI Means for Human Purpose\nAUTHOR: Saved article with reflections\nDATE: 2025-02-25 The question posed: If AI can do everything humans do, what's le..."
+          },
+          {
+            "index": 4,
+            "chunk_id": "ideas_2022_10x_vs_10_percent_chunk_0",
+            "doc_id": "ideas_2022_10x_vs_10_percent",
+            "year": 2022,
+            "category": "ideas",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002915616370549514,
+            "year_matched": false,
+            "excerpt": "TYPE: Mental Model\nSOURCE: Google X / moonshot thinking\nTITLE: 10x Goals vs. 10% Improvement\nAUTHOR: Me\nDATE: 2022-03-15 The paradox: 10x goals can be easier than 10% improvement."
+          },
+          {
+            "index": 5,
+            "chunk_id": "personal_2025_ai_meaning_journal_chunk_0",
+            "doc_id": "personal_2025_ai_meaning_journal",
+            "year": 2025,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.002888811809320013,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: Thinking About AI and My Work\nAUTHOR: Me\nDATE: 2025-02-18 What does meaning mean when AI can do my job? The question keeps me up at night."
+          },
+          {
+            "index": 6,
+            "chunk_id": "saved_2022_article_on_taste_chunk_0",
+            "doc_id": "saved_2022_article_on_taste",
+            "year": 2022,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.00284057659859095,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Article\nSOURCE: Paul Graham\nTITLE: How to Develop Good Taste\nAUTHOR: Saved with notes\nDATE: 2022-06-20 Key insight: \"Taste is just the ability to recognize good work."
+          },
+          {
+            "index": 7,
+            "chunk_id": "saved_2025_questions_to_revisit_chunk_0",
+            "doc_id": "saved_2025_questions_to_revisit",
+            "year": 2025,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0027479722481633263,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Reflection\nSOURCE: Personal\nTITLE: Questions I Keep Asking Myself\nAUTHOR: Me\nDATE: 2025-04-15 Questions I return to periodically: DIRECTION:\n- Am I proud of how I'm spending my days? - Wha..."
+          },
+          {
+            "index": 8,
+            "chunk_id": "learning_2024_never_split_difference_chunk_0",
+            "doc_id": "learning_2024_never_split_difference",
+            "year": 2024,
+            "category": "learning",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0021731160170616647,
+            "year_matched": false,
+            "excerpt": "TYPE: Book Notes\nSOURCE: Never Split the Difference by Chris Voss\nTITLE: Negotiation Tactics from FBI Hostage Negotiator\nAUTHOR: Me\nDATE: 2024-08-10 Key techniques: MIRRORING: Repeat the last 3 words ..."
+          },
+          {
+            "index": 9,
+            "chunk_id": "personal_2020_march_lockdown_begins_chunk_0",
+            "doc_id": "personal_2020_march_lockdown_begins",
+            "year": 2020,
+            "category": "personal",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0021307894648443407,
+            "year_matched": false,
+            "excerpt": "TYPE: Personal Journal\nSOURCE: Personal Diary\nTITLE: The World Stops - First Week of Lockdown\nAUTHOR: Me\nDATE: 2020-03-18 March 18, 2020. The office closed yesterday."
+          },
+          {
+            "index": 10,
+            "chunk_id": "saved_2021_stoic_reminders_chunk_0",
+            "doc_id": "saved_2021_stoic_reminders",
+            "year": 2021,
+            "category": "saved",
+            "title": null,
+            "source_path": null,
+            "relevance_score": 0.0020982516930989244,
+            "year_matched": false,
+            "excerpt": "TYPE: Saved Quotes\nSOURCE: Stoic texts\nTITLE: Stoic Reminders I Return To\nAUTHOR: Me\nDATE: 2021-12-05 For anxiety: \"We suffer more in imagination than in reality."
+          }
+        ],
+        "confidence": "good_match",
+        "quality": "good",
+        "latency_ms": 8562.600135803223,
+        "stats": {
+          "generation_time_ms": 8527.738094329834,
+          "total_latency_ms": 8562.600135803223,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "model_used": "gemini-flash-latest",
+          "temperature": 0.3,
+          "num_source_chunks": 10,
+          "context_length": 7725
+        },
+        "query_type": "specific",
+        "year_filter": null,
+        "category_filter": null,
+        "num_sources_used": 10,
+        "years_covered": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "categories_covered": [
+          "ideas",
+          "learning",
+          "personal",
+          "saved"
+        ],
+        "coverage_gaps": [],
+        "error": null,
+        "fallback_used": false
+      },
+      "latency_ms": 8562.678813934326,
+      "query_type_detected": "specific",
+      "year_filter_detected": null,
+      "category_filter_detected": null,
+      "retrieval_success": true,
+      "generation_success": true,
+      "type_detection_correct": false,
+      "evaluation": {
+        "synthesis": {
+          "citation_count": 7,
+          "source_coverage": 0.7,
+          "integration_quality": 3,
+          "final_score": 0.75
+        },
+        "overall_score": 0.875,
+        "strengths": [
+          "Good source coverage",
+          "Good multi-hop reasoning"
+        ],
+        "weaknesses": [],
+        "multi_hop": {
+          "unique_sources_cited": 7,
+          "source_diversity": 1.0,
+          "reasoning_quality": 1.0,
+          "final_score": 1.0
+        }
+      },
+      "error": null
+    }
+  ],
+  "aggregate": {
+    "total_queries": 10,
+    "successful_queries": 10,
+    "failed_queries": 0,
+    "avg_synthesis_score": 0.641,
+    "avg_cross_domain_score": 0.5766666666666667,
+    "avg_multi_hop_score": 0.808,
+    "multi_hop_successful": 9,
+    "multi_hop_total": 10,
+    "multi_hop_success_rate": 0.9,
+    "avg_temporal_score": 0.908,
+    "avg_overall_score": 0.7556111111111111,
+    "avg_latency_ms": 6974.019360542297,
+    "max_latency_ms": 10188.439846038818,
+    "min_latency_ms": 3701.831817626953,
+    "type_detection_accuracy": 0.1,
+    "years_coverage": {
+      "2020": 8,
+      "2022": 5,
+      "2023": 9,
+      "2024": 7,
+      "2025": 6,
+      "2021": 4
+    },
+    "categories_coverage": {
+      "ai_ml": 5,
+      "learning": 10,
+      "personal": 10,
+      "philosophy": 4,
+      "saved": 8,
+      "ideas": 5,
+      "technical": 1
+    }
+  }
+}

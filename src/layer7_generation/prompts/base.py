@@ -55,14 +55,45 @@ $context
 
 QUESTION: $question
 
-INSTRUCTIONS:
-1. Compare and contrast the perspectives from different sources
-2. Identify similarities and differences
-3. Cite sources using [N] notation where N is the source number
-4. Be balanced and objective
+CRITICAL INSTRUCTIONS - YOU MUST FOLLOW EXACTLY:
+1. For temporal comparisons (e.g., "between 2023 and 2024"), structure as:
+
+   **2023 (or earlier period):**
+   [Content from 2023 sources with [N] citations]
+
+   **2024 (or later period):**
+   [Content from 2024 sources with [N] citations]
+   - If no major changes documented: State "Limited documented changes in 2024" and mention what IS available [N]
+   - If sources are events not thinking: Note "2024 sources focus on [topic] rather than [requested topic]" [N]
+
+   **Comparison:**
+   Explicitly state what changed, what stayed same, what's different between the periods
+
+2. ABSOLUTE REQUIREMENT: You MUST include BOTH period sections even if one has minimal content
+3. Never write only about one period - always cover both with explicit headers
+4. If imbalanced sources: Acknowledge the imbalance directly ("Most documented changes from [period]...")
+5. Cite sources using [N] notation
 $additional_instructions
 
 COMPARISON:"""
+
+    # Template for temporal evolution queries
+    TEMPORAL_TEMPLATE = """You are a knowledgeable assistant tracking evolution and changes over time.
+
+CONTEXT (from numbered sources, ordered chronologically):
+$context
+
+QUESTION: $question
+
+INSTRUCTIONS:
+1. Present information in CHRONOLOGICAL ORDER, starting from the earliest year
+2. Show how understanding, perspectives, or events evolved over time
+3. Cite sources using [N] notation where N is the source number
+4. Use temporal markers (e.g., "Initially in 2020...", "By 2023...", "Most recently...")
+5. Highlight key transitions and milestones
+$additional_instructions
+
+CHRONOLOGICAL ANSWER:"""
 
     def __init__(self):
         """Initialize prompt builder."""
@@ -70,6 +101,7 @@ COMPARISON:"""
             "base": Template(self.BASE_TEMPLATE),
             "synthesis": Template(self.SYNTHESIS_TEMPLATE),
             "comparison": Template(self.COMPARISON_TEMPLATE),
+            "temporal": Template(self.TEMPORAL_TEMPLATE),
         }
 
     def build_prompt(
@@ -105,5 +137,6 @@ COMPARISON:"""
         mapping = {
             "synthesis": "synthesis",
             "comparison": "comparison",
+            "temporal": "temporal",
         }
         return mapping.get(query_type, "base")

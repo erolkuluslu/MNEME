@@ -186,6 +186,7 @@ class BenchmarkResult:
             "query_id": self.query_id,
             "query": self.query,
             "expected": self.expected,
+            "answer": self.answer.to_dict() if self.answer else None,
             "latency_ms": self.latency_ms,
             "query_type_detected": self.query_type_detected,
             "year_filter_detected": self.year_filter_detected,
@@ -213,6 +214,10 @@ class BenchmarkAggregate:
     avg_temporal_score: float = 0.0
     avg_overall_score: float = 0.0
 
+    # Multi-hop success tracking (actual detection, not query type)
+    multi_hop_successful: int = 0  # Answers with >=3 unique sources
+    multi_hop_total: int = 0  # All evaluated queries
+
     # Performance metrics
     avg_latency_ms: float = 0.0
     max_latency_ms: float = 0.0
@@ -234,6 +239,12 @@ class BenchmarkAggregate:
             "avg_synthesis_score": self.avg_synthesis_score,
             "avg_cross_domain_score": self.avg_cross_domain_score,
             "avg_multi_hop_score": self.avg_multi_hop_score,
+            "multi_hop_successful": self.multi_hop_successful,
+            "multi_hop_total": self.multi_hop_total,
+            "multi_hop_success_rate": (
+                self.multi_hop_successful / self.multi_hop_total
+                if self.multi_hop_total > 0 else 0.0
+            ),
             "avg_temporal_score": self.avg_temporal_score,
             "avg_overall_score": self.avg_overall_score,
             "avg_latency_ms": self.avg_latency_ms,
@@ -495,6 +506,14 @@ class BenchmarkRunner:
             aggregate.avg_cross_domain_score = sum(cross_domain_scores) / len(cross_domain_scores)
         if multi_hop_scores:
             aggregate.avg_multi_hop_score = sum(multi_hop_scores) / len(multi_hop_scores)
+
+        # Count actual multi-hop successes (>=3 unique sources cited)
+        for r in results:
+            if r.evaluation and r.evaluation.multi_hop:
+                aggregate.multi_hop_total += 1
+                if r.evaluation.multi_hop.unique_sources_cited >= 3:
+                    aggregate.multi_hop_successful += 1
+
         if temporal_scores:
             aggregate.avg_temporal_score = sum(temporal_scores) / len(temporal_scores)
         if overall_scores:

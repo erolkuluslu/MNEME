@@ -242,6 +242,7 @@ class AnswerGenerator:
             years_covered=sorted(years_covered),
             categories_covered=sorted(categories_covered),
             coverage_gaps=retrieval_result.coverage_gaps,
+            retrieval_result=retrieval_result,
         )
 
     def _assess_quality(

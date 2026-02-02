@@ -137,16 +137,38 @@ class ContextBuilder:
         total_length = 0
 
         # CRITICAL FIX: Ensure year-matched chunks are included first and NOT truncated
+        # For COMPARISON queries, BOTH boundary years should be prioritized
         # Separate year-matched and other chunks
-        year_matched_chunks = [c for c in ordered_chunks if c.year_matched and plan.year_filter is not None]
+        if plan.query_type == QueryType.COMPARISON and plan.filters.year_range:
+            # For comparison, prioritize chunks from BOTH boundary years equally
+            start_year, end_year = plan.filters.year_range
+            # Split by year to ensure balanced representation
+            start_year_chunks = [c for c in ordered_chunks if c.chunk.year == start_year]
+            end_year_chunks = [c for c in ordered_chunks if c.chunk.year == end_year]
+            # Interleave to ensure we get both years (start, end, start, end, ...)
+            year_matched_chunks = []
+            for i in range(max(len(start_year_chunks), len(end_year_chunks))):
+                if i < len(start_year_chunks):
+                    year_matched_chunks.append(start_year_chunks[i])
+                if i < len(end_year_chunks):
+                    year_matched_chunks.append(end_year_chunks[i])
+        else:
+            # For other queries, use year_filter matching
+            year_matched_chunks = [c for c in ordered_chunks if c.year_matched and plan.year_filter is not None]
+
         other_chunks = [c for c in ordered_chunks if c not in year_matched_chunks]
-        
-        # 1. Add ALL year-matched chunks first (bypass length limit for these if needed, or strictly prioritize)
+
+        # 1. Add year-matched chunks first WITH length limit to prevent context overflow
         for i, scored_chunk in enumerate(year_matched_chunks):
              formatted = self._format_chunk(scored_chunk, i + 1)
-             formatted_chunks.append(formatted)
-             total_length += len(formatted)
-             self._included_chunks.append(scored_chunk)
+             # Still check length limit even for year-matched to prevent LLM overflow
+             if total_length + len(formatted) <= self.max_context_length:
+                 formatted_chunks.append(formatted)
+                 total_length += len(formatted)
+                 self._included_chunks.append(scored_chunk)
+             else:
+                 logger.debug(f"Year-matched chunk truncated at {i+1} due to context length")
+                 break
              
         # 2. Add other chunks only if space remains
         start_index = len(year_matched_chunks) + 1

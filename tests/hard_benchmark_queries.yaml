@@ -1,0 +1,109 @@
+# Hard 10-Query Benchmark
+# Tests critical functionality and edge cases
+
+queries:
+  # === Test 1: Temporal Evolution (Chronological Ordering Fix) ===
+  - id: "H01"
+    query: "How has my understanding of AI evolved over time?"
+    expected:
+      type: "temporal_evolution"
+      difficulty: "hard"
+      query_type: "TEMPORAL"
+      requires: "chronological_ordering"
+      should_start_from_earliest_year: true
+
+  # === Test 2: Year-Specific with Keyword (BM25 Fix) ===
+  - id: "H02"
+    query: "What technical skills did I learn in 2023?"
+    expected:
+      type: "year_specific"
+      difficulty: "medium"
+      query_type: "SPECIFIC"
+      year: 2023
+      categories: ["learning", "technical"]
+
+  # === Test 3: Year Comparison (Community-Aware + Boundary Filtering) ===
+  - id: "H03"
+    query: "Compare my interests in 2020 vs 2024"
+    expected:
+      type: "year_comparison"
+      difficulty: "hard"
+      query_type: "COMPARISON"
+      years: [2020, 2024]
+      requires: "community_summaries"
+      should_exclude_intermediate_years: true
+
+  # === Test 4: Multi-Hop Synthesis (Multi-Hop Measurement Fix) ===
+  - id: "H04"
+    query: "How do my AI learning notes connect to my philosophy reading?"
+    expected:
+      type: "cross_domain_synthesis"
+      difficulty: "hard"
+      query_type: "SYNTHESIS"
+      categories: ["ai_ml", "philosophy"]
+      requires: "multi_hop"
+      min_unique_sources: 3
+
+  # === Test 5: Temporal Span Narrative ===
+  - id: "H05"
+    query: "Tell me the story of my personal growth from 2020 to 2025"
+    expected:
+      type: "temporal_narrative"
+      difficulty: "hard"
+      query_type: "TEMPORAL"
+      requires: "chronological_ordering"
+      categories: ["personal", "learning", "philosophy"]
+
+  # === Test 6: Year-Specific Edge Case (No Content) ===
+  - id: "H06"
+    query: "What programming projects did I work on in 2021?"
+    expected:
+      type: "year_specific_sparse"
+      difficulty: "medium"
+      query_type: "SPECIFIC"
+      year: 2021
+      categories: ["technical"]
+      expect_limited_results: true
+
+  # === Test 7: Cross-Domain Multi-Hop ===
+  - id: "H07"
+    query: "How have my thoughts on meaning and purpose evolved alongside my AI learning?"
+    expected:
+      type: "cross_domain_temporal"
+      difficulty: "hard"
+      query_type: "SYNTHESIS"
+      categories: ["philosophy", "ai_ml", "personal"]
+      requires: "multi_hop"
+      min_unique_sources: 4
+
+  # === Test 8: Recent Year Comparison ===
+  - id: "H08"
+    query: "What changed in my thinking between 2023 and 2024?"
+    expected:
+      type: "year_comparison"
+      difficulty: "medium"
+      query_type: "COMPARISON"
+      years: [2023, 2024]
+      requires: "community_summaries"
+
+  # === Test 9: Comprehensive Synthesis (Ultimate Multi-Hop) ===
+  - id: "H09"
+    query: "What are the main themes across all my notes?"
+    expected:
+      type: "full_synthesis"
+      difficulty: "hard"
+      query_type: "SYNTHESIS"
+      scope: "all"
+      requires: "multi_hop"
+      min_unique_sources: 5
+
+  # === Test 10: Temporal Evolution with Specific Topic ===
+  - id: "H10"
+    query: "How has my perspective on productivity and meaning changed over the years?"
+    expected:
+      type: "topical_temporal_evolution"
+      difficulty: "hard"
+      query_type: "TEMPORAL"
+      categories: ["philosophy", "personal", "learning"]
+      requires: "chronological_ordering"
+      min_unique_sources: 4

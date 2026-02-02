@@ -220,7 +220,8 @@ class CommunityAwareStrategy(BaseRetrievalStrategy):
             True if narrative query
         """
         # Check query type
-        NARRATIVE_TYPES = {QueryType.SYNTHESIS, QueryType.EXPLORATORY}
+        # COMPARISON queries benefit from community summaries for year-range comparisons
+        NARRATIVE_TYPES = {QueryType.SYNTHESIS, QueryType.EXPLORATORY, QueryType.COMPARISON}
         if plan.query_type in NARRATIVE_TYPES:
             return True
 

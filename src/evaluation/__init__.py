@@ -5,15 +5,16 @@ Metrics and evaluation tools for the MNEME RAG system.
 Includes LLM-as-judge evaluation and benchmark framework.
 """
 
-from .metrics import (
-    mean_reciprocal_rank,
-    precision_at_k,
-    recall_at_k,
-    hit_at_k,
-    ndcg_at_k,
-    year_accuracy,
-    EvaluationMetrics,
-)
+# Metrics module not yet implemented
+# from .metrics import (
+#     mean_reciprocal_rank,
+#     precision_at_k,
+#     recall_at_k,
+#     hit_at_k,
+#     ndcg_at_k,
+#     year_accuracy,
+#     EvaluationMetrics,
+# )
 
 from .llm_judge import (
     LLMJudgeEvaluator,
@@ -36,13 +37,14 @@ from .benchmark import (
 )
 
 __all__ = [
-    "mean_reciprocal_rank",
-    "precision_at_k",
-    "recall_at_k",
-    "hit_at_k",
-    "ndcg_at_k",
-    "year_accuracy",
-    "EvaluationMetrics",
+    # Metrics (not yet implemented)
+    # "mean_reciprocal_rank",
+    # "precision_at_k",
+    # "recall_at_k",
+    # "hit_at_k",
+    # "ndcg_at_k",
+    # "year_accuracy",
+    # "EvaluationMetrics",
     # LLM Judge
     "LLMJudgeEvaluator",
     "SynthesisQualityScore",

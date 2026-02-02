@@ -134,17 +134,66 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
         self._build_bm25_index()
 
     def _build_bm25_index(self):
-        """Build BM25 index for sparse retrieval."""
+        """
+        Build BM25 index for sparse retrieval with improved tokenization.
+
+        Preserves important keywords (technical terms, proper nouns) while
+        still normalizing common words for better matching.
+        """
         try:
             from rank_bm25 import BM25Okapi
-            tokenized = [c.text.lower().split() for c in self.chunks]
+
+            # Enhanced tokenization that preserves keywords
+            tokenized = []
+            for c in self.chunks:
+                tokens = self._tokenize_with_keyword_preservation(c.text)
+                tokenized.append(tokens)
+
             self._bm25 = BM25Okapi(tokenized)
             self._bm25_available = True
-            logger.info("BM25 index built successfully")
+            logger.info(f"BM25 index built successfully for {len(self.chunks)} chunks")
         except ImportError:
             logger.warning("rank_bm25 not installed, using dense-only retrieval")
             self._bm25 = None
             self._bm25_available = False
+
+    def _tokenize_with_keyword_preservation(self, text: str) -> List[str]:
+        """
+        Tokenize text while preserving important keywords.
+
+        Strategy:
+        1. Preserve capitalized words (technical terms, proper nouns)
+        2. Add lowercase version for matching
+        3. Split on whitespace and common punctuation
+        4. Keep technical terms intact (Python, JavaScript, etc.)
+
+        Examples:
+        - "Python programming" -> ["Python", "python", "programming"]
+        - "I learned ML" -> ["I", "i", "learned", "ML", "ml"]
+        """
+        import re
+
+        # Split on whitespace and punctuation, but keep the tokens
+        tokens = re.findall(r'\b[\w]+\b', text)
+
+        enhanced_tokens = []
+        for token in tokens:
+            # Skip very short tokens (a, I, etc.) unless they're uppercase
+            if len(token) <= 1 and not token.isupper():
+                enhanced_tokens.append(token.lower())
+                continue
+
+            # If token has uppercase letters (but not all caps), it's likely important
+            if token[0].isupper() or token.isupper():
+                # Add original case (for exact matching)
+                enhanced_tokens.append(token)
+                # Also add lowercase (for fuzzy matching)
+                enhanced_tokens.append(token.lower())
+            else:
+                # Regular word - just lowercase
+                enhanced_tokens.append(token.lower())
+
+        return enhanced_tokens
 
     def _compute_temporal_decay(self, chunk: Chunk, query_time: datetime = None) -> float:
         """
@@ -419,24 +468,70 @@ class HybridRRFStrategy(BaseRetrievalStrategy):
         return results
 
     def _sparse_retrieve(self, query: str, k: int) -> List[Tuple[int, float, str]]:
-        """Sparse retrieval using BM25 with normalized scores."""
+        """
+        Sparse retrieval using BM25 with enhanced keyword matching.
+
+        Improvements:
+        - Preserves case for technical terms
+        - Boosts exact keyword matches
+        - Better tokenization
+        """
         if not self._bm25_available:
             return []
 
-        tokenized_query = query.lower().split()
+        # Enhanced tokenization (same as index)
+        tokenized_query = self._tokenize_with_keyword_preservation(query)
         raw_scores = self._bm25.get_scores(tokenized_query)
 
+        # Exact match boosting - find documents with exact keyword matches
+        exact_match_boost = self._compute_exact_match_boost(query, raw_scores)
+        boosted_scores = raw_scores + exact_match_boost
+
         # Normalize BM25 scores to [0, 1]
-        normalized = self._normalize_scores(raw_scores)
+        normalized = self._normalize_scores(boosted_scores)
 
         # Get top-k indices (filter zero scores)
         top_indices = np.argsort(normalized)[::-1][:k]
+
+        # Log top results for debugging
+        if logger.isEnabledFor(logging.DEBUG):
+            top_chunks = [(idx, normalized[idx], self.chunks[idx].text[:100]) for idx in top_indices[:3]]
+            logger.debug(f"BM25 top 3 for '{query[:50]}': {top_chunks}")
 
         return [
             (int(idx), float(normalized[idx]), "sparse")
             for idx in top_indices
             if normalized[idx] > 0
         ]
+
+    def _compute_exact_match_boost(self, query: str, scores: np.ndarray) -> np.ndarray:
+        """
+        Boost documents that contain exact keyword matches.
+
+        For queries with clear keywords (e.g., "Python", "JavaScript"),
+        strongly boost documents containing those exact words.
+
+        Returns:
+            Array of boost values to add to BM25 scores
+        """
+        import re
+
+        # Extract potential keywords (capitalized words, technical terms)
+        keywords = re.findall(r'\b[A-Z][a-z]+\b|\b[A-Z]{2,}\b', query)
+
+        if not keywords:
+            return np.zeros_like(scores)
+
+        # Check each chunk for exact keyword matches
+        boosts = np.zeros_like(scores)
+        for idx, chunk in enumerate(self.chunks):
+            for keyword in keywords:
+                # Case-sensitive exact match
+                if keyword in chunk.text:
+                    boosts[idx] += 5.0  # Strong boost for exact match
+                    logger.debug(f"Exact match boost: '{keyword}' in chunk {idx}")
+
+        return boosts
 
     def _normalize_scores(self, scores: np.ndarray) -> np.ndarray:
         """Min-max normalize scores to [0, 1]."""

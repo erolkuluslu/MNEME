@@ -484,14 +484,15 @@ Respond with ONLY a single number from 1 to 5."""
         # Always evaluate synthesis
         eval_result.synthesis = self.evaluate_synthesis_quality(answer, sources)
 
-        # Conditional evaluations
+        # Always evaluate multi-hop to detect actual multi-hop reasoning
+        # regardless of whether query explicitly requires it
+        eval_result.multi_hop = self.evaluate_multi_hop(answer, sources)
+
+        # Conditional cross-domain evaluation
         if is_cross_domain:
             eval_result.cross_domain = self.evaluate_cross_domain(
                 answer, sources, expected_categories
             )
-
-        if is_multi_hop:
-            eval_result.multi_hop = self.evaluate_multi_hop(answer, sources)
 
         if year_filter:
             eval_result.temporal = self.evaluate_temporal_accuracy(

@@ -179,6 +179,10 @@ class RetrievalEngine:
             if len(expanded_result.candidates) > len(result.candidates):
                 result = expanded_result
 
+        # Chronological ordering for temporal evolution queries
+        if self._should_apply_chronological_ordering(query, plan):
+            result = self._apply_chronological_ordering(result)
+
         return result
 
     def _should_use_prefilter(self, plan: QueryPlan) -> bool:
@@ -206,7 +210,18 @@ class RetrievalEngine:
 
         if plan.filters.year_range is not None:
             start_year, end_year = plan.filters.year_range
-            for year in range(start_year, end_year + 1):
+
+            # For COMPARISON queries, retrieve only boundary years (e.g., "2020 vs 2024" → [2020, 2024])
+            # For TEMPORAL queries, retrieve all years in range (e.g., "2020 to 2024" → [2020, 2021, 2022, 2023, 2024])
+            if plan.query_type == QueryType.COMPARISON:
+                years_to_retrieve = [start_year, end_year]
+                logger.debug(
+                    f"COMPARISON query: retrieving boundary years only {years_to_retrieve}"
+                )
+            else:
+                years_to_retrieve = list(range(start_year, end_year + 1))
+
+            for year in years_to_retrieve:
                 candidate_indices.extend(
                     self.prefilter.get_candidate_indices(year, range_size=0)
                 )
@@ -380,6 +395,50 @@ class RetrievalEngine:
     def get_chunk(self, chunk_id: str) -> Optional[Chunk]:
         """Get chunk by ID."""
         return self._chunk_by_id.get(chunk_id)
+
+    def _should_apply_chronological_ordering(
+        self, query: str, plan: QueryPlan
+    ) -> bool:
+        """
+        Determine if results should be sorted chronologically.
+
+        Applies to TEMPORAL queries asking about evolution/progression over time.
+        """
+        if plan.query_type != QueryType.TEMPORAL:
+            return False
+
+        # Keywords indicating temporal evolution/progression
+        evolution_keywords = [
+            "evolve", "evolution", "progress", "progression",
+            "change", "changed", "develop", "development",
+            "grow", "growth", "trajectory", "over time",
+            "timeline", "journey", "transformation"
+        ]
+
+        query_lower = query.lower()
+        return any(keyword in query_lower for keyword in evolution_keywords)
+
+    def _apply_chronological_ordering(self, result: RetrievalResult) -> RetrievalResult:
+        """
+        Re-sort retrieval results chronologically (oldest first).
+
+        For temporal evolution queries, chronological order is more important
+        than relevance score for understanding progression over time.
+        """
+        # Sort candidates by year (ascending - oldest first)
+        sorted_candidates = sorted(
+            result.candidates,
+            key=lambda sc: (sc.chunk.year if sc.chunk.year else 9999)
+        )
+
+        logger.info(
+            f"Applied chronological ordering: "
+            f"years {[c.chunk.year for c in sorted_candidates[:10]]}"
+        )
+
+        # Create new result preserving all original fields
+        from dataclasses import replace
+        return replace(result, candidates=sorted_candidates)
 
 
 def create_retrieval_engine(

@@ -31,6 +31,8 @@ class QueryClassifier:
             r"\bcontrast\b",
             r"\bhow\s+(?:does|did|do)\s+\w+\s+differ\b",
             r"\bsimilarities?\s+and\s+differences?\b",
+            r"\bbetween\s+.*\s+and\s+.*\b",  # "between X and Y" pattern
+            r"\b(?:what|how)\s+(?:changed|differed|evolved)\s+between\b",  # "what changed between"
         ],
         QueryType.TEMPORAL: [
             # CRITICAL FIX: Add patterns for year-specific queries

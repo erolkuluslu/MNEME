@@ -254,6 +254,9 @@ class EnhancedAnswer:
     # Gap information
     coverage_gaps: List[str] = field(default_factory=list)
 
+    # Retrieval context (for evaluation and debugging)
+    retrieval_result: Optional[Any] = None  # RetrievalResult object
+
     # Error handling
     error: Optional[str] = None
     fallback_used: bool = False
