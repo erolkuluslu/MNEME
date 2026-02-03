@@ -5,7 +5,8 @@ Assembles context for answer generation from retrieval results.
 Enhanced version includes community summaries for narrative queries.
 """
 
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Tuple
+from dataclasses import dataclass
 import logging
 
 from src.models.chunk import Chunk
@@ -13,6 +14,16 @@ from src.models.query import QueryPlan, QueryType, QueryIntent
 from src.models.retrieval import RetrievalResult, ScoredChunk
 
 logger = logging.getLogger(__name__)
+
+
+@dataclass
+class ContextResult:
+    """Result of context building with metadata."""
+    context: str
+    included_indices: List[int]
+    was_truncated: bool
+    total_chunks_available: int
+    chunks_included: int
 
 # Keywords that indicate narrative/exploratory queries
 NARRATIVE_KEYWORDS = [
@@ -111,8 +122,38 @@ class ContextBuilder:
         Returns:
             Formatted context string
         """
+        context_result = self.build_context_with_metadata(result, plan)
+        return context_result.context
+
+    def build_context_with_metadata(
+        self,
+        result: RetrievalResult,
+        plan: QueryPlan,
+    ) -> ContextResult:
+        """
+        Build context string from retrieval result with metadata.
+
+        CRITICAL: Year-matched chunks are NEVER truncated.
+        Truncation only applies to other-year chunks.
+
+        Enhanced: For narrative queries, prepends community summaries
+        to provide a bird's-eye view before detailed sources.
+
+        Args:
+            result: Retrieval result with scored chunks
+            plan: Query plan
+
+        Returns:
+            ContextResult with context string and metadata
+        """
         if not result.candidates:
-            return ""
+            return ContextResult(
+                context="",
+                included_indices=[],
+                was_truncated=False,
+                total_chunks_available=0,
+                chunks_included=0,
+            )
 
         context_parts = []
 
@@ -128,6 +169,7 @@ class ContextBuilder:
 
         # Order chunks (year-matched first)
         ordered_chunks = self._order_chunks(result.candidates, plan)
+        total_chunks_available = len(ordered_chunks)
 
         # Track which chunks are included for proper indexing
         self._included_chunks = []
@@ -159,6 +201,7 @@ class ContextBuilder:
         other_chunks = [c for c in ordered_chunks if c not in year_matched_chunks]
 
         # 1. Add year-matched chunks first WITH length limit to prevent context overflow
+        was_truncated = False
         for i, scored_chunk in enumerate(year_matched_chunks):
              formatted = self._format_chunk(scored_chunk, i + 1)
              # Still check length limit even for year-matched to prevent LLM overflow
@@ -168,10 +211,11 @@ class ContextBuilder:
                  self._included_chunks.append(scored_chunk)
              else:
                  logger.debug(f"Year-matched chunk truncated at {i+1} due to context length")
+                 was_truncated = True
                  break
-             
+
         # 2. Add other chunks only if space remains
-        start_index = len(year_matched_chunks) + 1
+        start_index = len(self._included_chunks) + 1
         for i, scored_chunk in enumerate(other_chunks):
             formatted = self._format_chunk(scored_chunk, start_index + i)
             if total_length + len(formatted) <= self.max_context_length:
@@ -180,20 +224,35 @@ class ContextBuilder:
                 self._included_chunks.append(scored_chunk)
             else:
                 logger.debug(f"Context truncated at chunk {start_index+i}")
+                was_truncated = True
                 break
 
         chunk_context = self.chunk_separator.join(formatted_chunks)
         context_parts.append(chunk_context)
 
+        # Add truncation notice if context was truncated
+        if was_truncated:
+            truncation_notice = f"\n\n[CONTEXT TRUNCATED: Showing {len(self._included_chunks)} of {total_chunks_available} available sources. Some information may be missing.]"
+            context_parts.append(truncation_notice)
+
         # Combine all context parts
         context = "\n".join(context_parts)
 
+        # Build list of included indices (1-based)
+        included_indices = list(range(1, len(self._included_chunks) + 1))
+
         logger.debug(
             f"Built context with {len(formatted_chunks)} chunks, "
-            f"{len(context)} chars"
+            f"{len(context)} chars, truncated={was_truncated}"
         )
 
-        return context
+        return ContextResult(
+            context=context,
+            included_indices=included_indices,
+            was_truncated=was_truncated,
+            total_chunks_available=total_chunks_available,
+            chunks_included=len(self._included_chunks),
+        )
 
     def _order_chunks(
         self,

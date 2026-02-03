@@ -6,7 +6,7 @@ and gap enforcement.
 """
 
 from .gap_detector import GapDetector, create_gap_detector
-from .context_builder import ContextBuilder, create_context_builder
+from .context_builder import ContextBuilder, ContextResult, create_context_builder
 from .gap_enforcer import GapEnforcer, create_gap_enforcer
 from .source_scorer import (
     SourceImportanceScorer,
@@ -19,6 +19,7 @@ __all__ = [
     "GapDetector",
     "create_gap_detector",
     "ContextBuilder",
+    "ContextResult",
     "create_context_builder",
     "GapEnforcer",
     "create_gap_enforcer",

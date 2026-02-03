@@ -67,6 +67,7 @@ class AnswerGenerator:
         plan: QueryPlan,
         retrieval_result: RetrievalResult,
         context: str,
+        included_indices: List[int] = None,
     ) -> Tuple[str, GenerationStats]:
         """
         Generate an answer from retrieval results.
@@ -80,14 +81,15 @@ class AnswerGenerator:
             plan: Query plan
             retrieval_result: Retrieval results
             context: Formatted context string
+            included_indices: Indices of chunks actually included in context (1-based)
 
         Returns:
             Tuple of (answer_text, generation_stats)
         """
         start_time = time.time()
 
-        # Build prompt
-        prompt = self._build_prompt(question, plan, retrieval_result, context)
+        # Build prompt with included indices for proper citation validation
+        prompt = self._build_prompt(question, plan, retrieval_result, context, included_indices)
 
         # Select model based on query complexity
         selected_model = None
@@ -149,8 +151,22 @@ class AnswerGenerator:
         plan: QueryPlan,
         retrieval_result: RetrievalResult,
         context: str,
+        included_indices: List[int] = None,
     ) -> str:
-        """Build the appropriate prompt."""
+        """
+        Build the appropriate prompt.
+
+        Args:
+            question: User question
+            plan: Query plan
+            retrieval_result: Retrieval results
+            context: Formatted context string
+            included_indices: Indices of chunks actually included in context (1-based)
+        """
+        # Default to all indices if not provided (backwards compatibility)
+        if included_indices is None:
+            included_indices = list(range(1, len(retrieval_result.candidates) + 1))
+
         # Check if year-strict mode should be used
         if self.config.year_strict_mode and plan.year_filter:
             year_matched_count = sum(
@@ -158,19 +174,24 @@ class AnswerGenerator:
             )
 
             if year_matched_count > 0:
-                # Use year-strict prompt
-                valid_indices = [
-                    i + 1 for i, c in enumerate(retrieval_result.candidates)
-                    if c.year_matched
-                ]
-                all_indices = list(range(1, len(retrieval_result.candidates) + 1))
+                # CRITICAL FIX: Only include indices that are both:
+                # 1. Year-matched
+                # 2. Actually in the context (not truncated)
+                valid_indices = []
+                for i, c in enumerate(retrieval_result.candidates):
+                    idx = i + 1
+                    if c.year_matched and idx in included_indices:
+                        valid_indices.append(idx)
+
+                # Invalid indices are those in context but not year-matched
+                invalid_indices = [idx for idx in included_indices if idx not in valid_indices]
 
                 return self.year_strict_builder.build_year_strict_prompt(
                     context=context,
                     question=question,
                     year=plan.year_filter,
                     valid_indices=valid_indices,
-                    all_indices=all_indices,
+                    all_indices=included_indices,
                 )
             else:
                 # No year matches - use unavailable prompt

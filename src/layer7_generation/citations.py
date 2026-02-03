@@ -106,6 +106,106 @@ class CitationGenerator:
         return "\n".join(lines)
 
 
+class CitationValidator:
+    """
+    Validates citations in generated answers.
+
+    Ensures that:
+    1. Citations reference sources that exist in the context
+    2. Year-matched citations are used when required
+    3. No citations reference truncated or missing sources
+    """
+
+    # Pattern to match citation references like [1], [2], etc.
+    CITATION_PATTERN = re.compile(r'\[(\d+)\]')
+
+    def validate_citations(
+        self,
+        answer_text: str,
+        included_indices: List[int],
+        valid_year_indices: Optional[List[int]] = None,
+    ) -> Tuple[str, List[str], bool]:
+        """
+        Validate that citations in answer reference sources in context.
+
+        Args:
+            answer_text: Generated answer text
+            included_indices: Indices of chunks actually in context (1-based)
+            valid_year_indices: If year-strict, indices that match the year filter
+
+        Returns:
+            Tuple of (cleaned_answer, warnings, is_valid)
+        """
+        warnings = []
+        is_valid = True
+
+        # Find all citations in the answer
+        cited_indices = [int(m.group(1)) for m in self.CITATION_PATTERN.finditer(answer_text)]
+
+        if not cited_indices:
+            # No citations found - might be a "don't know" answer
+            return answer_text, warnings, True
+
+        # Check each citation
+        invalid_citations = []
+        wrong_year_citations = []
+
+        for idx in set(cited_indices):
+            if idx not in included_indices:
+                # Citation references source not in context (likely truncated)
+                invalid_citations.append(idx)
+                is_valid = False
+            elif valid_year_indices is not None and idx not in valid_year_indices:
+                # Citation references wrong-year source in year-strict mode
+                wrong_year_citations.append(idx)
+                # This is a warning but may still be intentional (comparing years)
+
+        if invalid_citations:
+            warnings.append(
+                f"Citations {sorted(invalid_citations)} reference sources not in context "
+                "(sources may have been truncated)"
+            )
+
+        if wrong_year_citations:
+            warnings.append(
+                f"Citations {sorted(wrong_year_citations)} reference sources from "
+                "years other than requested"
+            )
+
+        return answer_text, warnings, is_valid
+
+    def get_citation_coverage(
+        self,
+        answer_text: str,
+        included_indices: List[int],
+    ) -> Dict[str, any]:
+        """
+        Analyze citation coverage in the answer.
+
+        Args:
+            answer_text: Generated answer text
+            included_indices: Indices of chunks in context
+
+        Returns:
+            Coverage statistics
+        """
+        cited_indices = set(int(m.group(1)) for m in self.CITATION_PATTERN.finditer(answer_text))
+        included_set = set(included_indices)
+
+        valid_citations = cited_indices & included_set
+        invalid_citations = cited_indices - included_set
+        unused_sources = included_set - cited_indices
+
+        return {
+            "total_sources_in_context": len(included_indices),
+            "sources_cited": len(valid_citations),
+            "invalid_citations": list(sorted(invalid_citations)),
+            "unused_sources": list(sorted(unused_sources)),
+            "citation_rate": len(valid_citations) / len(included_indices) if included_indices else 0,
+            "all_citations_valid": len(invalid_citations) == 0,
+        }
+
+
 class CitationLinker:
     """
     Links citations to their usage in the answer text.
@@ -276,3 +376,23 @@ def create_linked_citations(
     """
     linker = CitationLinker()
     return linker.link_citations(answer, citations, scored_chunks)
+
+
+def validate_answer_citations(
+    answer_text: str,
+    included_indices: List[int],
+    valid_year_indices: Optional[List[int]] = None,
+) -> Tuple[str, List[str], bool]:
+    """
+    Convenience function to validate citations in an answer.
+
+    Args:
+        answer_text: Generated answer text
+        included_indices: Indices of chunks in context (1-based)
+        valid_year_indices: If year-strict, indices that match year filter
+
+    Returns:
+        Tuple of (answer_text, warnings, is_valid)
+    """
+    validator = CitationValidator()
+    return validator.validate_citations(answer_text, included_indices, valid_year_indices)

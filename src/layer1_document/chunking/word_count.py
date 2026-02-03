@@ -123,7 +123,12 @@ class WordCountChunking(BaseChunkingStrategy):
         return text.strip()
 
     def _split_into_sentences(self, text: str) -> List[str]:
-        """Split text into sentences, respecting paragraph boundaries."""
+        """
+        Split text into sentences, respecting paragraph boundaries and list structures.
+
+        Enhanced: Properly handles numbered lists (1. 2. 3.) and bullet points
+        to avoid splitting list items in the middle.
+        """
         import re
 
         sentences = []
@@ -133,13 +138,71 @@ class WordCountChunking(BaseChunkingStrategy):
             paragraphs = re.split(r'\n\s*\n', text)
             for para in paragraphs:
                 if para.strip():
-                    # Split paragraph into sentences
-                    para_sentences = re.split(r'(?<=[.!?])\s+', para)
+                    # Split paragraph into sentences with list awareness
+                    para_sentences = self._split_sentences_with_list_awareness(para)
                     sentences.extend([s.strip() for s in para_sentences if s.strip()])
         else:
-            # Simple sentence split
-            sentences = re.split(r'(?<=[.!?])\s+', text)
+            # Simple sentence split with list awareness
+            sentences = self._split_sentences_with_list_awareness(text)
             sentences = [s.strip() for s in sentences if s.strip()]
+
+        return sentences
+
+    def _split_sentences_with_list_awareness(self, text: str) -> List[str]:
+        """
+        Split text into sentences while preserving list structures.
+
+        Handles:
+        - Numbered lists: "1. First item" "2. Second item"
+        - Bullet points: "- Item" "• Item" "* Item"
+        - Multi-sentence list items
+        """
+        import re
+
+        # Check if text contains list structures
+        list_pattern = r'(?:^|\n)\s*(?:\d+\.|[-•*])\s+'
+        has_lists = re.search(list_pattern, text)
+
+        if not has_lists:
+            # No lists, use standard sentence splitting
+            # Split on .!? but NOT on abbreviations or decimal numbers
+            return re.split(r'(?<=[.!?])(?<!\d\.)(?<!\b[A-Z]\.)(?<!\bet al\.)\s+', text)
+
+        # Text has lists - be more careful about splitting
+        sentences = []
+
+        # Split by list item markers first, keeping the markers
+        # This regex splits on numbered items (1. 2.) and bullets (- • *)
+        # while keeping the marker with the content
+        list_split_pattern = r'(?=(?:^|\n)\s*(?:\d+\.|[-•*])\s+)'
+        parts = re.split(list_split_pattern, text)
+
+        for part in parts:
+            part = part.strip()
+            if not part:
+                continue
+
+            # Check if this part starts with a list marker
+            is_list_item = re.match(r'^(?:\d+\.|[-•*])\s+', part)
+
+            if is_list_item:
+                # Keep list item together, but split if it has multiple sentences
+                # Split ONLY on period followed by space AND capital letter (new sentence)
+                # This avoids splitting on abbreviations or mid-sentence periods
+                sub_sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z])', part)
+
+                # Keep short list items together
+                if len(sub_sentences) == 1 or len(part) < 200:
+                    sentences.append(part)
+                else:
+                    # For longer list items with multiple sentences,
+                    # keep first sentence (with marker) together
+                    sentences.append(sub_sentences[0])
+                    sentences.extend(sub_sentences[1:])
+            else:
+                # Regular text - use standard sentence splitting
+                sub_sentences = re.split(r'(?<=[.!?])(?<!\d\.)(?<!\b[A-Z]\.)(?<!\bet al\.)\s+', part)
+                sentences.extend(sub_sentences)
 
         return sentences
 

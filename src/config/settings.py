@@ -186,6 +186,7 @@ class MNEMEConfig:
     enable_iterative_retrieval: bool = True
     max_retrieval_iterations: int = 3
     gap_threshold: float = 0.3  # Threshold for detecting coverage gaps
+    max_context_length: int = 8000  # Maximum context chars sent to LLM
 
     # Source Importance Scoring (thinking mechanism)
     source_importance_threshold: float = 0.4  # Min importance to include in context

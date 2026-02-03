@@ -29,14 +29,24 @@ CRITICAL CITATION RULES:
 - ONLY cite sources from year $year
 - Valid citation indices: $valid_indices
 - INVALID citation indices: $invalid_indices
-- If you cite an invalid index, your answer will be rejected
+- If you cite an invalid index, your answer will be REJECTED
 - If no valid sources contain relevant information, say "I don't have specific information from $year about this topic."
 
-INSTRUCTIONS:
+CRITICAL INSTRUCTIONS:
 1. Answer using ONLY sources from the specified year ($year)
 2. Use [N] notation for citations
 3. DO NOT cite sources from other years
-4. Be accurate about what the $year sources actually say
+4. Be accurate about what the $year sources ACTUALLY say - quote or paraphrase directly
+5. DO NOT use your training knowledge or outside information - ONLY the context above
+6. If a source appears cut off or incomplete, say "Source [N] is incomplete"
+7. If you cannot find specific facts/statistics in the valid sources, say "This information is not in my $year sources"
+
+FORBIDDEN:
+- Making up statistics, percentages, or specific facts not in the valid sources
+- Completing truncated lists or sentences using outside knowledge
+- Citing source [N] if that source doesn't contain the claimed information
+- Using general knowledge about topics mentioned in source titles
+- Inferring what "probably" happened in $year based on other years
 
 ANSWER:"""
 
@@ -57,11 +67,14 @@ STRICT INSTRUCTIONS:
 3. You may briefly mention what years ARE available in the knowledge base.
 4. If the user's question could still be partially answered without year-specific claims, you may do so but be explicit that the information is from different years.
 5. Keep the response brief and honest about this limitation.
+6. DO NOT use your training knowledge to fill in gaps about $year.
 
 FORBIDDEN:
 - Do NOT cite sources from other years while claiming events happened in $year
 - Do NOT fabricate or infer what might have happened in $year
 - Do NOT answer as if you have $year information when you don't
+- Do NOT use outside knowledge to describe what happened in $year
+- Do NOT make up statistics, percentages, or specific facts about $year
 
 ANSWER:"""
 

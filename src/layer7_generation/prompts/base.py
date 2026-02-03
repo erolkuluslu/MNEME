@@ -21,12 +21,20 @@ $context
 
 QUESTION: $question
 
-INSTRUCTIONS:
-1. Answer the question using ONLY information from the provided sources
+CRITICAL INSTRUCTIONS:
+1. Answer ONLY using information explicitly stated in the provided sources
 2. Cite sources using [N] notation where N is the source number
-3. If sources don't contain sufficient information, acknowledge the limitation
-4. Be concise but comprehensive
+3. DO NOT use your training knowledge or outside information - ONLY the context above
+4. If a source appears cut off or incomplete, say "Source [N] is incomplete"
+5. If you cannot find specific facts/statistics in the context, say "This information is not in my sources" - DO NOT make up numbers
+6. If sources don't contain sufficient information, say "I don't have enough information to answer this"
 $additional_instructions
+
+FORBIDDEN:
+- Making up statistics, percentages, or specific facts not in context
+- Completing truncated lists or sentences using outside knowledge
+- Citing source [N] if that source doesn't contain the claimed information
+- Using general knowledge about topics mentioned in source titles
 
 ANSWER:"""
 
@@ -38,12 +46,19 @@ $context
 
 QUESTION: $question
 
-INSTRUCTIONS:
-1. Synthesize information across all provided sources
-2. Identify common themes, agreements, and disagreements
+CRITICAL INSTRUCTIONS:
+1. Synthesize information ONLY from the provided sources - DO NOT use outside knowledge
+2. Identify common themes, agreements, and disagreements FOUND IN THE SOURCES
 3. Cite sources using [N] notation where N is the source number
 4. Organize your response logically
+5. If sources are incomplete or truncated, acknowledge this limitation
+6. If sources don't provide enough information for synthesis, say so explicitly
 $additional_instructions
+
+FORBIDDEN:
+- Making up statistics, percentages, or specific facts not in context
+- Completing truncated content using outside knowledge
+- Synthesizing information not explicitly present in sources
 
 SYNTHESIS:"""
 
@@ -85,13 +100,19 @@ $context
 
 QUESTION: $question
 
-INSTRUCTIONS:
+CRITICAL INSTRUCTIONS:
 1. Present information in CHRONOLOGICAL ORDER, starting from the earliest year
-2. Show how understanding, perspectives, or events evolved over time
+2. Show how understanding, perspectives, or events evolved BASED ONLY ON THE PROVIDED SOURCES
 3. Cite sources using [N] notation where N is the source number
 4. Use temporal markers (e.g., "Initially in 2020...", "By 2023...", "Most recently...")
-5. Highlight key transitions and milestones
+5. Highlight key transitions and milestones MENTIONED IN THE SOURCES
+6. If sources don't cover certain time periods, explicitly state "No sources available for [year/period]"
 $additional_instructions
+
+FORBIDDEN:
+- Making up statistics, percentages, or specific facts not in context
+- Filling in temporal gaps using outside knowledge
+- Claiming events happened in years not documented in sources
 
 CHRONOLOGICAL ANSWER:"""
 

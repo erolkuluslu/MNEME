@@ -10,7 +10,7 @@ Runnable entry point to test the MNEME 7-layer RAG system from the command line.
 Provides observability into pipeline decisions, resource inspection, and query tracing.
 
 Usage:
-    python run_demo.py                              # Interactive mode
+                                # Interactive mode
     python run_demo.py --query "What happened in AI in 2020?"  # Single query
     python run_demo.py --query "AI in 2021" --trace # With retrieval trace
     python run_demo.py --stats                      # Show stats only

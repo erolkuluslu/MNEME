@@ -6,7 +6,7 @@ LLM providers, prompts, confidence, and citations.
 
 from .generator import AnswerGenerator, create_answer_generator
 from .confidence import ConfidenceAssessor, determine_confidence
-from .citations import CitationGenerator, create_citations
+from .citations import CitationGenerator, CitationValidator, create_citations, validate_answer_citations
 from .llm import BaseLLMProvider, GeminiProvider, create_gemini_provider
 from .prompts import PromptBuilder, YearStrictPromptBuilder, create_year_strict_prompt
 
@@ -16,7 +16,9 @@ __all__ = [
     "ConfidenceAssessor",
     "determine_confidence",
     "CitationGenerator",
+    "CitationValidator",
     "create_citations",
+    "validate_answer_citations",
     "BaseLLMProvider",
     "GeminiProvider",
     "create_gemini_provider",

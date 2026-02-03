@@ -26,8 +26,8 @@ from src.layer2_graph.embeddings.base import BaseEmbeddingEngine
 from src.layer2_graph.similarity.base import BaseSimilarityEngine
 from src.layer4_query import QueryAnalyzer
 from src.layer5_retrieval import RetrievalEngine, CommunityAwareStrategy
-from src.layer6_thinking import GapDetector, ContextBuilder
-from src.layer7_generation import AnswerGenerator, CitationGenerator
+from src.layer6_thinking import GapDetector, ContextBuilder, ContextResult
+from src.layer7_generation import AnswerGenerator, CitationGenerator, CitationValidator
 from src.layer7_generation.llm.base import BaseLLMProvider
 
 logger = logging.getLogger(__name__)
@@ -123,12 +123,14 @@ class MNEME:
             available_categories=self.retrieval_engine.get_available_categories(),
         )
         self.context_builder = ContextBuilder(
+            max_context_length=config.max_context_length,
             include_community_summaries=config.include_community_summaries,
         )
 
         # Layer 7: Answer Generator
         self.answer_generator = AnswerGenerator(config, llm_provider)
         self.citation_generator = CitationGenerator(chunks)
+        self.citation_validator = CitationValidator()
 
         logger.info(
             f"Initialized MNEME with {len(chunks)} chunks, "
@@ -187,16 +189,43 @@ class MNEME:
                 retrieval_result, plan
             )
 
-            context = self.context_builder.build_context(retrieval_result, plan)
+            # Build context with metadata for proper citation validation
+            context_result = self.context_builder.build_context_with_metadata(retrieval_result, plan)
+            context = context_result.context
+            included_indices = context_result.included_indices
 
-            # Layer 7: Generate answer
+            if context_result.was_truncated:
+                logger.warning(
+                    f"Context was truncated: {context_result.chunks_included} of "
+                    f"{context_result.total_chunks_available} chunks included"
+                )
+
+            # Layer 7: Generate answer with included indices for citation validation
             answer_text, stats = self.answer_generator.generate(
-                question, plan, retrieval_result, context
+                question, plan, retrieval_result, context, included_indices
             )
 
-            # Create citations
+            # Validate citations in the generated answer
+            valid_year_indices = None
+            if self.config.year_strict_mode and plan.year_filter:
+                valid_year_indices = [
+                    i + 1 for i, c in enumerate(retrieval_result.candidates[:len(included_indices)])
+                    if c.year_matched
+                ]
+
+            _, citation_warnings, citations_valid = self.citation_validator.validate_citations(
+                answer_text, included_indices, valid_year_indices
+            )
+
+            if citation_warnings:
+                for warning in citation_warnings:
+                    logger.warning(f"Citation validation: {warning}")
+
+            # Create citations only for chunks actually in context
+            # Use candidates up to the number of included indices
+            candidates_in_context = retrieval_result.candidates[:len(included_indices)]
             citations = self.citation_generator.create_citations(
-                retrieval_result.candidates,
+                candidates_in_context,
                 plan.year_filter,
             )
 
